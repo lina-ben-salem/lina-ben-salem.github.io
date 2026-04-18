@@ -189,6 +189,12 @@ nav {
   margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
 }
 .s-kicker::after { display: none; }
+.co-link {
+  color: var(--navy); font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.co-link:hover { color: var(--navy-2); }
 .s-title {
   font-family: 'Lora', serif;
   font-size: 28px; color: var(--navy); margin-bottom: 10px;
@@ -474,10 +480,10 @@ footer {
 <section class="hero" id="home">
   <div class="hero-grid">
     <div>
-      <div class="hero-kicker">AI Researcher & Engineer · Tunis, Tunisia</div>
+      <div class="hero-kicker">AI Researcher · Tunis, Tunisia</div>
       <h1 class="hero-name">Lina Ben Salem</h1>
-      <p class="hero-title">AI Researcher & Engineer</p>
-      <p class="hero-bio"> I am an AI Researcher and Engineer with a background spanning both academic research and industry practice from an M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at InstaDeep (a BioNTech company), to currently leading AI integration across R&D and Business Development at Opalia Recordati (a pharmaceutical company).<br> This journey has given me a deep respect for what research makes possible, and a genuine desire to contribute to it. I am seeking a PhD because I believe the most meaningful work in AI begins in research.</p>
+      <p class="hero-title">AI Researcher · M.Sc. Data Science, AI & Healthtech</p>
+      <p class="hero-bio"> I am an AI Researcher and Engineer with a background on academic research from a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), to currently leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research makes possible, and a genuine desire to contribute to it. I am seeking a PhD because I believe the most meaningful work in AI begins in research.</p>
      
       <!-- <div class="hero-badges">
         <span class="hbadge">RAG</span>
@@ -508,7 +514,7 @@ footer {
   <div class="section-inner">
     <div class="s-kicker">Featured Research</div>
     <h2 class="s-title">M.Sc. Thesis entitled AssistTrials</h2>
-    <p class="s-sub">Conducted at InstaDeep (a BioNTech company) with the AI Research and BioAI teams.</p>
+    <p class="s-sub">Conducted at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company) with the AI Research and Bio AI teams.</p>
 
     <div class="research-card">
       <div class="rc-top">
@@ -644,7 +650,7 @@ footer {
         <div class="w-date">August 2025</div>
         <div style="flex:1;">
           <div class="w-title">From research question to working system: how an AI research project actually unfolds</div>
-          <div class="w-desc">A walkthrough of the full research process from domain understanding and literature review through systematic experimentation, architecture design, and honest evaluation drawn from building AssistTrials at InstaDeep.</div>
+          <div class="w-desc">A walkthrough of the full research process from domain understanding and literature review through systematic experimentation, architecture design, and honest evaluation drawn from building AssistTrials at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
           <span class="w-tag">Research Process</span>
         </div>
         <div class="w-arrow">&#8594;</div>
@@ -656,7 +662,7 @@ footer {
         <div class="w-date">March 2026</div>
         <div style="flex:1;">
           <div class="w-title">Multi-agent LLMs in pharma: promise vs. reality</div>
-          <div class="w-desc">An honest practitioner's assessment drawing on two years across InstaDeep and Opalia what multi-agent pipelines genuinely deliver, where they still fail, and what the open research problems actually are.</div>
+          <div class="w-desc">An honest practitioner's assessment drawing on two years across <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia</a> what multi-agent pipelines genuinely deliver, where they still fail, and what the open research problems actually are.</div>
           <span class="w-tag">Opinion</span>
         </div>
         <div class="w-arrow">&#8594;</div>
@@ -665,7 +671,7 @@ footer {
        <div class="writing-item w-clickable" onclick="openArticle('a4')">
         <div class="w-date">April 2026</div>
         <div style="flex:1;">
-          <div class="w-title">Knowledge graph databases: when they are worth it — and when they are not</div>
+          <div class="w-title">Knowledge graph databases: when they are worth it, and when they are not</div>
           <div class="w-desc">A framework for deciding when graph databases genuinely justify their cost drawn from the experience of designing AI systems for pharmaceutical R&D and Business Development.</div>
           <span class="w-tag">Opinion · Business</span>
         </div>
@@ -730,7 +736,7 @@ var articles = {
   a3: {
     tag:'Opinion', date:'March 2026',
     title:'Multi-agent LLMs in pharma: promise vs. reality',
-    byline:'Based on working across InstaDeep (research) and Opalia Recordati (industry) &mdash; 2026',
+    byline:'Based on working across InstaDeep (research) and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (industry) &mdash; 2026',
     body:'<p>I have spent the last two years in an unusual position: building LLM-based multi-agent systems for clinical and pharmaceutical applications at InstaDeep, and then deploying AI-driven production systems at a generics pharmaceutical company. Two years with one foot in research and one in industry. From that position, the gap between what multi-agent AI promises and what it actually delivers in pharma becomes very visible.</p><h2>What we mean by multi-agent in this context</h2><p>The architectures that actually deliver value tend to be <em>agentic pipelines with modular reasoning</em>: a central orchestrator (implemented with LangGraph\u2019s StateGraph) that coordinates a sequence of specialized functional nodes, each responsible for a distinct subtask, with a shared state updated as the pipeline progresses. Not the autonomous, open-ended AI agent of popular imagination. It is closer to a well-engineered workflow where the \u201cagent\u201d part means the system can make conditional decisions choosing which node to activate next based on intermediate results. Keeping that distinction in mind matters a lot for setting realistic expectations.</p><h2>Where it genuinely works</h2><p><strong>Decomposing complex document understanding tasks.</strong> \u201cDoes this patient qualify for this trial?\u201d is not a single question, it is a conjunction of dozens of sub-questions. A multi-agent pipeline decomposes this naturally. Each node does a tractable, well-defined task. The LLM is never asked to do everything at once. When the system produced an incorrect match, we could trace exactly which node failed and why. <strong>Ontology-aware filtering at scale.</strong> In AssistTrials, a dedicated filtering node operated on structured MeSH data before any semantic search, combining symbolic filtering with neural retrieval cleanly. <strong>Handling the retrieval-reasoning boundary.</strong> Our question-generation step forced the reasoning to be explicit and criterion-by-criterion, rather than asking the model to produce a holistic judgment over a large document. The result was more reliable and much more auditable.</p><h2>Where it does not yet work</h2><p><strong>Temporal reasoning over clinical histories.</strong> A trial might exclude patients who received \u201csystemic chemotherapy within the past 6 months.\u201d Patient records encode time implicitly. Current LLM pipelines can extract facts from clinical text reasonably well. They struggle to reason reliably about temporal relationships when the timeline is scattered across an unstructured narrative. <strong>Handling contradictions and uncertainty.</strong> Real clinical notes contain contradictions, outdated information, and ambiguous shorthand. Current pipelines treat all text as equally reliable, which leads to systematic errors. <strong>Evaluation at the criterion level.</strong> Standard benchmarks measure patient-level or trial-level performance. They do not tell you whether the system reasons correctly about individual eligibility criteria. A system can achieve reasonable benchmark scores while making systematically wrong decisions about negations, temporal conditions, or dosage requirements. <strong>Cost and latency in production.</strong> In our research system, we used GPT-4.1 for multiple pipeline steps per patient-trial pair. At the scale of a real matching system, this adds up quickly. The pharmaceutical industry cares about cost per correct match, time saved per coordinator, and reduction in trial enrollment failures different optimization targets than accuracy alone.</p><h2>What I think the next few years look like</h2><p>The systems that will actually get deployed are not the ones with the highest benchmark scores. They are the ones that are auditable, cost-effective, and trustworthy enough for clinicians to rely on in high-stakes decisions. The most interesting open problems are not about making the models more powerful they are about making them more reliable in the specific ways that matter for clinical use: handling temporal logic, managing uncertainty, providing interpretable evidence for decisions, and maintaining performance when the real-world data distribution shifts away from the benchmark. These are not purely engineering problems. They are research questions. And they are the reason I want to do a PhD.</p>'
   },
  
@@ -738,7 +744,7 @@ var articles = {
     tag:'Opinion · Business',
     date:'April 2026',
     title:'Knowledge graph databases: when they are worth it and when they are not',
-    byline:'Written in the context of leading AI integration across R&D and Business Development at Opalia Recordati',
+    byline:'Written in the context of leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>',
     body:'<p>One of the first questions I had to answer when starting to design AI systems for a pharmaceutical company was whether we needed a knowledge graph database. The answer was not obvious, and the process of working through it taught me something useful about how to think about technology decisions in general.</p><p>This piece is my attempt to share that thinking particularly for anyone sitting in a similar position, where the technology sounds compelling but the cost is real and the justification needs to be clear.</p><h2>What a Knowledge Graph Database Actually Does Differently</h2><p>A regular database stores data in rows and columns. It is fast, well-understood, and excellent at answering questions like \"show me all orders placed in March\" predictable lookups against structured records.</p><p>A knowledge graph database stores data as a web of connected nodes. Instead of rows, it stores entities; people, products, diseases, compounds and the relationships between them. It is designed to answer a fundamentally different kind of question: \"How is Person A connected to Company Z, and through how many steps?\" or \"Which drugs interact with this protein, and what other diseases share this pathway?\"</p><p>The key difference is that in a graph database, the connections between data are treated as first-class citizens, not as an afterthought computed at query time. That is powerful. It is also expensive, and understanding why matters before making any decision.</p><h2>Why Graph Databases Cost More To Run</h2><p>There are four main cost drivers worth understanding.</p><h4>When A Graph Database Is The Right Choice</h4><p>Given the costs, a graph database should only be considered when the business problem is fundamentally about navigating relationships and when that capability delivers measurable value that justifies the investment.</p><p>The clearest use cases are fraud detection (tracing how money flows through networks of accounts and shell companies across dozens of steps), recommendation engines (traversing complex webs of user behavior and product attributes simultaneously), pharmaceutical knowledge graphs (mapping relationships between diseases, genes, proteins, and drug compounds to answer questions that would be nearly impossible in a relational database), and infrastructure dependency mapping (understanding what breaks when a specific server fails, across hundreds of interconnected services).</p><p>What these have in common: the value of the system depends on traversing deep, multi-layered relationships at query time. If your problem genuinely requires this, a graph database can be a transformative investment.</p><h4>When It Is Not The Right Choice</h4><p>The harder discipline is recognizing when a graph database is not necessary especially when the technology sounds appealing.</p><p>If your primary need is storing and retrieving structured records customers, orders, invoices, employee data a relational database is faster, cheaper, and far easier to maintain. Adding a graph database here introduces cost and complexity with no meaningful benefit. The same applies when relationships are simple: one customer has many orders, one product belongs to one category. Graph databases shine on deep, multi-layered relationships simple ones do not justify the overhead.</p><p>For high-volume, simple lookups \"fetch this user\'s profile,\" \"look up this product price\" relational databases are significantly faster. Graph databases are optimized for traversal, not raw lookup speed. And when budget is a constraint, the 3x–10x cost premium over equivalent relational infrastructure is a serious consideration that should not be rationalized away by technological enthusiasm.</p><h4>The Framework I Use For These Decisions</h4><p>The right question is never \"is this technology interesting?\" It is: does the problem we are solving require this specific capability, and does the value it delivers justify the premium we will pay to build, run, and maintain it?</p><p>When both answers are yes, graph databases are worth it. When either answer is uncertain, a well-designed relational database will almost always deliver better value and leave budget and engineering capacity for problems that actually require specialized tools.</p><p>That discipline matching tool to problem rather than adopting tools because they are sophisticated is, I think, one of the more underrated skills in applied AI work.</p>'
   },
     a5: {
@@ -793,14 +799,10 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
           </div>
           <div class="tl-item">
             <span class="tl-dot filled"></span>
-            <div class="tl-role">ML Research Intern – AI Research</div>
-            <div class="tl-org">InstaDeep · 2025</div>
-            <div class="tl-note">M.Sc. thesis on AssistTrials: Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-dot filled"></span>
             <div class="tl-role">AI Apprentice</div>
             <div class="tl-org">InstaDeep · 2023 – 2025</div>
+            <div class="tl-note">M.Sc. AI Research Thesis on AssistTrials: Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
+
             </div>
           <div class="tl-item">
             <span class="tl-dot"></span>
@@ -824,12 +826,12 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
             </div>
           <div class="tl-item">
             <span class="tl-dot"></span>
-            <div class="tl-role">Engineering Degree — Software Engineering</div>
+            <div class="tl-role">Engineering Degree in Software Engineering</div>
             <div class="tl-org">EPI · 2016 – 2019</div>
           </div>
           <div class="tl-item">
             <span class="tl-dot"></span>
-            <div class="tl-role">Preparatory Cycle — Physics & Chemistry</div>
+            <div class="tl-role">Preparatory Cycle in Physics & Chemistry</div>
             <div class="tl-org">Preparatory Institute of Engineering Studies · 2011 – 2013</div>
           </div>
         </div>
@@ -913,7 +915,7 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
           <div class="pres-thumb-overlay">View Presentation →</div>
         </div>
         <div class="pres-card-body">
-          <div class="pres-card-title">Big Data — Architectures, Tools & Challenges</div>
+          <div class="pres-card-title">Big Data: Architectures, Tools & Challenges</div>
           <div class="pres-card-meta">M.Sc. coursework · Data Science & AI</div>
         </div>
       </a>
@@ -924,7 +926,7 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
           <div class="pres-thumb-overlay">View Presentation →</div>
         </div>
         <div class="pres-card-body">
-          <div class="pres-card-title">Foundations of Immunology — Part I & II</div>
+          <div class="pres-card-title">Foundations of Immunology, Part I & II</div>
           <div class="pres-card-meta">M.Sc. coursework · AI & Healthtech</div>
         </div>
       </a>
@@ -935,7 +937,7 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
           <div class="pres-thumb-overlay">View Presentation →</div>
         </div>
         <div class="pres-card-body">
-          <div class="pres-card-title">The Pragmatic Programmer — Key Lessons & Engineering Philosophy</div>
+          <div class="pres-card-title">The Pragmatic Programmer: Key Lessons & Engineering Philosophy</div>
           <div class="pres-card-meta">Book presentation · Software Engineering</div>
         </div>
       </a>
@@ -957,7 +959,7 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
         <div class="proj-thumb pt-navy">AI Research</div>
         <div class="proj-body">
           <div class="proj-title">AssistTrials</div>
-          <div class="proj-desc">Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at InstaDeep.</div>
+          <div class="proj-desc">Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
           <div class="proj-stack"><span class="stag">LangGraph</span><span class="stag">LangChain</span><span class="stag">Graph-RAG</span><span class="stag">ChromaDB</span><span class="stag">Cross-Encoders</span><span class="stag">Multi-Agent Systems</span><span class="stag">LLMs</span><span class="stag">Knowledge Graph</span><span class="stag">PyTorch</span></div>
         </div>
       </div>
@@ -965,15 +967,15 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
         <div class="proj-thumb pt-sage">Applied ML</div>
         <div class="proj-body">
           <div class="proj-title">Olive Oil Production & Price Prediction</div>
-          <div class="proj-desc">Production forecasting dashboard for olive oil yields and extra-virgin prices at InstaDeep.</div>
+          <div class="proj-desc">Production forecasting dashboard for olive oil yields and extra-virgin prices at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
           <div class="proj-stack"><span class="stag">Python</span><span class="stag">CatBoost</span><span class="stag">XGBoost</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">SciPy</span><span class="stag">Dash</span><span class="stag">Plotly</span><span class="stag">Flask</span><span class="stag">Optuna</span><span class="stag">Hydra</span><span class="stag">BeautifulSoup</span><span class="stag">Anaconda</span><span class="stag">Black</span><span class="stag">isort</span><span class="stag">Flake8</span><span class="stag">GitLab</span><span class="stag">Time Series</span></div>
         </div>
       </div>
-      <div class="proj-card">
+      <div class="proj-card" onclick="window.open('https://github.com/lina2761991/DiabetesML','_blank')" style="cursor:pointer;">
         <div class="proj-thumb pt-navy">Applied ML
         </div>
         <div class="proj-body">
-          <div class="proj-title"><a href="https://github.com/lina2761991/DiabetesML" target="_blank" style="color:inherit; text-decoration:none;">Diabetes Prediction</a></div>
+          <div class="proj-title">Diabetes Prediction</div>
           <div class="proj-desc">End-to-end ML classification pipeline with a Django dashboard for clinical risk assessment.</div>
           <div class="proj-stack"><span class="stag">Django</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">Classification</span><span class="stag">Logistic Regression</span><span class="stag">Feature Engineering</span><span class="stag">Cross-validation</span><span class="stag">ROC-AUC</span></div>
         </div>
@@ -990,10 +992,10 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
           <div class="proj-stack"><span class="stag">R</span><span class="stag">R Markdown</span><span class="stag">ggplot2</span><span class="stag">tidyverse</span><span class="stag">Data Cleaning</span><span class="stag">EDA</span><span class="stag">Data Visualization</span><span class="stag">Correlation Analysis</span><span class="stag">Feature Understanding</span></div>
         </div>
       </div>
-      <div class="proj-card">
+      <div class="proj-card" onclick="window.open('https://www.youtube.com/watch?v=1JQTGREPMRo','_blank')" style="cursor:pointer;">
         <div class="proj-thumb pt-sage">Full-stack</div>
         <div class="proj-body">
-          <div class="proj-title"><a href="https://www.youtube.com/watch?v=1JQTGREPMRo" target="_blank" style="color:inherit; text-decoration:none;">TuniPaw</a></div>
+          <div class="proj-title">TuniPaw</div>
           <div class="proj-desc">Platform connecting veterinarians, associations, and pet owners across Tunisia.</div>
           <div class="proj-stack"><span class="stag">Symfony3</span><span class="stag">MySQL</span><span class="stag">Bootstrap</span><span class="stag">HTML5/CSS3</span><span class="stag">JavaScript</span><span class="stag">jQuery</span></div>
         </div>
