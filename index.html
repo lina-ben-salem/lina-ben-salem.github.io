@@ -3,380 +3,307 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lina Ben Salem · AI Research Portfolio
+<title>Lina Ben Salem · AI Research & Engineering Portfolio
 </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --navy:       #1e3a5f;
-  --navy-2:     #2a4f7c;
-  --navy-3:     #3d6494;
-  --navy-light: #e8f0f8;
-  --navy-dim:   rgba(30,58,95,0.08);
-  --ivory:      #faf8f3;
-  --ivory-2:    #f3f0e8;
-  --ivory-3:    #ece8dd;
-  --ink:        #1a1a1a;
-  --ink-2:      #3d3d3d;
-  --ink-3:      #6a6a6a;
-  --ink-4:      #9a9a9a;
-  --border:     #dedad0;
-  --border-2:   #cac5b8;
-  --surface:    #ffffff;
-  --sage-bg:    #eaf2ec;
-  --sage-fg:    #2d6e40;
-  --amber-bg:   #fdf4e3;
-  --amber-fg:   #7a5200;
-  --rose-bg:    #f8edf0;
-  --rose-fg:    #8a2840;
+--navy: #1e3a5f;
+--navy-2: #2a4f7c;
+--navy-3: #3d6494;
+--navy-light: #e8f0f8;
+--navy-dim: rgba(30,58,95,0.08);
+--ivory: #faf8f3;
+--ivory-2: #f3f0e8;
+--ivory-3: #ece8dd;
+--ink: #1a1a1a;
+--ink-2: #3d3d3d;
+--ink-3: #6a6a6a;
+--ink-4: #9a9a9a;
+--border: #dedad0;
+--border-2: #cac5b8;
+--surface: #ffffff;
+--sage-bg: #eaf2ec;
+--sage-fg: #2d6e40;
+--amber-bg: #fdf4e3;
+--amber-fg: #7a5200;
+--rose-bg: #f8edf0;
+--rose-fg: #8a2840;
 }
-
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--ivory);
-  color: var(--ink);
-  font-size: 15px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+font-family: 'Inter', sans-serif;
+background: var(--ivory);
+color: var(--ink);
+font-size: 15px;
+line-height: 1.65;
+-webkit-font-smoothing: antialiased;
 }
-
-/* ── NAV ── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 56px; height: 58px;
-  background: rgba(250,248,243,0.95);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+display: flex; align-items: center; justify-content: space-between;
+padding: 0 56px; height: 58px;
+background: rgba(250,248,243,0.95);
+backdrop-filter: blur(14px);
+border-bottom: 1px solid var(--border);
 }
 .nav-logo {
-  font-family: 'Lora', serif;
-  font-size: 16px; color: var(--navy); letter-spacing: 0.01em; font-weight: 600;
-  display: flex; flex-direction: column; line-height: 1.2;
+font-family: 'Lora', serif;
+font-size: 16px; color: var(--navy); letter-spacing: 0.01em; font-weight: 600;
+display: flex; flex-direction: column; line-height: 1.2;
 }
 .nav-logo span {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px; font-weight: 400; color: var(--ink-4);
-  letter-spacing: 0.08em; text-transform: uppercase;
+font-family: 'Inter', sans-serif;
+font-size: 10px; font-weight: 400; color: var(--ink-4);
+letter-spacing: 0.08em; text-transform: uppercase;
 }
-.nav-links { display: flex; gap: 36px; }
+.nav-links { display: flex; gap: 30px; }
 .nav-links a {
-  font-size: 13px; font-weight: 500; color: var(--ink-3);
-  text-decoration: none; letter-spacing: 0.01em;
-  transition: color 0.2s;
+font-size: 13px; font-weight: 500; color: var(--ink-3);
+text-decoration: none; letter-spacing: 0.01em;
+transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--navy); }
-
-/* ── HERO ── */
 .hero {
-  min-height: 100vh;
-  background: var(--ivory);
-  display: flex; align-items: center;
-  padding: 96px 56px 72px;
-  position: relative; overflow: hidden;
-  border-bottom: 1px solid var(--border);
+min-height: 100vh;
+background: var(--ivory);
+display: flex; align-items: center;
+padding: 96px 56px 72px;
+position: relative; overflow: hidden;
+border-bottom: 1px solid var(--border);
 }
 .hero::before {
-  content: '';
-  position: absolute; top: 0; right: 0;
-  width: 480px; height: 480px;
-  background: radial-gradient(ellipse at top right, rgba(30,58,95,0.05) 0%, transparent 70%);
-  pointer-events: none;
+content: '';
+position: absolute; top: 0; right: 0;
+width: 480px; height: 480px;
+background: radial-gradient(ellipse at top right, rgba(30,58,95,0.05) 0%, transparent 70%);
+pointer-events: none;
 }
 .hero::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0;
-  width: 320px; height: 320px;
-  background: radial-gradient(ellipse at bottom left, rgba(30,58,95,0.04) 0%, transparent 70%);
-  pointer-events: none;
+content: '';
+position: absolute; bottom: 0; left: 0;
+width: 320px; height: 320px;
+background: radial-gradient(ellipse at bottom left, rgba(30,58,95,0.04) 0%, transparent 70%);
+pointer-events: none;
 }
 .hero-grid {
-  max-width: 960px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr 240px; gap: 72px;
-  align-items: center; position: relative; z-index: 1;
+max-width: 960px; margin: 0 auto; width: 100%;
+display: grid; grid-template-columns: 1fr 240px; gap: 72px;
+align-items: center; position: relative; z-index: 1;
 }
 .hero-kicker {
-  display: flex; align-items: center; gap: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--navy-3);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 22px;
+display: flex; align-items: center; gap: 12px;
+font-family: 'JetBrains Mono', monospace;
+font-size: 11px; color: var(--navy-3);
+letter-spacing: 0.1em; text-transform: uppercase;
+margin-bottom: 22px;
 }
 .hero-kicker-line { width: 28px; height: 1px; background: var(--navy-3); }
 .hero-name {
-  font-family: 'Lora', serif;
-  font-size: clamp(40px, 5vw, 58px);
-  color: var(--navy); line-height: 1.05;
-  letter-spacing: -0.02em; margin-bottom: 8px; font-weight: 600;
+font-family: 'Lora', serif;
+font-size: clamp(40px, 5vw, 58px);
+color: var(--navy); line-height: 1.05;
+letter-spacing: -0.02em; margin-bottom: 8px; font-weight: 600;
 }
 .hero-title {
-  font-family: 'Lora', serif;
-  font-size: 18px; color: var(--ink-3);
-  font-style: italic; margin-bottom: 24px; font-weight: 400;
+font-family: 'Lora', serif;
+font-size: 18px; color: var(--ink-3);
+font-style: italic; margin-bottom: 24px; font-weight: 400;
 }
 .hero-bio {
-  font-size: 15px; color: var(--ink-2); line-height: 1.8;
-  max-width: 500px; margin-bottom: 28px;
-  border-left: 3px solid var(--navy-light);
-  padding-left: 16px;
-}
-.hero-question {
-  background: var(--navy-dim);
-  border: 1px solid rgba(30,58,95,0.12);
-  border-radius: 10px; padding: 16px 20px;
-  margin-bottom: 28px; max-width: 500px;
-}
-.hero-question-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--navy-3);
-  letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.hero-question-text {
-  font-family: 'Lora', serif;
-  font-size: 14px; color: var(--navy); font-style: italic; line-height: 1.6;
+font-size: 15px; color: var(--ink-2); line-height: 1.8;
+max-width: 500px; margin-bottom: 28px;
+border-left: 3px solid var(--navy-light);
+padding-left: 16px;
 }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 28px; }
 .hbadge {
-  font-size: 11px; font-weight: 500; padding: 4px 12px;
-  border-radius: 4px; border: 1px solid var(--border-2);
-  color: var(--ink-3); background: var(--surface);
-  letter-spacing: 0.01em;
-  transition: all 0.2s;
+font-size: 11px; font-weight: 500; padding: 4px 12px;
+border-radius: 4px; border: 1px solid var(--border-2);
+color: var(--ink-3); background: var(--surface);
+letter-spacing: 0.01em;
+transition: all 0.2s;
 }
 .hbadge:hover { border-color: var(--navy); color: var(--navy); background: var(--navy-light); }
 .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
-  font-size: 13px; font-weight: 600; padding: 10px 22px;
-  border-radius: 6px; text-decoration: none; letter-spacing: 0.01em;
-  transition: all 0.2s; cursor: pointer;
+font-size: 13px; font-weight: 600; padding: 10px 22px;
+border-radius: 6px; text-decoration: none; letter-spacing: 0.01em;
+transition: all 0.2s; cursor: pointer;
 }
 .btn-primary { background: var(--navy); color: #fff; border: 1px solid var(--navy); }
 .btn-primary:hover { background: var(--navy-2); }
 .btn-ghost { border: 1px solid var(--border-2); color: var(--ink-2); background: transparent; }
 .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
-
-/* Photo */
 .hero-photo-col { display: flex; flex-direction: column; }
 .hero-photo-frame {
-  border-radius: 20px; overflow: hidden;
-  border: 1px solid var(--border-2);
-  aspect-ratio: 4/5; position: relative;
-  background: var(--ivory-2);
-  box-shadow:
-    0 0 0 6px var(--ivory),
-    0 0 0 7px var(--border),
-    0 12px 48px rgba(30,58,95,0.13),
-    0 2px 8px rgba(30,58,95,0.06);
+border-radius: 20px; overflow: hidden;
+border: 1px solid var(--border-2);
+aspect-ratio: 4/5; position: relative;
+background: var(--ivory-2);
+box-shadow:
+0 0 0 6px var(--ivory),
+0 0 0 7px var(--border),
+0 12px 48px rgba(30,58,95,0.13),
+0 2px 8px rgba(30,58,95,0.06);
 }
 .hero-photo-frame img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 }
-.hero-photo-initials {
-  position: absolute; inset: 0; display: flex; align-items: center;
-  justify-content: center;
-  font-family: 'Lora', serif; font-size: 44px; color: var(--border-2);
-}
-
-/* ── SECTIONS ── */
 .section { padding: 88px 56px; }
 .section.alt { background: var(--surface); }
 .section.ivory { background: var(--ivory-2); }
 .section-inner { max-width: 960px; margin: 0 auto; }
-
 .s-kicker {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--navy-3);
-  letter-spacing: 0.14em; text-transform: uppercase;
-  margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
+font-family: 'JetBrains Mono', monospace;
+font-size: 10px; color: var(--navy-3);
+letter-spacing: 0.14em; text-transform: uppercase;
+margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
 }
-.s-kicker::after { display: none; }
 .co-link {
-  color: var(--navy); font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s;
+color: var(--navy); font-weight: 500;
+text-decoration: none;
+transition: color 0.2s;
 }
 .co-link:hover { color: var(--navy-2); }
 .s-title {
-  font-family: 'Lora', serif;
-  font-size: 28px; color: var(--navy); margin-bottom: 10px;
-  letter-spacing: -0.02em; line-height: 1.2; font-weight: 600;
+font-family: 'Lora', serif;
+font-size: 28px; color: var(--navy); margin-bottom: 10px;
+letter-spacing: -0.02em; line-height: 1.2; font-weight: 600;
 }
 .s-sub {
-  font-size: 14px; color: var(--ink-3); line-height: 1.7;
-  max-width: 580px; margin-bottom: 36px;
+font-size: 14px; color: var(--ink-3); line-height: 1.7;
+max-width: 580px; margin-bottom: 36px;
 }
-
-/* ── RESEARCH CARD ── */
 .research-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; overflow: hidden;
-  box-shadow: 0 1px 8px rgba(30,58,95,0.06);
+background: var(--surface); border: 1px solid var(--border);
+border-radius: 12px; overflow: hidden;
+box-shadow: 0 1px 8px rgba(30,58,95,0.06);
+margin-bottom: 20px;
 }
 .rc-top {
-  background: var(--navy); padding: 24px 28px;
-  display: flex; gap: 20px; align-items: flex-start;
+background: var(--navy); padding: 24px 28px;
+display: flex; gap: 20px; align-items: flex-start;
 }
 .rc-type-badge {
-  flex-shrink: 0;
-  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 6px; padding: 8px 12px; text-align: center;
+flex-shrink: 0;
+background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+border-radius: 6px; padding: 8px 12px; text-align: center;
 }
 .rc-type-label { font-size: 9px; color: rgba(255,255,255,0.6); letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 2px; }
 .rc-type-val { font-size: 11px; color: rgba(255,255,255,0.9); font-weight: 500; }
 .rc-top-text { flex: 1; }
 .rc-top-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; margin-bottom: 8px; }
 .rc-top-title {
-  font-family: 'Lora', serif;
-  font-size: 19px; color: #fff; line-height: 1.35; font-weight: 600;
+font-family: 'Lora', serif;
+font-size: 19px; color: #fff; line-height: 1.35; font-weight: 600;
 }
 .rc-body { padding: 24px 28px; }
-
 .rc-section-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--navy-3); letter-spacing: 0.1em;
-  text-transform: uppercase; margin-bottom: 10px; display: block;
+font-family: 'JetBrains Mono', monospace;
+font-size: 10px; color: var(--navy-3); letter-spacing: 0.1em;
+text-transform: uppercase; margin-bottom: 10px; display: block;
 }
 .rc-abstract {
-  font-size: 14px; color: var(--ink-2); line-height: 1.85;
-  margin-bottom: 20px;
-}
-.rc-question-box {
-  background: var(--navy-dim); border: 1px solid rgba(30,58,95,0.1);
-  border-left: 3px solid var(--navy); border-radius: 0 8px 8px 0;
-  padding: 14px 18px; margin-bottom: 20px;
-}
-.rc-question-box p {
-  font-family: 'Lora', serif; font-style: italic;
-  font-size: 14px; color: var(--navy); line-height: 1.6;
+font-size: 14px; color: var(--ink-2); line-height: 1.85;
+margin-bottom: 20px;
 }
 .rc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
 .tag {
-  font-size: 11px; font-weight: 500; padding: 4px 11px;
-  border-radius: 4px;
+font-size: 11px; font-weight: 500; padding: 4px 11px;
+border-radius: 4px;
 }
 .tag-navy { background: var(--navy-light); color: var(--navy); }
 .tag-sage { background: var(--sage-bg); color: var(--sage-fg); }
 .tag-amber { background: var(--amber-bg); color: var(--amber-fg); }
 .tag-rose { background: var(--rose-bg); color: var(--rose-fg); }
-
-/* Resource buttons */
-.rc-resource-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 600; padding: 10px 20px;
-  border-radius: 6px; text-decoration: none;
-  letter-spacing: 0.01em; transition: all 0.2s;
-}
-.rc-resource-primary {
-  background: var(--navy); color: #fff; border: 1px solid var(--navy);
-}
-.rc-resource-primary:hover { background: var(--navy-2); border-color: var(--navy-2); }
-.rc-resource-outline {
-  background: transparent; color: var(--navy);
-  border: 1px solid var(--navy-3);
-}
-.rc-resource-outline:hover { background: var(--navy-light); border-color: var(--navy); }
-
-/* Document strip */
 .rc-doc-strip {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 18px; border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface); text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
+display: flex; align-items: center; gap: 14px;
+padding: 14px 18px; border-radius: 8px;
+border: 1px solid var(--border);
+background: var(--surface); text-decoration: none;
+transition: border-color 0.2s, background 0.2s;
 }
 .rc-doc-strip:hover { border-color: var(--navy); background: var(--navy-light); }
 .rc-doc-strip-icon {
-  flex-shrink: 0; width: 38px; height: 38px;
-  border-radius: 8px; background: var(--navy-dim);
-  border: 1px solid rgba(30,58,95,0.12);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--navy);
+flex-shrink: 0; width: 38px; height: 38px;
+border-radius: 8px; background: var(--navy-dim);
+border: 1px solid rgba(30,58,95,0.12);
+display: flex; align-items: center; justify-content: center;
+color: var(--navy);
 }
 .rc-doc-strip-text { flex: 1; min-width: 0; }
 .rc-doc-strip-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
 .rc-doc-strip-meta { font-size: 11px; color: var(--ink-4); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
 .rc-doc-strip-action { font-size: 12px; font-weight: 600; color: var(--navy); flex-shrink: 0; white-space: nowrap; }
-
-/* ── RESEARCH QUESTIONS ── */
-
-
-/* ── PROJECTS ── */
 .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .proj-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 10px; overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
+background: var(--surface); border: 1px solid var(--border);
+border-radius: 10px; overflow: hidden;
+transition: border-color 0.2s, transform 0.2s;
 }
 .proj-card:hover { border-color: var(--navy); transform: translateY(-2px); }
 .proj-thumb {
-  height: 80px; display: flex; align-items: center; justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; letter-spacing: 0.08em; font-weight: 500;
+height: 80px; display: flex; align-items: center; justify-content: center;
+font-family: 'JetBrains Mono', monospace;
+font-size: 10px; letter-spacing: 0.08em; font-weight: 500;
 }
 .pt-navy { background: var(--navy-light); color: var(--navy); }
 .pt-sage { background: var(--sage-bg); color: var(--sage-fg); }
 .pt-amber { background: var(--amber-bg); color: var(--amber-fg); }
+.pt-rose { background: var(--rose-bg); color: var(--rose-fg); }
 .proj-body { padding: 14px 16px; }
 .proj-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .proj-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; margin-bottom: 10px; }
 .proj-stack { display: flex; flex-wrap: wrap; gap: 4px; }
 .stag {
-  font-size: 10px; padding: 2px 7px; border-radius: 4px;
-  background: var(--ivory-2); color: var(--ink-2);
-  border: 1px solid var(--border);
+font-size: 10px; padding: 2px 7px; border-radius: 4px;
+background: var(--ivory-2); color: var(--ink-2);
+border: 1px solid var(--border);
 }
-
-/* ── TIMELINE ── */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .col-title {
-  font-family: 'Lora', serif; font-size: 17px;
-  color: var(--navy); margin-bottom: 24px; font-weight: 600;
+font-family: 'Lora', serif; font-size: 17px;
+color: var(--navy); margin-bottom: 24px; font-weight: 600;
 }
 .timeline { border-left: 1.5px solid var(--border-2); padding-left: 24px; margin-left: 5px; }
 .tl-item { position: relative; margin-bottom: 24px; }
 .tl-dot {
-  width: 9px; height: 9px; border-radius: 50%;
-  border: 2px solid var(--navy-3); background: var(--ivory);
-  position: absolute; left: -29px; top: 5px;
+width: 9px; height: 9px; border-radius: 50%;
+border: 2px solid var(--navy-3); background: var(--ivory);
+position: absolute; left: -29px; top: 5px;
 }
 .tl-dot.filled { background: var(--navy); border-color: var(--navy); }
 .tl-role { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .tl-org {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--ink-4);
-  margin: 3px 0 5px; letter-spacing: 0.02em;
+font-family: 'JetBrains Mono', monospace;
+font-size: 11px; color: var(--ink-4);
+margin: 3px 0 5px; letter-spacing: 0.02em;
 }
 .tl-note { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
-
-/* ── SKILLS ── */
 .skill-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .skill-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 10px; padding: 18px;
+background: var(--surface); border: 1px solid var(--border);
+border-radius: 10px; padding: 18px;
 }
 .skill-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--navy); margin-bottom: 12px;
+font-family: 'JetBrains Mono', monospace;
+font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+text-transform: uppercase; color: var(--navy); margin-bottom: 12px;
 }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .skill-tag {
-  font-size: 11px; padding: 3px 8px; border-radius: 4px;
-  background: var(--ivory-2); color: var(--ink-2);
-  border: 1px solid var(--border);
+font-size: 11px; padding: 3px 8px; border-radius: 4px;
+background: var(--ivory-2); color: var(--ink-2);
+border: 1px solid var(--border);
 }
-
-/* ── WRITING ── */
 .writing-list { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
 .writing-item {
-  display: flex; gap: 20px; padding: 20px 22px;
-  background: var(--surface); border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
+display: flex; gap: 20px; padding: 20px 22px;
+background: var(--surface); border-bottom: 1px solid var(--border);
+transition: background 0.15s;
 }
 .writing-item:last-child { border-bottom: none; }
 .writing-item:hover { background: var(--ivory); }
@@ -384,50 +311,46 @@ nav {
 .w-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .w-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
 .w-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: var(--navy-light); color: var(--navy); margin-top: 7px; }
-.writing-note {
-  font-size: 12px; text-align: center; margin-top: 14px;
-  padding: 12px 16px; background: var(--amber-bg);
-  border: 1px solid #e8d090; border-radius: 8px; color: var(--amber-fg);
-}
-
-/* ── PRESENTATIONS GRID ── */
 .pres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .pres-card {
-  display: flex; flex-direction: column;
-  border: 1px solid var(--border); border-radius: 10px;
-  overflow: hidden; text-decoration: none;
-  transition: border-color 0.2s, transform 0.2s;
+display: flex; flex-direction: column;
+border: 1px solid var(--border); border-radius: 10px;
+overflow: hidden; text-decoration: none;
+transition: border-color 0.2s, transform 0.2s;
 }
 .pres-card:hover { border-color: var(--navy); transform: translateY(-3px); }
 .pres-thumb {
-  position: relative; overflow: hidden;
-  aspect-ratio: 16/9; background: var(--ivory-2);
+position: relative; overflow: hidden;
+aspect-ratio: 16/9; background: var(--ivory-2);
 }
 .pres-thumb img {
-  width: 100%; height: 100%; object-fit: contain; display: block;
+width: 100%; height: 100%; object-fit: contain; display: block;
 }
 .pres-thumb-overlay {
-  position: absolute; inset: 0;
-  background: rgba(30,58,95,0.75);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 600; color: #fff;
-  letter-spacing: 0.04em;
-  opacity: 0; transition: opacity 0.2s;
+position: absolute; inset: 0;
+background: rgba(30,58,95,0.75);
+display: flex; align-items: center; justify-content: center;
+font-size: 12px; font-weight: 600; color: #fff;
+letter-spacing: 0.04em;
+opacity: 0; transition: opacity 0.2s;
 }
 .pres-card:hover .pres-thumb-overlay { opacity: 1; }
 .pres-card-body { padding: 12px 14px; flex: 1; }
 .pres-card-title { font-size: 12px; font-weight: 600; color: var(--ink); line-height: 1.45; margin-bottom: 5px; }
 .pres-card-meta { font-size: 11px; color: var(--ink-4); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
-
-/* ── FOOTER ── */
+.pres-note {
+font-size: 12px; color: var(--ink-3); margin-top: 14px;
+padding: 12px 16px; background: var(--surface);
+border: 1px solid var(--border); border-radius: 8px;
+}
 footer {
-  background: var(--navy); padding: 56px;
-  display: flex; flex-direction: column; align-items: center; gap: 18px;
-  border-top: none;
+background: var(--navy); padding: 56px;
+display: flex; flex-direction: column; align-items: center; gap: 18px;
+border-top: none;
 }
 .footer-name {
-  font-family: 'Lora', serif; font-size: 22px;
-  color: #fff; letter-spacing: -0.01em; font-weight: 600;
+font-family: 'Lora', serif; font-size: 22px;
+color: #fff; letter-spacing: -0.01em; font-weight: 600;
 }
 .footer-title { font-size: 13px; color: rgba(255,255,255,0.45); font-style: italic; }
 .footer-links { display: flex; gap: 28px; }
@@ -435,287 +358,32 @@ footer {
 .footer-links a:hover { color: #fff; }
 .footer-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.15); }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
-
-/* ── ANIMATIONS ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(16px); }
+to { opacity: 1; transform: translateY(0); }
 }
-.hero-kicker   { animation: fadeUp 0.5s ease both 0.1s; }
-.hero-name     { animation: fadeUp 0.5s ease both 0.2s; }
-.hero-title    { animation: fadeUp 0.5s ease both 0.25s; }
-.hero-bio      { animation: fadeUp 0.5s ease both 0.3s; }
-.hero-question { animation: fadeUp 0.5s ease both 0.35s; }
-.hero-badges   { animation: fadeUp 0.5s ease both 0.4s; }
-.hero-cta      { animation: fadeUp 0.5s ease both 0.45s; }
+.hero-kicker { animation: fadeUp 0.5s ease both 0.1s; }
+.hero-name { animation: fadeUp 0.5s ease both 0.2s; }
+.hero-title { animation: fadeUp 0.5s ease both 0.25s; }
+.hero-bio { animation: fadeUp 0.5s ease both 0.3s; }
+.hero-badges { animation: fadeUp 0.5s ease both 0.4s; }
+.hero-cta { animation: fadeUp 0.5s ease both 0.45s; }
 .hero-photo-col { animation: fadeUp 0.6s ease both 0.3s; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 820px) {
-  nav { padding: 0 20px; }
-  .nav-links { gap: 18px; }
-  .hero, .section { padding: 80px 24px 56px; }
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-photo-col { display: none; }
-  .proj-grid, .skill-grid { grid-template-columns: 1fr 1fr; }
-  .pres-grid { grid-template-columns: 1fr; }
-  .rq-grid { grid-template-columns: 1fr; }
-  .two-col { grid-template-columns: 1fr; }
-  footer { padding: 40px 24px; }
-}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Lina Ben Salem<span>AI Researcher & Engineer</span></div>
-  <div class="nav-links">
-    <a href="#home" class="active">Home</a>
-    <a href="#research">Research</a>
-    <a href="#writing">Writing</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#presentations">Presentations</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-kicker">AI Researcher & Engineer · Tunis, Tunisia</div>
-      <h1 class="hero-name">Lina Ben Salem</h1>
-      <p class="hero-title">AI Researcher & Engineer · M.Sc. Data Science, AI & Healthtech</p>
-      <p class="hero-bio"> I am an AI Researcher and Engineer with a background on academic research from a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), to currently leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
-     
-      <!-- <div class="hero-badges">
-        <span class="hbadge">RAG</span>
-        <span class="hbadge">Multi Agentic System</span>
-        <span class="hbadge">Clinical AI</span>
-        <span class="hbadge">Biomedical NLP</span>
-        <span class="hbadge">Knowledge Graph</span>
-        <span class="hbadge">Agents</span>
-        <span class="hbadge">BioAI</span>
-        <span class="hbadge">Vectore Database</span>
-      </div> -->
-      <div class="hero-cta">
-        <a href="#research" class="btn btn-primary">View Research</a>
-        <a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://github.com/lina2761991" class="btn btn-ghost">GitHub</a>
-      </div>
-    </div>
-    <div class="hero-photo-col">
-      <div class="hero-photo-frame">
-        <img src="download.png" alt="Lina Ben Salem">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESEARCH -->
-<section class="section alt" id="research">
-  <div class="section-inner">
-    <div class="s-kicker">Featured Research</div>
-    <h2 class="s-title">M.Sc. Thesis entitled AssistTrials</h2>
-    <p class="s-sub">Conducted at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company) with the AI Research and Bio AI teams.</p>
-
-    <div class="research-card">
-      <div class="rc-top">
-        <div class="rc-type-badge">
-          <span class="rc-type-label">Type</span>
-          <span class="rc-type-val">M.Sc. Thesis</span>
-          <span class="rc-type-label" style="margin-top:6px;">Period</span>
-          <span class="rc-type-val">03.2025 – 09.2025</span>
-        </div>
-        <div class="rc-top-text">
-          <div class="rc-top-meta">InstaDeep ·  AI Research · Tunis</div>
-          <div class="rc-top-title">AssistTrials: Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System</div>
-        </div>
-      </div>
-      <div class="rc-body">
-        <span class="rc-section-label">Abstract</span>
-        <p class="rc-abstract">This report presents a capstone research project conducted at InstaDeep as part of the National Master’s Degree in Data Science, AI & HealthTech at Pristini. The project addresses a key bottleneck in clinical research: the accurate and efficient identification of suitable clinical trials for patients, a process that often delays the development of new therapies.<br>We introduce an agentic, retrieval-augmented system powered by Large Language Models (LLMs) to automate the semantic alignment of unstructured patient records with structured trial documents. The system integrates LLM-based reasoning and regulatory-aware filtering to align with clinical constraints. Evaluated on a synthetic benchmark simulating realistic eligibility criteria, it achieves competitive performance relative to state-of-the-art approaches. This work offers a modular framework for accelerating patient recruitment while maintaining strict compliance with medical and regulatory standards.</p>
-        <span class="rc-section-label">Methods & Stack</span>
-        <div class="rc-tags">
-          <span class="tag tag-navy">LangGraph</span>
-          <span class="tag tag-navy">LangChain</span>
-          <span class="tag tag-navy">Graph-RAG</span>
-          <span class="tag tag-sage">Cross-Encoders</span>
-          <span class="tag tag-sage">Vector Database</span>
-          <span class="tag tag-sage">Multi-Agent Systems</span>
-          <span class="tag tag-amber">LLMs</span>
-          <span class="tag tag-amber">Knowledge Graph</span>
-
-        </div>
-
-        <span class="rc-section-label">Resources</span>
-        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
-
-          <a href="https://drive.google.com/file/d/10IsKz_rd9DmmjmamWBkUWGWgEnLo5ygH/view?usp=sharing" target="_blank" class="rc-doc-strip">
-            <div class="rc-doc-strip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <div class="rc-doc-strip-text">
-              <div class="rc-doc-strip-title">AssistTrials: A Patient-Trial Matching Framework</div>
-              <div class="rc-doc-strip-meta">M.Sc. Thesis </div>
-            </div>
-            <div class="rc-doc-strip-action">Read Report →</div>
-          </a>
-
-          <a href="https://docs.google.com/presentation/d/1cGZc3rzB4wQ3jrKlSSLnwwLSvuSfX5ZAqBmd_aaJUg8/edit?usp=sharing" target="_blank" class="rc-doc-strip">
-            <div class="rc-doc-strip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div class="rc-doc-strip-text">
-              <div class="rc-doc-strip-title">AssistTrials: Thesis Defense Presentation</div>
-              <div class="rc-doc-strip-meta">Slides</div>
-            </div>
-            <div class="rc-doc-strip-action">View Slides →</div>
-          </a>
-
-        </div>
-
-          <div class="rc-doc-strip rc-video-strip" onclick="toggleDemo(this)" style="border-bottom: 1px solid var(--border);">
-            <div class="rc-doc-strip-icon" style="background:rgba(30,58,95,0.08); border-color:rgba(30,58,95,0.12);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--navy);"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-            </div>
-            <div class="rc-doc-strip-text">
-              <div class="rc-doc-strip-title">AssistTrials: System Demo</div>
-              <div class="rc-doc-strip-meta">Live Pipeline Walkthrough </div>
-            </div>
-            <div class="rc-doc-strip-action rc-demo-toggle">Watch Demo →</div>
-          </div>
-          <div class="rc-demo-expand" id="demo-expand">
-            <iframe src="https://drive.google.com/file/d/1YHK19U4xzAmnDHrajwPNUIEx0jHgdy1W/preview" allowfullscreen style="width:100%; aspect-ratio:16/9; border:none; display:block;"></iframe>
-          </div>
-
-        </div>
-
-        <style>
-        .rc-video-strip { cursor:pointer; }
-        .rc-video-strip.open { border-color:var(--navy); background:var(--navy-light); border-bottom-left-radius:0; border-bottom-right-radius:0; border-bottom-color:transparent; }
-        .rc-demo-expand {
-          display:none; border:1px solid var(--navy); border-top:none;
-          border-bottom-left-radius:8px; border-bottom-right-radius:8px;
-          overflow:hidden;
-        }
-        .rc-demo-expand.open { display:block; }
-        </style>
-
-        <script>
-        function toggleDemo(strip) {
-          var expand = document.getElementById('demo-expand');
-          var toggle = strip.querySelector('.rc-demo-toggle');
-          var isOpen = expand.classList.contains('open');
-          if (isOpen) {
-            expand.classList.remove('open');
-            strip.classList.remove('open');
-            toggle.textContent = 'Watch Demo \u2193';
-          } else {
-            expand.classList.add('open');
-            strip.classList.add('open');
-            toggle.textContent = 'Close \u2191';
-          }
-        }
-        </script>
-    </div><!-- end research-card -->
-  </div>
-</section>
-
-
-
-<!-- WRITING -->
-<section class="section alt" id="writing">
-  <div class="section-inner">
-    <div class="s-kicker">Technical Writing</div>
-    <h2 class="s-title">Technical Writing</h2>
-    <p class="s-sub" style="white-space: nowrap;">Independent technical writing produced alongside AI research and system development.</p>
-    <div class="writing-list">
-    <div class="writing-item w-clickable" onclick="openArticle('a2')">
-            <div class="w-date">May 2025</div>
-            <div style="flex:1;">
-              <div class="w-title">Why cross-encoder reranking matters in biomedical retrieval</div>
-              <div class="w-desc">In AssistTrials, the reranker turned out to be the single highest-impact component and for good reason. This article breaks down the bi-encoder vs. cross-encoder tradeoff through the lens of real experimental results, and explains why the biomedical domain makes this gap especially pronounced.</div>
-              <span class="w-tag">Technical Explainer</span>
-            </div>
-            <div class="w-arrow">&#8594;</div>
-          </div>
-      <div class="writing-item w-clickable" onclick="openArticle('a1')">
-        <div class="w-date">July 2025</div>
-        <div style="flex:1;">
-          <div class="w-title">What Graph-RAG actually looks like in production</div>
-          <div class="w-desc">A step-by-step breakdown of the AssistTrials pipeline from why standard RAG fails for clinical matching, to the nine-node LangGraph architecture, synthetic patient generation, MeSH ontology enrichment, and honest lessons learned.</div>
-          <span class="w-tag">Technical Writeup</span>
-        </div>
-        <div class="w-arrow">&#8594;</div>
-      </div>
-        <div class="writing-item w-clickable" onclick="openArticle('a5')">
-        <div class="w-date">August 2025</div>
-        <div style="flex:1;">
-          <div class="w-title">From research question to working system: how an AI research project actually unfolds</div>
-          <div class="w-desc">A walkthrough of the full research process from domain understanding and literature review through systematic experimentation, architecture design, and honest evaluation drawn from building AssistTrials at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
-          <span class="w-tag">Research Process</span>
-        </div>
-        <div class="w-arrow">&#8594;</div>
-      </div>
-
-      
-
-      <div class="writing-item w-clickable" onclick="openArticle('a3')">
-        <div class="w-date">March 2026</div>
-        <div style="flex:1;">
-          <div class="w-title">Multi-agent LLMs in pharma: promise vs. reality</div>
-          <div class="w-desc">An honest practitioner's assessment drawing on two years across <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia</a> what multi-agent pipelines genuinely deliver, where they still fail, and what the open research problems actually are.</div>
-          <span class="w-tag">Opinion</span>
-        </div>
-        <div class="w-arrow">&#8594;</div>
-      </div>
-
-       <div class="writing-item w-clickable" onclick="openArticle('a4')">
-        <div class="w-date">April 2026</div>
-        <div style="flex:1;">
-          <div class="w-title">Knowledge graph databases: when they are worth it, and when they are not</div>
-          <div class="w-desc">A framework for deciding when graph databases genuinely justify their cost drawn from the experience of designing AI systems for pharmaceutical R&D and Business Development.</div>
-          <span class="w-tag">Opinion · Business</span>
-        </div>
-        <div class="w-arrow">&#8594;</div>
-      </div>
-    
-
-    </div>
-  </div>
-</section>
-
-<!-- ARTICLE OVERLAY -->
-<div id="article-overlay">
-  <div class="article-page">
-    <button class="back-btn" onclick="closeArticle()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to portfolio
-    </button>
-    <div id="article-content"></div>
-  </div>
-</div>
-
-<style>
 .w-clickable { cursor:pointer; }
 .w-clickable:hover { background:var(--ivory-2); }
 .w-clickable:hover .w-title { color:var(--navy); }
 .w-arrow { color:var(--ink-4); font-size:18px; padding-left:12px; flex-shrink:0; transition:transform 0.2s, color 0.2s; }
 .w-clickable:hover .w-arrow { color:var(--navy); transform:translateX(4px); }
 #article-overlay {
-  display:none; position:fixed; inset:0; z-index:200;
-  background:var(--ivory); overflow-y:auto;
+display:none; position:fixed; inset:0; z-index:200;
+background:var(--ivory); overflow-y:auto;
 }
 .article-page { max-width:720px; margin:0 auto; padding:80px 40px 80px; }
 .back-btn {
-  display:inline-flex; align-items:center; gap:8px;
-  background:none; border:1px solid var(--border-2); border-radius:6px;
-  padding:8px 16px; font-size:13px; font-weight:500; color:var(--ink-3);
-  cursor:pointer; margin-bottom:48px; font-family:inherit; transition:all 0.2s;
+display:inline-flex; align-items:center; gap:8px;
+background:none; border:1px solid var(--border-2); border-radius:6px;
+padding:8px 16px; font-size:13px; font-weight:500; color:var(--ink-3);
+cursor:pointer; margin-bottom:48px; font-family:inherit; transition:all 0.2s;
 }
 .back-btn:hover { border-color:var(--navy); color:var(--navy); }
 .article-body { font-size:16px; line-height:1.85; color:var(--ink-2); }
@@ -723,347 +391,755 @@ footer {
 .article-body h2 { font-family:'Lora',serif; font-size:20px; font-weight:600; color:var(--navy); margin:2.2em 0 0.8em; letter-spacing:-0.01em; }
 .article-body strong { font-weight:600; color:var(--ink); }
 .article-body em { font-style:italic; }
+.rc-video-strip { cursor:pointer; }
+.rc-video-strip.open { border-color:var(--navy); background:var(--navy-light); border-bottom-left-radius:0; border-bottom-right-radius:0; border-bottom-color:transparent; }
+.rc-demo-expand {
+display:none; border:1px solid var(--navy); border-top:none;
+border-bottom-left-radius:8px; border-bottom-right-radius:8px;
+overflow:hidden;
+}
+.rc-demo-expand.open { display:block; }
+@media (max-width: 820px) {
+nav { padding: 0 20px; }
+.nav-links { gap: 16px; }
+.hero, .section { padding: 80px 24px 56px; }
+.hero-grid { grid-template-columns: 1fr; }
+.hero-photo-col { display: none; }
+.proj-grid, .skill-grid { grid-template-columns: 1fr 1fr; }
+.pres-grid { grid-template-columns: 1fr; }
+.two-col { grid-template-columns: 1fr; }
+footer { padding: 40px 24px; }
+}
 </style>
+</head>
+<body>
+<nav>
+<div class="nav-logo">Lina Ben Salem<span>AI Researcher & Engineer</span></div>
+<div class="nav-links">
+<a href="#home" class="active">Home</a>
+<a href="#research">Research</a>
+<a href="#engineering">Engineering</a>
+<a href="#projects">Additional Projects</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#writing">Writing</a>
+<a href="#presentations">Presentations</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-grid">
+<div>
+<div class="hero-kicker">AI Researcher & Engineer · Tunis, Tunisia</div>
+<h1 class="hero-name">Lina Ben Salem</h1>
+<p class="hero-title">AI Researcher & Engineer · M.Sc. Data Science, AI & Healthtech</p>
+<p class="hero-bio"> I am an AI Researcher and Engineer with a background on academic research from a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), to currently leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
+<div class="hero-cta">
+<a href="#research" class="btn btn-primary">View Research</a>
+<a href="#engineering" class="btn btn-ghost">View Engineering</a>
+<a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/" class="btn btn-ghost">LinkedIn</a>
+<a href="https://github.com/lina2761991" class="btn btn-ghost">GitHub</a>
+</div>
+</div>
+<div class="hero-photo-col">
+<div class="hero-photo-frame">
+<img src="download.png" alt="Lina Ben Salem">
+</div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="work">
+<div class="section-inner">
+<div class="s-kicker">Featured Work</div>
+<h2 class="s-title" style="font-size:40px;">Research, Engineering & Selected Projects</h2>
+<p class="s-sub" style="max-width:640px;">Applied research and production engineering, from a benchmarked M.Sc. thesis to systems shipped inside a regulated business, plus a selection of applied and earlier engineering work organized into the three parts below.</p>
+
+<div id="research" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+<div class="s-kicker">Featured Research</div>
+<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">M.Sc. Thesis entitled AssistTrials</h3>
+<p class="s-sub">Conducted at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company) with the AI Research and Bio AI teams.</p>
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">M.Sc. Thesis</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">03.2025 &ndash; 09.2025</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">InstaDeep &middot; AI Research &middot; Tunis</div>
+<div class="rc-top-title">AssistTrials: Automated Patient&ndash;Clinical Trial Matching via Graph-RAG in a Multi-Agentic System</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Abstract</span>
+<p class="rc-abstract">This report presents a capstone research project conducted at InstaDeep as part of the National Master’s Degree in Data Science, AI & HealthTech at Pristini. The project addresses a key bottleneck in clinical research: the accurate and efficient identification of suitable clinical trials for patients, a process that often delays the development of new therapies.<br>We introduce an agentic, retrieval-augmented system powered by Large Language Models (LLMs) to automate the semantic alignment of unstructured patient records with structured trial documents. The system integrates LLM-based reasoning and regulatory-aware filtering to align with clinical constraints. Evaluated on a synthetic benchmark simulating realistic eligibility criteria, it achieves competitive performance relative to state-of-the-art approaches. This work offers a modular framework for accelerating patient recruitment while maintaining strict compliance with medical and regulatory standards.</p>
+<span class="rc-section-label">Methods & Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-navy">LangChain</span>
+<span class="tag tag-navy">Graph-RAG</span>
+<span class="tag tag-sage">Cross-Encoders</span>
+<span class="tag tag-sage">Vector Database</span>
+<span class="tag tag-sage">Multi-Agent Systems</span>
+<span class="tag tag-amber">LLMs</span>
+<span class="tag tag-amber">Knowledge Graph</span>
+</div>
+<span class="rc-section-label">Resources</span>
+<div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+<a href="https://drive.google.com/file/d/10IsKz_rd9DmmjmamWBkUWGWgEnLo5ygH/view?usp=sharing" target="_blank" class="rc-doc-strip">
+<div class="rc-doc-strip-icon">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+</div>
+<div class="rc-doc-strip-text">
+<div class="rc-doc-strip-title">AssistTrials: A Patient-Trial Matching Framework</div>
+<div class="rc-doc-strip-meta">M.Sc. Thesis </div>
+</div>
+<div class="rc-doc-strip-action">Read Report &rarr;</div>
+</a>
+<a href="https://docs.google.com/presentation/d/1cGZc3rzB4wQ3jrKlSSLnwwLSvuSfX5ZAqBmd_aaJUg8/edit?usp=sharing" target="_blank" class="rc-doc-strip">
+<div class="rc-doc-strip-icon">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+</div>
+<div class="rc-doc-strip-text">
+<div class="rc-doc-strip-title">AssistTrials: Thesis Defense Presentation</div>
+<div class="rc-doc-strip-meta">Slides</div>
+</div>
+<div class="rc-doc-strip-action">View Slides &rarr;</div>
+</a>
+</div>
+<div class="rc-doc-strip rc-video-strip" onclick="toggleDemo(this)" style="border-bottom: 1px solid var(--border);">
+<div class="rc-doc-strip-icon" style="background:rgba(30,58,95,0.08); border-color:rgba(30,58,95,0.12);">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--navy);"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+</div>
+<div class="rc-doc-strip-text">
+<div class="rc-doc-strip-title">AssistTrials: System Demo</div>
+<div class="rc-doc-strip-meta">Live Pipeline Walkthrough </div>
+</div>
+<div class="rc-doc-strip-action rc-demo-toggle">Watch Demo &rarr;</div>
+</div>
+<div class="rc-demo-expand" id="demo-expand">
+<iframe src="https://drive.google.com/file/d/1YHK19U4xzAmnDHrajwPNUIEx0jHgdy1W/preview" allowfullscreen style="width:100%; aspect-ratio:16/9; border:none; display:block;"></iframe>
+</div>
+</div>
+</div>
+</div>
+
+<div style="height:1px; background:var(--border); margin:56px 0;"></div>
+
+<div id="engineering" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+<div class="s-kicker">Featured AI Engineering Systems</div>
+<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Multi-Agent & Production Systems Built at Opalia Recordati</h3>
+<p class="s-sub">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working, tested systems.</p>
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">AI Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">DeformAI: automating pharmaceutical deformulation and reverse-engineering research</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">A 5-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates, two of them mandatory on high-severity safety flags, are backed by a full timestamped audit trail. Validated with a pytest suite against mock data. Reduced a multi-week manual research process to an approximately 11-minute guided analysis.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-navy">FastAPI</span>
+<span class="tag tag-navy">WebSocket</span>
+<span class="tag tag-sage">Pydantic v2</span>
+<span class="tag tag-sage">Guardrails</span>
+<span class="tag tag-sage">Audit Trail</span>
+<span class="tag tag-amber">pytest</span>
+<span class="tag tag-amber">Human-in-the-loop</span>
+</div>
+</div>
+</div>
+
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">MonographMind: automating European Pharmacopoeia monograph compliance review</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">Built a Streamlit + FastAPI system automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by the Streamlit frontend and available to other internal tools. Also integrates SOAP-based communication (zeep) with an internal ERP system.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">FastAPI</span>
+<span class="tag tag-navy">Streamlit</span>
+<span class="tag tag-sage">PyMuPDF</span>
+<span class="tag tag-sage">BeautifulSoup</span>
+<span class="tag tag-amber">SOAP</span>
+<span class="tag tag-amber">openpyxl</span>
+</div>
+</div>
+</div>
+
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">AI Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">BD Intelligence Platform: automating pharma business development workflows</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, or database step. PostgreSQL serves as the relational data layer underlying the platform.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-sage">PostgreSQL</span>
+<span class="tag tag-amber">Evaluation</span>
+<span class="tag tag-amber">Guardrails</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="height:1px; background:var(--border); margin:56px 0;"></div>
+
+<div id="projects" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+<div class="s-kicker">Applied ML & Earlier Engineering Work</div>
+<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Additional Projects</h3>
+<p class="s-sub">Applied ML work and earlier software engineering projects. Research and production engineering systems are featured above.</p>
+
+<div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Applied ML</div>
+<div class="proj-grid" style="margin-bottom:32px;">
+<div class="proj-card">
+<div class="proj-thumb pt-sage">Applied ML</div>
+<div class="proj-body">
+<div class="proj-title">Olive Oil Production & Price Prediction</div>
+<div class="proj-desc">Production forecasting dashboard for olive oil yields and extra-virgin prices at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
+<div class="proj-stack"><span class="stag">Python</span><span class="stag">CatBoost</span><span class="stag">XGBoost</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">Dash</span><span class="stag">Plotly</span><span class="stag">Flask</span><span class="stag">Time Series</span></div>
+</div>
+</div>
+<div class="proj-card" onclick="window.open('https://github.com/lina2761991/DiabetesML','_blank')" style="cursor:pointer;">
+<div class="proj-thumb pt-navy">Applied ML</div>
+<div class="proj-body">
+<div class="proj-title">Diabetes Prediction</div>
+<div class="proj-desc">End-to-end ML classification pipeline with a Django dashboard for clinical risk assessment.</div>
+<div class="proj-stack"><span class="stag">Django</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">Classification</span><span class="stag">ROC-AUC</span></div>
+</div>
+</div>
+</div>
+
+<div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Earlier Engineering Work</div>
+<div class="proj-grid">
+<div class="proj-card">
+<div class="proj-thumb pt-amber">Data Analysis</div>
+<div class="proj-body">
+<div class="proj-title">Data Analysis Projects</div>
+<div class="proj-desc">Two R Markdown reports: <a href="https://rpubs.com/lina276/bikeShare1" target="_blank" style="color:var(--navy);">EDA on bike-sharing demand</a>; and an <a href="https://rpubs.com/lina276/Inv" target="_blank" style="color:var(--navy);">investment analysis of IFC funding trends</a>.</div>
+<div class="proj-stack"><span class="stag">R</span><span class="stag">ggplot2</span><span class="stag">tidyverse</span><span class="stag">EDA</span></div>
+</div>
+</div>
+<div class="proj-card">
+<div class="proj-thumb pt-sage">Full-stack</div>
+<div class="proj-body">
+<div class="proj-title">TuniPaw</div>
+<div class="proj-desc">Platform connecting veterinarians, associations, and pet owners across Tunisia.</div>
+<div class="proj-stack"><span class="stag">Symfony3</span><span class="stag">MySQL</span><span class="stag">Bootstrap</span><span class="stag">HTML5/CSS3</span><span class="stag">JavaScript</span><span class="stag">jQuery</span></div>
+</div>
+</div>
+<div class="proj-card">
+<div class="proj-thumb pt-navy">Banking Systems</div>
+<div class="proj-body">
+<div class="proj-title">BTK Bank Applications</div>
+<div class="proj-desc">Three production web applications for debt collection, internal portals, and liquidity ratio calculation.</div>
+<div class="proj-stack"><span class="stag">Java 8</span><span class="stag">JSF</span><span class="stag">MySQL</span><span class="stag">Wildfly</span><span class="stag">PrimeFaces</span></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+<section class="section ivory" id="skills">
+<div class="section-inner">
+<div class="s-kicker">Technical Skills</div>
+<h2 class="s-title">Technical Skills</h2>
+<div class="skill-grid" style="margin-top: 24px;">
+<div class="skill-card">
+<div class="skill-heading">Agentic AI & LLM Applications</div>
+<div class="skill-tags"><span class="skill-tag">LangGraph</span><span class="skill-tag">LangChain</span><span class="skill-tag">Graph-RAG</span><span class="skill-tag">RAG</span><span class="skill-tag">Multi-Agent Orchestration</span><span class="skill-tag">Tool Calling</span><span class="skill-tag">MCP</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Fine-tuning</span><span class="skill-tag">PEFT/LoRA</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">LLM Evaluation, Guardrails & Observability</div>
+<div class="skill-tags"><span class="skill-tag">Ragas</span><span class="skill-tag">LLM-as-a-judge</span><span class="skill-tag">Groundedness/Relevance</span><span class="skill-tag">Prompt-Injection Guardrails</span><span class="skill-tag">Hallucination Detection</span><span class="skill-tag">Cost/Latency/Quality Observability</span><span class="skill-tag">Human-in-the-loop</span><span class="skill-tag">Auditable Outputs</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Engineering & Deployment</div>
+<div class="skill-tags"><span class="skill-tag">FastAPI</span><span class="skill-tag">WebSocket</span><span class="skill-tag">Pydantic v2</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span><span class="skill-tag">CI/CD</span><span class="skill-tag">REST APIs</span><span class="skill-tag">SOAP</span><span class="skill-tag">Streamlit</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">ML & Data Science</div>
+<div class="skill-tags"><span class="skill-tag">PyTorch</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Transformers</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">XGBoost</span><span class="skill-tag">CatBoost</span><span class="skill-tag">W&B</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Research Infrastructure</div>
+<div class="skill-tags"><span class="skill-tag">MLflow</span><span class="skill-tag">DVC</span><span class="skill-tag">Hydra</span><span class="skill-tag">Neo4j</span><span class="skill-tag">Weaviate</span><span class="skill-tag">PostgreSQL</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Biomedical & Clinical AI</div>
+<div class="skill-tags"><span class="skill-tag">Clinical NLP</span><span class="skill-tag">UMLS/MeSH</span><span class="skill-tag">NER</span><span class="skill-tag">Clinical Trial Ontologies</span><span class="skill-tag">Knowledge Graphs</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="experience">
+<div class="section-inner">
+<div class="s-kicker">Experience & Education</div>
+<h2 class="s-title">Background</h2>
+<div class="two-col" style="margin-top: 32px;">
+<div>
+<div class="col-title">Experience</div>
+<div class="timeline">
+<div class="tl-item">
+<span class="tl-dot filled"></span>
+<div class="tl-role">Pharmaceutical Development Project Manager</div>
+<div class="tl-org">Opalia Recordati &middot; Jan 2026 &ndash; Jul 2026</div>
+<div class="tl-note">Designed and shipped three production-facing multi-agent LLM systems: BD Intelligence Platform, DeformAI, and MonographMind, spanning LangGraph orchestration, FastAPI backends, evaluation, and guardrails.</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">AI Apprentice</div>
+<div class="tl-org">InstaDeep &middot; 2023 &ndash; 2025</div>
+<div class="tl-note">M.Sc. AI Research Thesis on AssistTrials: Automated Patient&ndash;Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Software Engineer</div>
+<div class="tl-org">BTK Bank &middot; 2021 &ndash; 2022</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Intern &ndash; Web Development</div>
+<div class="tl-org">APP4MOB &middot; 2020</div>
+</div>
+</div>
+</div>
+<div>
+<div class="col-title">Education</div>
+<div class="timeline">
+<div class="tl-item">
+<span class="tl-dot filled"></span>
+<div class="tl-role">M.Sc. Data Science, AI & Healthtech</div>
+<div class="tl-org">Pristini University &middot; 2022 &ndash; 2025</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Engineering Degree in Software Engineering</div>
+<div class="tl-org">EPI &middot; 2016 &ndash; 2019</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Preparatory Cycle in Physics & Chemistry</div>
+<div class="tl-org">Preparatory Institute of Engineering Studies &middot; 2011 &ndash; 2013</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="writing">
+<div class="section-inner">
+<div class="s-kicker">Technical Writing</div>
+<h2 class="s-title">Technical Writing</h2>
+<p class="s-sub">Independent technical writing produced alongside AI research and system development.</p>
+<div class="writing-list">
+<div class="writing-item w-clickable" onclick="openArticle('a6')">
+<div class="w-date">August 2026</div>
+<div style="flex:1;">
+<div class="w-title">From research agent to production agent: what actually changes</div>
+<div class="w-desc">AssistTrials and DeformAI are both LangGraph multi-agent pipelines, one built for a thesis benchmark, one built to run inside a regulated business. Same core architecture, very different engineering demands. A comparison of what changes when an agent has to survive contact with a real production process.</div>
+<span class="w-tag">Research &rarr; Engineering</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a7')">
+<div class="w-date">August 2026</div>
+<div style="flex:1;">
+<div class="w-title">What "trustworthy" actually has to mean for agentic AI in high-stakes settings</div>
+<div class="w-desc">Trustworthy AI gets used as a label for almost anything. Drawing on a concrete failure mode from AssistTrials and a concrete design choice in DeformAI, an argument for what the term should require: calibrated uncertainty, not just accuracy, and traceability, not just guardrails.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a8')">
+<div class="w-date">July 2026</div>
+<div style="flex:1;">
+<div class="w-title">Why I keep coming back to knowledge graphs: symbolic grounding for LLMs</div>
+<div class="w-desc">Two systems, a MeSH-grounded retrieval agent and a rule-based severity classifier sitting next to an LLM, taught me the same lesson from different angles: the interesting problems in neuro-symbolic AI are not about replacing statistical models with symbolic ones, but about deciding, precisely, where the boundary between them should sit.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a9')">
+<div class="w-date">June 2026</div>
+<div style="flex:1;">
+<div class="w-title">Human-in-the-loop is a design decision, not a fallback</div>
+<div class="w-desc">Most systems bolt a human review step onto the end, as an apology for what the model might get wrong. DeformAI's seven intervention points were designed in from the start, as part of the architecture. What that distinction actually changes, and why it matters for explainability research.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a10')">
+<div class="w-date">May 2026</div>
+<div style="flex:1;">
+<div class="w-title">What LLM-as-a-judge gets wrong, and how I've worked around it</div>
+<div class="w-desc">Position bias, length bias, self-preference: LLM-as-a-judge is useful and quietly unreliable at the same time. What I actually changed in BD Intelligence Platform and DeformAI to make judge scores trustworthy enough to act on, and the calibration gap I still haven't solved.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a11')">
+<div class="w-date">April 2026</div>
+<div style="flex:1;">
+<div class="w-title">Cost-aware agent design: the metric that doesn't show up in benchmarks</div>
+<div class="w-desc">Accuracy and latency get all the attention. Cost per completed task is what actually decided most of the architecture choices in BD Intelligence Platform and DeformAI, model routing, caching, streaming, and it's barely treated as a first-class metric in agentic AI evaluation.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a4')">
+<div class="w-date">April 2026</div>
+<div style="flex:1;">
+<div class="w-title">Knowledge graph databases: when they are worth it, and when they are not</div>
+<div class="w-desc">A framework for deciding when graph databases genuinely justify their cost drawn from the experience of designing AI systems for pharmaceutical R&D and Business Development.</div>
+<span class="w-tag">Opinion · Business</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a12')">
+<div class="w-date">March 2026</div>
+<div style="flex:1;">
+<div class="w-title">What building for a regulated industry taught me about AI accountability</div>
+<div class="w-desc">Technical guardrails answer "was the output right." A regulated environment forces a different question: when it's wrong, who is answerable, and can they show what they knew. Why I think that organizational framing of accountability generalizes well past pharma.</div>
+<span class="w-tag">Research Perspective</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a3')">
+<div class="w-date">March 2026</div>
+<div style="flex:1;">
+<div class="w-title">Multi-agent LLMs in pharma: promise vs. reality</div>
+<div class="w-desc">An honest practitioner's assessment drawing on two years across <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia</a> what multi-agent pipelines genuinely deliver, where they still fail, and what the open research problems actually are.</div>
+<span class="w-tag">Opinion</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a5')">
+<div class="w-date">August 2025</div>
+<div style="flex:1;">
+<div class="w-title">From research question to working system: how an AI research project actually unfolds</div>
+<div class="w-desc">A walkthrough of the full research process from domain understanding and literature review through systematic experimentation, architecture design, and honest evaluation drawn from building AssistTrials at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
+<span class="w-tag">Research Process</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a1')">
+<div class="w-date">July 2025</div>
+<div style="flex:1;">
+<div class="w-title">What Graph-RAG actually looks like in production</div>
+<div class="w-desc">A step-by-step breakdown of the AssistTrials pipeline from why standard RAG fails for clinical matching, to the nine-node LangGraph architecture, synthetic patient generation, MeSH ontology enrichment, and honest lessons learned.</div>
+<span class="w-tag">Technical Writeup</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+<div class="writing-item w-clickable" onclick="openArticle('a2')">
+<div class="w-date">May 2025</div>
+<div style="flex:1;">
+<div class="w-title">Why cross-encoder reranking matters in biomedical retrieval</div>
+<div class="w-desc">In AssistTrials, the reranker turned out to be the single highest-impact component and for good reason. This article breaks down the bi-encoder vs. cross-encoder tradeoff through the lens of real experimental results, and explains why the biomedical domain makes this gap especially pronounced.</div>
+<span class="w-tag">Technical Explainer</span>
+</div>
+<div class="w-arrow">&#8594;</div>
+</div>
+</div>
+</div>
+</section>
+
+<div id="article-overlay">
+<div class="article-page">
+<button class="back-btn" onclick="closeArticle()">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+Back to portfolio
+</button>
+<div id="article-content"></div>
+</div>
+</div>
 
 <script>
 var articles = {
-  a1: {
-    tag:'Technical writeup', date:' July 2025',
-    title:'What Graph-RAG actually looks like in production',
-    byline:'M.Sc. Thesis Research &mdash; InstaDeep, 2025',
-    body:'<p>There is a lot of writing about Graph-RAG on the internet. Most of it describes the concept in clean diagrams: a knowledge graph here, a vector retrieval step there, an LLM at the end that reasons over everything. It looks elegant. It looks straightforward.</p><p>Building it in a real clinical setting is a different story.</p><p>Here is what Graph-RAG actually looked like when I built it as part of my M.Sc. thesis at InstaDeep; an end-to-end system called AssistTrials for automated patient\u2013clinical trial matching. The decisions, the failure modes, the things I wish I had known all of it, as clearly as I can put it.</p><h2>The problem we were solving</h2><p>Clinical trial recruitment is broken. Only 3\u20135% of eligible patients actually enroll in trials. Over 80% of trials fail to meet their enrollment timelines. The eligibility criteria are written in clinical natural language dense, ambiguous, full of medical abbreviations, negations, and hierarchical disease references. Patient records, on the other hand, are unstructured admission-style narratives. Matching these two kinds of documents is not a keyword search problem. It is a semantic reasoning problem.</p><h2>Why Graph-RAG and not standard RAG</h2><p>Standard RAG breaks down for clinical matching in two specific ways. First, the vocabulary mismatch is severe. A patient record might say \u201cHTN\u201d and a trial might say \u201chypertension\u201d those embed similarly. But \u201canaplastic astrocytoma of the spine\u201d vs. \u201cneoplasms of the central nervous system\u201d is a hierarchical relationship that flat embedding similarity will miss entirely. Second, eligibility is not about similarity, it is about logical satisfaction. A knowledge graph lets us encode hierarchical relationships between disease terms through MeSH (Medical Subject Headings). When a patient has \u201canaplastic astrocytoma,\u201d we know from MeSH this is a child of \u201cNeoplasms\u201d (C04) and \u201cNervous System Diseases\u201d (C10). This lets us retrieve trials that are relevant at the ontological level, not just the lexical level.</p><h2>What the system actually looked like</h2><p>The final pipeline, implemented using LangGraph\u2019s StateGraph, executed a nine-step sequence. <strong>Data loading</strong> parsed 375,580 clinical trial documents from ClinicalTrials.gov. <strong>LLM-based entity extraction</strong> via GPT-4.1 mapped each patient\u2019s conditions to MeSH terms and parent MeSH codes. <strong>Demographic filtering</strong> by gender, age, and parent MeSH tree codes reduced the search space dramatically, this alone improved AUROC on TREC 2022 from 0.60 to 0.72. <strong>Synthetic patient generation</strong> was the most counterintuitive step: instead of comparing patient narratives to trial criteria directly, we generated synthetic patient descriptions <em>from</em> the trial eligibility criteria and compared those to the actual patient narrative. This bridged the vocabulary gap, improving AUROC from 0.57 to 0.60. <strong>ChromaDB vectorstore retrieval</strong> then retrieved the most semantically similar synthetic profiles. <strong>LLM reranking</strong> was the single largest improvement in the entire pipeline AUROC jumped from 0.61 to 0.69 on TREC 2021 and from 0.72 to 0.77 on TREC 2022. The remaining steps processed eligibility criteria into structured yes/no questions and scored each against the patient narrative, marking a trial as a match only if all inclusion criteria were satisfied and no exclusion criteria violated.</p><h2>What I got wrong</h2><p>I underestimated how much the vocabulary mismatch problem would dominate everything. The first version used raw cosine similarity. AUROC was 0.57 barely better than random. ClinicalBERT was also not the right tool for MeSH term generation: it achieved AUROC of 0.58 vs. GPT-4.1\u2019s 0.61. A domain-specific model was worse than a general-purpose large model for this task, partly because MeSH mapping requires reasoning over ontological hierarchies, not just clinical language understanding.</p><h2>Where the system ended up</h2><p>The final pipeline achieved AUROC of 0.69 on TREC 2021 and 0.77 on TREC 2022, compared to the LLM-Match state-of-the-art of 0.7829 and 0.8102. The gap is real but the architecture is sound and the remaining distance is primarily a function of model scale and fine-tuning. The system was delivered as a Streamlit web application the \u201cClinical Trial Assistant\u201d allowing clinicians to input a patient summary and receive a ranked list of relevant trials in real time. Building this system convinced me that the interesting open problems in clinical AI are not primarily about model capability they are about knowledge representation, evaluation, and reliability.</p>'
-  },
-  a2: {
-    tag:'Technical explainer', date:'May 2025',
-    title:'Why cross-encoder reranking matters in biomedical retrieval',
-    byline:'Retrieval experiments from the M.Sc. Thesis Research  &mdash; InstaDeep, 2025',
-    body:'<p>When I started building the retrieval component of AssistTrials, I assumed the hard problem was finding the right embedding model. The reranker was an afterthought. It turned out to be the single most impactful component in the entire pipeline.</p><h2>The Retrieval Gap</h2><p>Any retrieval system is solving two distinct problems. The first is <em>recall</em>: finding the relevant documents at all. The second is <em>precision</em>: correctly ordering the candidates you have retrieved. Standard dense retrieval (bi-encoders) handles recall reasonably well, you encode all documents offline and retrieve the top-k by cosine similarity at query time. But bi-encoders are structurally limited for precision. They encode the query and each document <em>independently</em>. The model never sees the query and document together during inference. It cannot model the specific interactions between them; the conditional dependencies, the logical relationships, the nuanced eligibility reasoning that clinical trial matching requires.</p><h2>What Cross-Encoders Do Differently</h2><p>A cross-encoder takes the query and a candidate document as a <em>joint input</em>, producing a single relevance score. The model can attend to every token in both simultaneously. It can notice that a patient has \u201ctype 2 diabetes mellitus\u201d and a trial requires \u201cabsence of insulin-dependent diabetes\u201d and reason that these are different conditions, something a bi-encoder cannot reliably do. The tradeoff is speed: you must run inference on every query-document pair at retrieval time. This makes cross-encoders impractical as a first-stage retriever over hundreds of thousands of documents but entirely practical as a second-stage reranker over a small candidate set. The standard two-stage pattern gives you recall from dense retrieval and precision from full interaction modeling.</p><h2>What The Numbers Looked Like</h2><p>Our best configuration before adding the reranker achieved AUROC of 0.61 on TREC 2021 and 0.72 on TREC 2022. Adding the LLM reranker pushed AUROC to 0.69 and 0.77 respectively which is a gain larger than the combined improvements from all other pipeline changes. Without the reranker, we were roughly 0.17 AUROC below state-of-the-art. With it, we closed that gap to approximately 0.09. A single architectural component reduced our distance to state-of-the-art by half.</p><h2>Why The Gains Are Especially Large In The Biomedical Domain</h2><p><strong>Negation is everywhere.</strong> \u201cNo prior history of cardiac arrhythmia\u201d and \u201chistory of cardiac arrhythmia\u201d are semantically opposite but have very similar embedding representations. A bi-encoder often ranks them similarly. A cross-encoder handles negation much more reliably. <strong>Eligibility logic is conjunctive.</strong> A patient must satisfy <em>all</em> inclusion criteria and violate <em>none</em> of the exclusion criteria, a logical AND over multiple conditions that single-vector similarity handles poorly. <strong>The vocabulary is hierarchical and technical.</strong> Medical terminology organized into ontological hierarchies requires reasoning that general-purpose bi-encoders may not capture reliably.</p><h2>What This Implies For Research</h2><p>The precision gap between bi-encoders and cross-encoders in biomedical retrieval is well-documented. What is less well understood is how to close it efficiently, how to get cross-encoder quality at bi-encoder speed, or how to fine-tune models that encode the logical structure of eligibility reasoning rather than just semantic similarity. The standard benchmarks measure end-to-end performance but do not isolate what the model is doing at each stage. Building better evaluation frameworks that separately assess recall, precision, and eligibility reasoning would help the field move faster. The gap between measuring outcomes and understanding mechanisms is where most of the interesting research actually lives.</p>'
-  },
-  a3: {
-    tag:'Opinion', date:'March 2026',
-    title:'Multi-agent LLMs in pharma: promise vs. reality',
-    byline:'Based on working across InstaDeep (research) and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (industry) &mdash; 2026',
-    body:'<p>I have spent the last two years in an unusual position: building LLM-based multi-agent systems for clinical and pharmaceutical applications at InstaDeep, and then deploying AI-driven production systems at a generics pharmaceutical company. Two years with one foot in research and one in industry. From that position, the gap between what multi-agent AI promises and what it actually delivers in pharma becomes very visible.</p><h2>What we mean by multi-agent in this context</h2><p>The architectures that actually deliver value tend to be <em>agentic pipelines with modular reasoning</em>: a central orchestrator (implemented with LangGraph\u2019s StateGraph) that coordinates a sequence of specialized functional nodes, each responsible for a distinct subtask, with a shared state updated as the pipeline progresses. Not the autonomous, open-ended AI agent of popular imagination. It is closer to a well-engineered workflow where the \u201cagent\u201d part means the system can make conditional decisions choosing which node to activate next based on intermediate results. Keeping that distinction in mind matters a lot for setting realistic expectations.</p><h2>Where it genuinely works</h2><p><strong>Decomposing complex document understanding tasks.</strong> \u201cDoes this patient qualify for this trial?\u201d is not a single question, it is a conjunction of dozens of sub-questions. A multi-agent pipeline decomposes this naturally. Each node does a tractable, well-defined task. The LLM is never asked to do everything at once. When the system produced an incorrect match, we could trace exactly which node failed and why. <strong>Ontology-aware filtering at scale.</strong> In AssistTrials, a dedicated filtering node operated on structured MeSH data before any semantic search, combining symbolic filtering with neural retrieval cleanly. <strong>Handling the retrieval-reasoning boundary.</strong> Our question-generation step forced the reasoning to be explicit and criterion-by-criterion, rather than asking the model to produce a holistic judgment over a large document. The result was more reliable and much more auditable.</p><h2>Where it does not yet work</h2><p><strong>Temporal reasoning over clinical histories.</strong> A trial might exclude patients who received \u201csystemic chemotherapy within the past 6 months.\u201d Patient records encode time implicitly. Current LLM pipelines can extract facts from clinical text reasonably well. They struggle to reason reliably about temporal relationships when the timeline is scattered across an unstructured narrative. <strong>Handling contradictions and uncertainty.</strong> Real clinical notes contain contradictions, outdated information, and ambiguous shorthand. Current pipelines treat all text as equally reliable, which leads to systematic errors. <strong>Evaluation at the criterion level.</strong> Standard benchmarks measure patient-level or trial-level performance. They do not tell you whether the system reasons correctly about individual eligibility criteria. A system can achieve reasonable benchmark scores while making systematically wrong decisions about negations, temporal conditions, or dosage requirements. <strong>Cost and latency in production.</strong> In our research system, we used GPT-4.1 for multiple pipeline steps per patient-trial pair. At the scale of a real matching system, this adds up quickly. The pharmaceutical industry cares about cost per correct match, time saved per coordinator, and reduction in trial enrollment failures different optimization targets than accuracy alone.</p><h2>What I think the next few years look like</h2><p>The systems that will actually get deployed are not the ones with the highest benchmark scores. They are the ones that are auditable, cost-effective, and trustworthy enough for clinicians to rely on in high-stakes decisions. The most interesting open problems are not about making the models more powerful they are about making them more reliable in the specific ways that matter for clinical use: handling temporal logic, managing uncertainty, providing interpretable evidence for decisions, and maintaining performance when the real-world data distribution shifts away from the benchmark. These are not purely engineering problems. They are research questions. And they are the reason I want to do a PhD.</p>'
-  },
- 
-  a4: {
-    tag:'Opinion · Business',
-    date:'April 2026',
-    title:'Knowledge graph databases: when they are worth it and when they are not',
-    byline:'Written in the context of leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>',
-    body:'<p>One of the first questions I had to answer when starting to design AI systems for a pharmaceutical company was whether we needed a knowledge graph database. The answer was not obvious, and the process of working through it taught me something useful about how to think about technology decisions in general.</p><p>This piece is my attempt to share that thinking particularly for anyone sitting in a similar position, where the technology sounds compelling but the cost is real and the justification needs to be clear.</p><h2>What a Knowledge Graph Database Actually Does Differently</h2><p>A regular database stores data in rows and columns. It is fast, well-understood, and excellent at answering questions like \"show me all orders placed in March\" predictable lookups against structured records.</p><p>A knowledge graph database stores data as a web of connected nodes. Instead of rows, it stores entities; people, products, diseases, compounds and the relationships between them. It is designed to answer a fundamentally different kind of question: \"How is Person A connected to Company Z, and through how many steps?\" or \"Which drugs interact with this protein, and what other diseases share this pathway?\"</p><p>The key difference is that in a graph database, the connections between data are treated as first-class citizens, not as an afterthought computed at query time. That is powerful. It is also expensive, and understanding why matters before making any decision.</p><h2>Why Graph Databases Cost More To Run</h2><p>There are four main cost drivers worth understanding.</p><h4>When A Graph Database Is The Right Choice</h4><p>Given the costs, a graph database should only be considered when the business problem is fundamentally about navigating relationships and when that capability delivers measurable value that justifies the investment.</p><p>The clearest use cases are fraud detection (tracing how money flows through networks of accounts and shell companies across dozens of steps), recommendation engines (traversing complex webs of user behavior and product attributes simultaneously), pharmaceutical knowledge graphs (mapping relationships between diseases, genes, proteins, and drug compounds to answer questions that would be nearly impossible in a relational database), and infrastructure dependency mapping (understanding what breaks when a specific server fails, across hundreds of interconnected services).</p><p>What these have in common: the value of the system depends on traversing deep, multi-layered relationships at query time. If your problem genuinely requires this, a graph database can be a transformative investment.</p><h4>When It Is Not The Right Choice</h4><p>The harder discipline is recognizing when a graph database is not necessary especially when the technology sounds appealing.</p><p>If your primary need is storing and retrieving structured records customers, orders, invoices, employee data a relational database is faster, cheaper, and far easier to maintain. Adding a graph database here introduces cost and complexity with no meaningful benefit. The same applies when relationships are simple: one customer has many orders, one product belongs to one category. Graph databases shine on deep, multi-layered relationships simple ones do not justify the overhead.</p><p>For high-volume, simple lookups \"fetch this user\'s profile,\" \"look up this product price\" relational databases are significantly faster. Graph databases are optimized for traversal, not raw lookup speed. And when budget is a constraint, the 3x–10x cost premium over equivalent relational infrastructure is a serious consideration that should not be rationalized away by technological enthusiasm.</p><h4>The Framework I Use For These Decisions</h4><p>The right question is never \"is this technology interesting?\" It is: does the problem we are solving require this specific capability, and does the value it delivers justify the premium we will pay to build, run, and maintain it?</p><p>When both answers are yes, graph databases are worth it. When either answer is uncertain, a well-designed relational database will almost always deliver better value and leave budget and engineering capacity for problems that actually require specialized tools.</p><p>That discipline matching tool to problem rather than adopting tools because they are sophisticated is, I think, one of the more underrated skills in applied AI work.</p>'
-  },
-    a5: {
-    tag:'Research Process',
-    date:'August 2025',
-    title:'From research question to working system: how an AI research project actually unfolds',
-    byline:'M.Sc. Thesis Research &mdash; InstaDeep, 2025',
-    body:'<p>There is a version of AI research that looks clean in retrospect: a well-defined problem, a clever solution, a table of results. What that version leaves out is everything that happens in between the false starts, the pivots, the experiments that taught you what not to do. This article is about the messy, real version: the actual sequence of steps that takes a research project from an open problem to a working system.</p><p>I am writing this from the experience of building AssistTrials, my M.Sc. thesis at InstaDeep a Graph-RAG multi-agent pipeline for automated patient-to-clinical trial matching. The project followed a hybrid methodology combining CRISP-DM for the data science workflow and Scrum for iterative delivery. In retrospect, the phases map cleanly onto what I now understand to be the standard structure of any serious AI research project.</p><h2>Phase 1: Understanding the domain before touching the data</h2><p>The first instinct when starting an AI project is to find a dataset and start experimenting. This is almost always the wrong first move.</p><p>Before writing a single line of code, I spent several weeks understanding the domain: what a clinical trial is, how patient recruitment actually works, what eligibility criteria look like in practice, and why the matching process fails so consistently. Only 3–5% of eligible patients ever enroll in clinical trials. Over 80% of trials fail to meet their enrollment timelines. Understanding those numbers and the institutional, regulatory, and operational reasons behind them was essential for understanding what the system actually needed to do.</p><p>This phase also involved understanding the constraints that would shape the solution: regulatory compliance requirements, the structure of ClinicalTrials.gov data, the difference between inclusion and exclusion criteria, and why simple keyword matching had failed in prior work. Domain understanding is not a box you tick before the real work starts. It is the foundation on which every subsequent decision rests.</p><h2>Phase 2: Literature review: understanding the state of the art</h2><p>The literature review phase is where you map the research landscape: what has been tried, what has worked, what has failed, and where the gaps are.</p><p>For AssistTrials, this meant a systematic review of patient-to-trial matching systems from early rule-based approaches, through ML-based methods, to the most recent LLM-based frameworks. I studied TrialGPT (the first major LLM-based breakthrough in the field), LLM-Match (the current state-of-the-art at the time of my thesis), and a range of intermediate approaches.</p><p>The literature review serves two purposes that are often underappreciated. The first is obvious: it tells you what the best existing approaches are and what benchmarks you need to beat. The second is subtler: it teaches you the vocabulary and conceptual framing of a field, which is what allows you to position your own contribution clearly. You cannot explain why your approach is different or better without understanding the landscape it sits in.</p><p>A practical note: good literature reviews are not exhaustive surveys. They are opinionated syntheses. The goal is to identify the two or three most relevant prior works, understand them deeply, and extract the specific limitations your work is designed to address.</p><p><strong>One of the most important decisions in any research project is choosing which paper to treat as your backbone</strong>, the reference you align your experimental setup against, whose benchmarks you adopt, and whose limitations you are explicitly trying to address. After reviewing the landscape, I chose LLM-Match as the backbone of AssistTrials. It was the most recent state-of-the-art system at the time, using open-source LLMs and RAG for patient-trial matching, and it had been evaluated on publicly available benchmarks TREC 2021 and 2022 which made direct comparison possible. This choice was deliberate: by adopting the same datasets, the same evaluation metric (AUROC), and the same experimental protocol as LLM-Match, any improvement I achieved would be meaningful rather than the product of a favorable or incomparable setup. Choosing the right backbone paper is not a formality. It is a foundational research decision that shapes every experiment that follows.</p><h2>Phase 3: Data collection and understanding</h2><p>For most real-world AI research projects, the data does not come ready to use. Understanding, collecting, and preparing it is a substantial phase of its own.</p><p>In AssistTrials, the data came from three sources: patient case descriptions from the TREC 2021 and 2022 Clinical Trials benchmarks, clinical trial documents from ClinicalTrials.gov (375,580 trials in total), and ground truth relevance judgments linking patients to relevant trials. Each source required different handling.</p><p>The patient data consisted of unstructured XML narratives admission-style clinical notes with no consistent structure. The clinical trial data was semi-structured XML with both metadata fields and free-text eligibility criteria embedded in a single tag. The ground truth labels were space-delimited text files that required parsing, cleaning, and binarization.</p><p>Beyond the technical work, exploratory data analysis revealed things that directly shaped the system design: the overwhelming skew toward adult participants in trial eligibility criteria, the disease distribution across patient demographics, the prevalence of specific drug categories all of which informed the filtering logic built into the final pipeline.</p><p>Data understanding is not a precursor to research. It is research.</p><h2>Phase 4: Systematic experimentation</h2><p>This is the phase most people picture when they think of AI research and it is where the CRISP-DM cycle becomes most visible. The key discipline is to treat each experiment as a hypothesis test, not a search for the best result.</p><p>In AssistTrials, the experimentation phase followed a deliberate progression. I started with the simplest possible baseline raw cosine similarity between patient narratives and clinical trial documents and measured its performance (AUROC 0.57 on TREC 2021). Every subsequent experiment introduced one change at a time: synthetic patient generation, MeSH term filtering, different embedding models, the LLM reranker. Each change was evaluated against the same benchmark, with the same metrics, so that the contribution of each component was clear.</p><p>This is the part of the process where most of the learning happens not from the experiments that work, but from the ones that do not. ClinicalBERT underperforming GPT-4.1 for MeSH term generation was a meaningful finding. It told me something about the nature of the task: ontological hierarchy reasoning requires general-purpose inference, not just biomedical language understanding. That kind of insight only emerges from systematic experimentation with controlled comparisons.</p><p>The primary metric throughout was AUROC, the same metric used by the state-of-the-art baseline which kept the comparisons honest and externally interpretable.</p><h2>Phase 5: Architecture design and system integration</h2><p>Once the best-performing components had been identified through experimentation, the challenge shifted from &quot;which components work?&quot; to &quot;how do they fit together into a coherent system?&quot;</p><p>The final AssistTrials pipeline was implemented as an agentic graph using LangGraph&#39;s StateGraph a directed acyclic graph where each node was a modular function and the edges encoded the control flow logic. This architecture was chosen deliberately: it made the system interpretable (you could trace exactly which node produced which output), fault-resilient (a failure in one node did not collapse the whole pipeline), and extensible (new nodes could be added without restructuring existing ones).</p><p>The nine-step pipeline data loading, entity extraction, demographic filtering, synthetic patient generation, vectorstore creation, retrieval, LLM reranking, criteria processing, question generation, and scoring emerged from the experimental phase. The architecture phase was about implementing those components at production quality: with proper error handling, caching, CI/CD standards, and a user-facing interface built in Streamlit.</p><p>System integration almost always surfaces problems that experimentation did not. The interaction between components at scale, the latency of multiple sequential LLM calls, the edge cases in real patient data, these only appear when the system runs end-to-end.</p><h2>Phase 6: Evaluation, benchmarking, and honest reporting</h2><p>The final phase is evaluation and the discipline here is honesty about what your system does and does not do well.</p><p>AssistTrials was benchmarked against LLM-Match on the TREC 2021 and 2022 datasets, using AUROC as the primary metric alongside precision, recall, F1, MAP, MRR, and nDCG. The results were competitive 0.69 on TREC 2021 and 0.77 on TREC 2022, compared to state-of-the-art scores of 0.7829 and 0.8102. The gap was real and I reported it honestly, with a clear analysis of where it came from.</p><p>Good evaluation is not just about the final numbers. It is about understanding which components contributed what, where the remaining performance gap lies, and what limitations the system has that the benchmarks do not fully capture. In our case: the n2c2 dataset was inaccessible for evaluation, temporal reasoning over clinical histories remained an unsolved limitation, and the system had not been tested on real (non-synthetic) patient records.</p><p>These limitations are not failures to hide. They are the honest boundary conditions of the work and they are, in most cases, exactly where the next research project begins.</p><h2>What this process taught me about AI research</h2><p>Looking back, the most important thing the AssistTrials project taught me is that AI research is not primarily about the model. The model is one component in a much larger process of problem understanding, literature synthesis, data work, systematic experimentation, architectural design, and honest evaluation.</p><p>The projects that produce genuinely useful results are the ones where each of these phases is taken seriously where domain understanding shapes the problem formulation, where the literature review informs the experimental design, where experimentation is systematic rather than opportunistic, and where evaluation is honest about what works and what does not.</p><p>That process is what I am seeking a PhD to practice at depth.</p>'
-  
+a1: {
+tag:'Technical writeup', date:'July 2025',
+title:'What Graph-RAG actually looks like in production',
+byline:'M.Sc. Thesis Research &mdash; InstaDeep, 2025',
+body:'<p>There is a lot of writing about Graph-RAG on the internet. Most of it describes the concept in clean diagrams: a knowledge graph here, a vector retrieval step there, an LLM at the end that reasons over everything. It looks elegant. It looks straightforward.</p><p>Building it in a real clinical setting is a different story.</p><p>Here is what Graph-RAG actually looked like when I built it as part of my M.Sc. thesis at InstaDeep; an end-to-end system called AssistTrials for automated patient–clinical trial matching. The decisions, the failure modes, the things I wish I had known all of it, as clearly as I can put it.</p><h2>The problem we were solving</h2><p>Clinical trial recruitment is broken. Only 3–5% of eligible patients actually enroll in trials. Over 80% of trials fail to meet their enrollment timelines. The eligibility criteria are written in clinical natural language dense, ambiguous, full of medical abbreviations, negations, and hierarchical disease references. Patient records, on the other hand, are unstructured admission-style narratives. Matching these two kinds of documents is not a keyword search problem. It is a semantic reasoning problem.</p><h2>Why Graph-RAG and not standard RAG</h2><p>Standard RAG breaks down for clinical matching in two specific ways. First, the vocabulary mismatch is severe. A patient record might say “HTN” and a trial might say “hypertension” those embed similarly. But “anaplastic astrocytoma of the spine” vs. “neoplasms of the central nervous system” is a hierarchical relationship that flat embedding similarity will miss entirely. Second, eligibility is not about similarity, it is about logical satisfaction. A knowledge graph lets us encode hierarchical relationships between disease terms through MeSH (Medical Subject Headings). When a patient has “anaplastic astrocytoma,” we know from MeSH this is a child of “Neoplasms” (C04) and “Nervous System Diseases” (C10). This lets us retrieve trials that are relevant at the ontological level, not just the lexical level.</p><h2>What the system actually looked like</h2><p>The final pipeline, implemented using LangGraph’s StateGraph, executed a nine-step sequence. <strong>Data loading</strong> parsed 375,580 clinical trial documents from ClinicalTrials.gov. <strong>LLM-based entity extraction</strong> via GPT-4.1 mapped each patient’s conditions to MeSH terms and parent MeSH codes. <strong>Demographic filtering</strong> by gender, age, and parent MeSH tree codes reduced the search space dramatically, this alone improved AUROC on TREC 2022 from 0.60 to 0.72. <strong>Synthetic patient generation</strong> was the most counterintuitive step: instead of comparing patient narratives to trial criteria directly, we generated synthetic patient descriptions <em>from</em> the trial eligibility criteria and compared those to the actual patient narrative. This bridged the vocabulary gap, improving AUROC from 0.57 to 0.60. <strong>ChromaDB vectorstore retrieval</strong> then retrieved the most semantically similar synthetic profiles. <strong>LLM reranking</strong> was the single largest improvement in the entire pipeline AUROC jumped from 0.61 to 0.69 on TREC 2021 and from 0.72 to 0.77 on TREC 2022. The remaining steps processed eligibility criteria into structured yes/no questions and scored each against the patient narrative, marking a trial as a match only if all inclusion criteria were satisfied and no exclusion criteria violated.</p><h2>What I got wrong</h2><p>I underestimated how much the vocabulary mismatch problem would dominate everything. The first version used raw cosine similarity. AUROC was 0.57 barely better than random. ClinicalBERT was also not the right tool for MeSH term generation: it achieved AUROC of 0.58 vs. GPT-4.1’s 0.61. A domain-specific model was worse than a general-purpose large model for this task, partly because MeSH mapping requires reasoning over ontological hierarchies, not just clinical language understanding.</p><h2>Where the system ended up</h2><p>The final pipeline achieved AUROC of 0.69 on TREC 2021 and 0.77 on TREC 2022, compared to the LLM-Match state-of-the-art of 0.7829 and 0.8102. The gap is real but the architecture is sound and the remaining distance is primarily a function of model scale and fine-tuning. The system was delivered as a Streamlit web application the “Clinical Trial Assistant” allowing clinicians to input a patient summary and receive a ranked list of relevant trials in real time. Building this system convinced me that the interesting open problems in clinical AI are not primarily about model capability they are about knowledge representation, evaluation, and reliability.</p>'
+},
+a2: {
+tag:'Technical explainer', date:'May 2025',
+title:'Why cross-encoder reranking matters in biomedical retrieval',
+byline:'Retrieval experiments from the M.Sc. Thesis Research &mdash; InstaDeep, 2025',
+body:'<p>When I started building the retrieval component of AssistTrials, I assumed the hard problem was finding the right embedding model. The reranker was an afterthought. It turned out to be the single most impactful component in the entire pipeline.</p><h2>The Retrieval Gap</h2><p>Any retrieval system is solving two distinct problems. The first is <em>recall</em>: finding the relevant documents at all. The second is <em>precision</em>: correctly ordering the candidates you have retrieved. Standard dense retrieval (bi-encoders) handles recall reasonably well, you encode all documents offline and retrieve the top-k by cosine similarity at query time. But bi-encoders are structurally limited for precision. They encode the query and each document <em>independently</em>. The model never sees the query and document together during inference. It cannot model the specific interactions between them; the conditional dependencies, the logical relationships, the nuanced eligibility reasoning that clinical trial matching requires.</p><h2>What Cross-Encoders Do Differently</h2><p>A cross-encoder takes the query and a candidate document as a <em>joint input</em>, producing a single relevance score. The model can attend to every token in both simultaneously. It can notice that a patient has “type 2 diabetes mellitus” and a trial requires “absence of insulin-dependent diabetes” and reason that these are different conditions, something a bi-encoder cannot reliably do. The tradeoff is speed: you must run inference on every query-document pair at retrieval time. This makes cross-encoders impractical as a first-stage retriever over hundreds of thousands of documents but entirely practical as a second-stage reranker over a small candidate set. The standard two-stage pattern gives you recall from dense retrieval and precision from full interaction modeling.</p><h2>What The Numbers Looked Like</h2><p>Our best configuration before adding the reranker achieved AUROC of 0.61 on TREC 2021 and 0.72 on TREC 2022. Adding the LLM reranker pushed AUROC to 0.69 and 0.77 respectively which is a gain larger than the combined improvements from all other pipeline changes. Without the reranker, we were roughly 0.17 AUROC below state-of-the-art. With it, we closed that gap to approximately 0.09. A single architectural component reduced our distance to state-of-the-art by half.</p><h2>Why The Gains Are Especially Large In The Biomedical Domain</h2><p><strong>Negation is everywhere.</strong> “No prior history of cardiac arrhythmia” and “history of cardiac arrhythmia” are semantically opposite but have very similar embedding representations. A bi-encoder often ranks them similarly. A cross-encoder handles negation much more reliably. <strong>Eligibility logic is conjunctive.</strong> A patient must satisfy <em>all</em> inclusion criteria and violate <em>none</em> of the exclusion criteria, a logical AND over multiple conditions that single-vector similarity handles poorly. <strong>The vocabulary is hierarchical and technical.</strong> Medical terminology organized into ontological hierarchies requires reasoning that general-purpose bi-encoders may not capture reliably.</p><h2>What This Implies For Research</h2><p>The precision gap between bi-encoders and cross-encoders in biomedical retrieval is well-documented. What is less well understood is how to close it efficiently, how to get cross-encoder quality at bi-encoder speed, or how to fine-tune models that encode the logical structure of eligibility reasoning rather than just semantic similarity. The standard benchmarks measure end-to-end performance but do not isolate what the model is doing at each stage. Building better evaluation frameworks that separately assess recall, precision, and eligibility reasoning would help the field move faster. The gap between measuring outcomes and understanding mechanisms is where most of the interesting research actually lives.</p>'
+},
+a3: {
+tag:'Opinion', date:'March 2026',
+title:'Multi-agent LLMs in pharma: promise vs. reality',
+byline:'Based on working across InstaDeep (research) and <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (industry) &mdash; 2026',
+body:'<p>I have spent the last two years in an unusual position: building LLM-based multi-agent systems for clinical and pharmaceutical applications at InstaDeep, and then deploying AI-driven production systems at a generics pharmaceutical company. Two years with one foot in research and one in industry. From that position, the gap between what multi-agent AI promises and what it actually delivers in pharma becomes very visible.</p><h2>What we mean by multi-agent in this context</h2><p>The architectures that actually deliver value tend to be <em>agentic pipelines with modular reasoning</em>: a central orchestrator (implemented with LangGraph’s StateGraph) that coordinates a sequence of specialized functional nodes, each responsible for a distinct subtask, with a shared state updated as the pipeline progresses. Not the autonomous, open-ended AI agent of popular imagination. It is closer to a well-engineered workflow where the “agent” part means the system can make conditional decisions choosing which node to activate next based on intermediate results. Keeping that distinction in mind matters a lot for setting realistic expectations.</p><h2>Where it genuinely works</h2><p><strong>Decomposing complex document understanding tasks.</strong> “Does this patient qualify for this trial?” is not a single question, it is a conjunction of dozens of sub-questions. A multi-agent pipeline decomposes this naturally. Each node does a tractable, well-defined task. The LLM is never asked to do everything at once. When the system produced an incorrect match, we could trace exactly which node failed and why. <strong>Ontology-aware filtering at scale.</strong> In AssistTrials, a dedicated filtering node operated on structured MeSH data before any semantic search, combining symbolic filtering with neural retrieval cleanly. <strong>Handling the retrieval-reasoning boundary.</strong> Our question-generation step forced the reasoning to be explicit and criterion-by-criterion, rather than asking the model to produce a holistic judgment over a large document. The result was more reliable and much more auditable.</p><h2>Where it does not yet work</h2><p><strong>Temporal reasoning over clinical histories.</strong> A trial might exclude patients who received “systemic chemotherapy within the past 6 months.” Patient records encode time implicitly. Current LLM pipelines can extract facts from clinical text reasonably well. They struggle to reason reliably about temporal relationships when the timeline is scattered across an unstructured narrative. <strong>Handling contradictions and uncertainty.</strong> Real clinical notes contain contradictions, outdated information, and ambiguous shorthand. Current pipelines treat all text as equally reliable, which leads to systematic errors. <strong>Evaluation at the criterion level.</strong> Standard benchmarks measure patient-level or trial-level performance. They do not tell you whether the system reasons correctly about individual eligibility criteria. A system can achieve reasonable benchmark scores while making systematically wrong decisions about negations, temporal conditions, or dosage requirements. <strong>Cost and latency in production.</strong> In our research system, we used GPT-4.1 for multiple pipeline steps per patient-trial pair. At the scale of a real matching system, this adds up quickly. The pharmaceutical industry cares about cost per correct match, time saved per coordinator, and reduction in trial enrollment failures different optimization targets than accuracy alone.</p><h2>What I think the next few years look like</h2><p>The systems that will actually get deployed are not the ones with the highest benchmark scores. They are the ones that are auditable, cost-effective, and trustworthy enough for clinicians to rely on in high-stakes decisions. The most interesting open problems are not about making the models more powerful they are about making them more reliable in the specific ways that matter for clinical use: handling temporal logic, managing uncertainty, providing interpretable evidence for decisions, and maintaining performance when the real-world data distribution shifts away from the benchmark. These are not purely engineering problems. They are research questions. And they are the reason I want to do a PhD.</p>'
+},
+a4: {
+tag:'Opinion · Business',
+date:'April 2026',
+title:'Knowledge graph databases: when they are worth it and when they are not',
+byline:'Written in the context of leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>',
+body:'<p>One of the first questions I had to answer when starting to design AI systems for a pharmaceutical company was whether we needed a knowledge graph database. The answer was not obvious, and the process of working through it taught me something useful about how to think about technology decisions in general.</p><p>This piece is my attempt to share that thinking particularly for anyone sitting in a similar position, where the technology sounds compelling but the cost is real and the justification needs to be clear.</p><h2>What a Knowledge Graph Database Actually Does Differently</h2><p>A regular database stores data in rows and columns. It is fast, well-understood, and excellent at answering questions like "show me all orders placed in March" predictable lookups against structured records.</p><p>A knowledge graph database stores data as a web of connected nodes. Instead of rows, it stores entities; people, products, diseases, compounds and the relationships between them. It is designed to answer a fundamentally different kind of question: "How is Person A connected to Company Z, and through how many steps?" or "Which drugs interact with this protein, and what other diseases share this pathway?"</p><p>The key difference is that in a graph database, the connections between data are treated as first-class citizens, not as an afterthought computed at query time. That is powerful. It is also expensive, and understanding why matters before making any decision.</p><h2>Why Graph Databases Cost More To Run</h2><p>There are four main cost drivers worth understanding.</p><h4>When A Graph Database Is The Right Choice</h4><p>Given the costs, a graph database should only be considered when the business problem is fundamentally about navigating relationships and when that capability delivers measurable value that justifies the investment.</p><p>The clearest use cases are fraud detection (tracing how money flows through networks of accounts and shell companies across dozens of steps), recommendation engines (traversing complex webs of user behavior and product attributes simultaneously), pharmaceutical knowledge graphs (mapping relationships between diseases, genes, proteins, and drug compounds to answer questions that would be nearly impossible in a relational database), and infrastructure dependency mapping (understanding what breaks when a specific server fails, across hundreds of interconnected services).</p><p>What these have in common: the value of the system depends on traversing deep, multi-layered relationships at query time. If your problem genuinely requires this, a graph database can be a transformative investment.</p><h4>When It Is Not The Right Choice</h4><p>The harder discipline is recognizing when a graph database is not necessary especially when the technology sounds appealing.</p><p>If your primary need is storing and retrieving structured records customers, orders, invoices, employee data a relational database is faster, cheaper, and far easier to maintain. Adding a graph database here introduces cost and complexity with no meaningful benefit. The same applies when relationships are simple: one customer has many orders, one product belongs to one category. Graph databases shine on deep, multi-layered relationships simple ones do not justify the overhead.</p><p>For high-volume, simple lookups "fetch this user\'s profile," "look up this product price" relational databases are significantly faster. Graph databases are optimized for traversal, not raw lookup speed. And when budget is a constraint, the 3x–10x cost premium over equivalent relational infrastructure is a serious consideration that should not be rationalized away by technological enthusiasm.</p><h4>The Framework I Use For These Decisions</h4><p>The right question is never "is this technology interesting?" It is: does the problem we are solving require this specific capability, and does the value it delivers justify the premium we will pay to build, run, and maintain it?</p><p>When both answers are yes, graph databases are worth it. When either answer is uncertain, a well-designed relational database will almost always deliver better value and leave budget and engineering capacity for problems that actually require specialized tools.</p><p>That discipline matching tool to problem rather than adopting tools because they are sophisticated is, I think, one of the more underrated skills in applied AI work.</p>'
+},
+a5: {
+tag:'Research Process',
+date:'August 2025',
+title:'From research question to working system: how an AI research project actually unfolds',
+byline:'M.Sc. Thesis Research &mdash; InstaDeep, 2025',
+body:'<p>There is a version of AI research that looks clean in retrospect: a well-defined problem, a clever solution, a table of results. What that version leaves out is everything that happens in between the false starts, the pivots, the experiments that taught you what not to do. This article is about the messy, real version: the actual sequence of steps that takes a research project from an open problem to a working system.</p><p>I am writing this from the experience of building AssistTrials, my M.Sc. thesis at InstaDeep a Graph-RAG multi-agent pipeline for automated patient-to-clinical trial matching. The project followed a hybrid methodology combining CRISP-DM for the data science workflow and Scrum for iterative delivery. In retrospect, the phases map cleanly onto what I now understand to be the standard structure of any serious AI research project.</p><h2>Phase 1: Understanding the domain before touching the data</h2><p>The first instinct when starting an AI project is to find a dataset and start experimenting. This is almost always the wrong first move.</p><p>Before writing a single line of code, I spent several weeks understanding the domain: what a clinical trial is, how patient recruitment actually works, what eligibility criteria look like in practice, and why the matching process fails so consistently. Only 3–5% of eligible patients ever enroll in clinical trials. Over 80% of trials fail to meet their enrollment timelines. Understanding those numbers and the institutional, regulatory, and operational reasons behind them was essential for understanding what the system actually needed to do.</p><p>This phase also involved understanding the constraints that would shape the solution: regulatory compliance requirements, the structure of ClinicalTrials.gov data, the difference between inclusion and exclusion criteria, and why simple keyword matching had failed in prior work. Domain understanding is not a box you tick before the real work starts. It is the foundation on which every subsequent decision rests.</p><h2>Phase 2: Literature review: understanding the state of the art</h2><p>The literature review phase is where you map the research landscape: what has been tried, what has worked, what has failed, and where the gaps are.</p><p>For AssistTrials, this meant a systematic review of patient-to-trial matching systems from early rule-based approaches, through ML-based methods, to the most recent LLM-based frameworks. I studied TrialGPT (the first major LLM-based breakthrough in the field), LLM-Match (the current state-of-the-art at the time of my thesis), and a range of intermediate approaches.</p><p>The literature review serves two purposes that are often underappreciated. The first is obvious: it tells you what the best existing approaches are and what benchmarks you need to beat. The second is subtler: it teaches you the vocabulary and conceptual framing of a field, which is what allows you to position your own contribution clearly. You cannot explain why your approach is different or better without understanding the landscape it sits in.</p><p>A practical note: good literature reviews are not exhaustive surveys. They are opinionated syntheses. The goal is to identify the two or three most relevant prior works, understand them deeply, and extract the specific limitations your work is designed to address.</p><p><strong>One of the most important decisions in any research project is choosing which paper to treat as your backbone</strong>, the reference you align your experimental setup against, whose benchmarks you adopt, and whose limitations you are explicitly trying to address. After reviewing the landscape, I chose LLM-Match as the backbone of AssistTrials. It was the most recent state-of-the-art system at the time, using open-source LLMs and RAG for patient-trial matching, and it had been evaluated on publicly available benchmarks TREC 2021 and 2022 which made direct comparison possible. This choice was deliberate: by adopting the same datasets, the same evaluation metric (AUROC), and the same experimental protocol as LLM-Match, any improvement I achieved would be meaningful rather than the product of a favorable or incomparable setup. Choosing the right backbone paper is not a formality. It is a foundational research decision that shapes every experiment that follows.</p><h2>Phase 3: Data collection and understanding</h2><p>For most real-world AI research projects, the data does not come ready to use. Understanding, collecting, and preparing it is a substantial phase of its own.</p><p>In AssistTrials, the data came from three sources: patient case descriptions from the TREC 2021 and 2022 Clinical Trials benchmarks, clinical trial documents from ClinicalTrials.gov (375,580 trials in total), and ground truth relevance judgments linking patients to relevant trials. Each source required different handling.</p><p>The patient data consisted of unstructured XML narratives admission-style clinical notes with no consistent structure. The clinical trial data was semi-structured XML with both metadata fields and free-text eligibility criteria embedded in a single tag. The ground truth labels were space-delimited text files that required parsing, cleaning, and binarization.</p><p>Beyond the technical work, exploratory data analysis revealed things that directly shaped the system design: the overwhelming skew toward adult participants in trial eligibility criteria, the disease distribution across patient demographics, the prevalence of specific drug categories all of which informed the filtering logic built into the final pipeline.</p><p>Data understanding is not a precursor to research. It is research.</p><h2>Phase 4: Systematic experimentation</h2><p>This is the phase most people picture when they think of AI research and it is where the CRISP-DM cycle becomes most visible. The key discipline is to treat each experiment as a hypothesis test, not a search for the best result.</p><p>In AssistTrials, the experimentation phase followed a deliberate progression. I started with the simplest possible baseline raw cosine similarity between patient narratives and clinical trial documents and measured its performance (AUROC 0.57 on TREC 2021). Every subsequent experiment introduced one change at a time: synthetic patient generation, MeSH term filtering, different embedding models, the LLM reranker. Each change was evaluated against the same benchmark, with the same metrics, so that the contribution of each component was clear.</p><p>This is the part of the process where most of the learning happens not from the experiments that work, but from the ones that do not. ClinicalBERT underperforming GPT-4.1 for MeSH term generation was a meaningful finding. It told me something about the nature of the task: ontological hierarchy reasoning requires general-purpose inference, not just biomedical language understanding. That kind of insight only emerges from systematic experimentation with controlled comparisons.</p><p>The primary metric throughout was AUROC, the same metric used by the state-of-the-art baseline which kept the comparisons honest and externally interpretable.</p><h2>Phase 5: Architecture design and system integration</h2><p>Once the best-performing components had been identified through experimentation, the challenge shifted from &quot;which components work?&quot; to &quot;how do they fit together into a coherent system?&quot;</p><p>The final AssistTrials pipeline was implemented as an agentic graph using LangGraph\'s StateGraph a directed acyclic graph where each node was a modular function and the edges encoded the control flow logic. This architecture was chosen deliberately: it made the system interpretable (you could trace exactly which node produced which output), fault-resilient (a failure in one node did not collapse the whole pipeline), and extensible (new nodes could be added without restructuring existing ones).</p><p>The nine-step pipeline data loading, entity extraction, demographic filtering, synthetic patient generation, vectorstore creation, retrieval, LLM reranking, criteria processing, question generation, and scoring emerged from the experimental phase. The architecture phase was about implementing those components at production quality: with proper error handling, caching, CI/CD standards, and a user-facing interface built in Streamlit.</p><p>System integration almost always surfaces problems that experimentation did not. The interaction between components at scale, the latency of multiple sequential LLM calls, the edge cases in real patient data, these only appear when the system runs end-to-end.</p><h2>Phase 6: Evaluation, benchmarking, and honest reporting</h2><p>The final phase is evaluation and the discipline here is honesty about what your system does and does not do well.</p><p>AssistTrials was benchmarked against LLM-Match on the TREC 2021 and 2022 datasets, using AUROC as the primary metric alongside precision, recall, F1, MAP, MRR, and nDCG. The results were competitive 0.69 on TREC 2021 and 0.77 on TREC 2022, compared to state-of-the-art scores of 0.7829 and 0.8102. The gap was real and I reported it honestly, with a clear analysis of where it came from.</p><p>Good evaluation is not just about the final numbers. It is about understanding which components contributed what, where the remaining performance gap lies, and what limitations the system has that the benchmarks do not fully capture. In our case: the n2c2 dataset was inaccessible for evaluation, temporal reasoning over clinical histories remained an unsolved limitation, and the system had not been tested on real (non-synthetic) patient records.</p><p>These limitations are not failures to hide. They are the honest boundary conditions of the work and they are, in most cases, exactly where the next research project begins.</p><h2>What this process taught me about AI research</h2><p>Looking back, the most important thing the AssistTrials project taught me is that AI research is not primarily about the model. The model is one component in a much larger process of problem understanding, literature synthesis, data work, systematic experimentation, architectural design, and honest evaluation.</p><p>The projects that produce genuinely useful results are the ones where each of these phases is taken seriously where domain understanding shapes the problem formulation, where the literature review informs the experimental design, where experimentation is systematic rather than opportunistic, and where evaluation is honest about what works and what does not.</p><p>That process is what I am seeking a PhD to practice at depth.</p>'
+},
+a6: {
+tag:'Research &rarr; Engineering',
+date:'August 2026',
+title:'From research agent to production agent: what actually changes',
+byline:'Comparing AssistTrials (InstaDeep, 2025) and DeformAI (Opalia Recordati, 2026)',
+body:'<p>AssistTrials and DeformAI are, on paper, the same kind of system: a LangGraph StateGraph orchestrating a handful of specialized nodes, retrieving evidence, reasoning over it with an LLM, and producing a structured output. One was built for a thesis benchmark. The other was built to run inside a real business process. The architecture diagram looks almost identical. Almost everything else about building them did not.</p><h2>The evaluation target changes completely</h2><p>AssistTrials was judged against a single number: AUROC on TREC 2021 and 2022, measured against a published state-of-the-art baseline. That is a clean, well-posed research problem, and most of my engineering effort went into closing the gap between my pipeline and that number, one architectural change at a time.</p><p>DeformAI has no equivalent scoreboard. There is no public leaderboard for pharmaceutical deformulation research quality. The thing that mattered instead was whether a domain expert could trust a specific output enough to act on it, and whether the system was honest when it could not support a claim. That shifted the entire design conversation from "how do we raise the score" to "how do we make every claim traceable to a source, and every failure mode visible before it causes harm."</p><h2>Structured output stops being a nice-to-have</h2><p>In AssistTrials, if an LLM call returned something slightly malformed, I could catch it in a notebook and rerun. In DeformAI, five agents pass state to each other and to a frontend over WebSocket in real time. An unvalidated field breaks the next agent silently, or worse, breaks nothing and just produces a wrong downstream answer. Pydantic v2 schemas on every agent\'s output were not a code-quality preference, they were the thing that made the pipeline debuggable at all once it had to run unattended.</p><h2>Human-in-the-loop stops being optional</h2><p>AssistTrials had a human in the loop in the sense that a clinician read the final ranked list. DeformAI has seven explicit review gates built into the graph itself, two of them mandatory, that block the pipeline from continuing until a domain expert acknowledges a high-severity finding. That is a different design discipline: you are not just producing an answer, you are deciding, node by node, which decisions the system is allowed to make alone and which ones it has to hand back.</p><h2>What stayed the same</h2><p>The core intuition carried over cleanly: decompose a complex reasoning task into small, auditable steps; keep the LLM\'s job narrow at each step; make every intermediate result inspectable rather than trusting an end-to-end black box. That is the part of Graph-RAG and multi-agent design that is genuinely transferable, from a benchmark to a production system. The scaffolding around it, evaluation, validation, human oversight, is what has to be rebuilt for the audience the system actually serves.</p><p>That rebuilding, I think, is the real engineering work in applied AI. The model is rarely the hard part twice.</p>'
+},
+a7: {
+tag:'Research Perspective', date:'August 2026',
+title:'What \"trustworthy\" actually has to mean for agentic AI in high-stakes settings',
+byline:'Written during PhD applications in trustworthy AI, drawing on AssistTrials (InstaDeep, 2025) and DeformAI (Opalia Recordati, 2026)',
+body:'<p>&quot;Trustworthy AI&quot; shows up in grant proposals, lab mission statements, and job postings often enough that it risks meaning nothing. I want to make the case for a narrower, more useful definition, built from two specific things I have run into in practice, not from a survey of the literature.</p><h2>The first thing: accuracy is not the same as knowing when you are wrong</h2><p>In AssistTrials, the patient-to-clinical-trial matching system I built for my M.Sc. thesis, the retrieval component reached a reasonable AUROC after several rounds of tuning. What surprised me was not the final number. It was discovering that a high retrieval score did not tell me anything about whether the system could flag its own uncertainty on a specific case. Two patients with the same match confidence score could have very different actual reliability, one grounded in strong ontological overlap between patient record and trial criteria, the other a coincidental lexical match the model had no real basis to trust.</p><p>That distinction, between being right and knowing when you might be wrong, is where I think most definitions of trustworthy AI go soft. Benchmark accuracy is measurable and therefore gets optimized. Calibrated uncertainty is harder to measure and therefore gets asserted rather than demonstrated. A system that is 85% accurate but cannot tell you which 15% to distrust is a worse foundation for a high-stakes decision than a system that is 75% accurate and honest about its blind spots.</p><h2>The second thing: guardrails are not the same as traceability</h2><p>At Opalia, I designed DeformAI, a multi-agent pipeline for pharmaceutical deformulation research, around seven human-in-the-loop review gates, two of them mandatory whenever a high-severity safety flag is raised. It would be easy to describe that as a guardrail system and stop there. What actually makes it useful is not the gate itself, it is that every gate is backed by a full audit trail: which agent produced a finding, from which source, with what confidence, and what a human did with it afterward.</p><p>A guardrail without traceability just moves the trust problem, from &quot;can I trust the model\'s output&quot; to &quot;can I trust that the guardrail caught everything.&quot; Traceability is what lets a domain expert, or an external auditor, actually check that. It converts a black-box safety claim into something falsifiable, and falsifiable is a much higher bar than most systems marketed as &quot;trustworthy&quot; actually clear.</p><h2>What I think this implies for research</h2><p>Put together, I think a useful definition of trustworthy AI requires at least two properties that are usually treated as optional extras rather than core requirements: the system\'s confidence has to be calibrated against its actual reliability, not just its accuracy, and every consequential output has to be traceable to its evidence and its intervention history, not just gated by a rule.</p><p>Neither property is solved by a bigger model. Both are open research problems, on evaluation methodology, on uncertainty quantification for retrieval-augmented and agentic systems, on what auditability should look like for systems that reason in multiple steps rather than producing a single classification. That is the specific corner of trustworthy AI I want to spend a PhD on, not the term as a banner, but the two concrete properties underneath it that I have already run into the hard way.</p>'
+},
+a8: {
+tag:'Research Perspective', date:'July 2026',
+title:'Why I keep coming back to knowledge graphs: symbolic grounding for LLMs',
+byline:'Written during PhD applications in neuro-symbolic AI, drawing on AssistTrials and DeformAI',
+body:'<p>I did not set out to become someone who cares about knowledge graphs. It happened because two separate systems, built for two very different reasons, kept teaching me the same lesson from different angles.</p><h2>The first angle: retrieval that respects hierarchy</h2><p>AssistTrials needed to match patient records against clinical trial eligibility criteria, both written in dense, technical, and inconsistent medical language. Early on, plain embedding similarity was not enough: a patient record might describe &quot;anaplastic astrocytoma of the spine&quot; while a trial criterion referred to &quot;neoplasms of the central nervous system&quot;, two phrases with real semantic distance in embedding space, but a direct hierarchical relationship in the MeSH ontology (astrocytoma is a child term of neoplasms, several levels down). No amount of better embeddings fixes that gap on its own, because it is not a similarity problem, it is a structural one.</p><p>Grounding retrieval in the MeSH knowledge graph, walking parent-child relationships explicitly rather than hoping a dense vector captures them, was what closed that gap. The lesson I took from it was not &quot;knowledge graphs beat embeddings.&quot; It was that some relationships in a domain are genuinely hierarchical and symbolic, and pretending a purely statistical representation will discover that structure on its own, given enough data, is often just slower and less reliable than encoding the structure directly.</p><h2>The second angle: knowing what not to leave to the model</h2><p>DeformAI, the deformulation pipeline I built at Opalia, uses an LLM for open-ended reasoning, literature synthesis, drug-excipient interaction analysis, but the severity classification for a detected interaction (HIGH, MEDIUM, LOW) is deterministic, rule-based, and sits outside the model\'s discretion entirely. That was a deliberate boundary, not a limitation I ran out of time to fix.</p><p>The reasoning: severity thresholds are a place where consistency and auditability matter more than flexibility. A rule can be inspected, versioned, and defended to a regulator in a way that a model\'s implicit judgment cannot. Keeping that boundary symbolic, and reserving the LLM for the parts of the task that genuinely require open-ended synthesis, is a small-scale version of the same question that shows up in neuro-symbolic AI research more broadly: which parts of a reasoning process benefit from explicit structure, and which parts are better left flexible.</p><h2>The actual research question, as I see it</h2><p>I do not think the interesting problem in neuro-symbolic AI is proving that symbolic components can improve LLM performance, that has been shown often enough. I think the interesting problem is developing a principled way to decide where that boundary belongs for a given task, rather than discovering it by trial and error the way I did on both of these systems. What properties of a subtask (verifiability requirements, consistency requirements, the cost of an undetected error) should predict whether it belongs on the symbolic or the statistical side of that line? That is a question I have now run into twice from different directions, in ontology-grounded retrieval and in deterministic safety classification, and it is the question I want to work on directly rather than solving ad hoc for the third time.</p>'
+},
+a9: {
+tag:'Research Perspective', date:'June 2026',
+title:'Human-in-the-loop is a design decision, not a fallback',
+byline:'Written during PhD applications touching explainable and human-centered AI, drawing on DeformAI (Opalia Recordati, 2026)',
+body:'<p>Most systems I have seen treat human review as a safety net: run the model, and if something looks wrong, a person can catch it before it goes out the door. That framing puts the human at the end of the process, reacting to a decision that has, in practice, mostly already been made. DeformAI was built the other way around, and I think the difference is worth spelling out.</p><h2>What &quot;designed in&quot; actually looks like</h2><p>DeformAI has seven human-in-the-loop review points built directly into the LangGraph pipeline as graph nodes, not as a UI layer added after the fact. Five are optional, the pipeline proceeds automatically if a domain expert skips them. Two are mandatory: whenever Agent 5 flags a high-severity drug-excipient interaction, the pipeline halts and cannot continue until a scientist explicitly acknowledges the finding, revises the composition, or documents why the flag does not apply. That is not a warning banner. It is a state the graph cannot exit without a specific human action, logged with a timestamp, tied to a specific agent output.</p><p>The difference between this and a bolted-on review step is where the decision authority actually sits. A system that lets a model act and offers a human the chance to undo it has already made the human\'s role reactive. A system that architecturally cannot proceed past a high-risk point without a human decision has made the human\'s role load-bearing. Those produce very different behavior in practice, mostly around what happens when the reviewer is busy, tired, or under time pressure. A reactive review step degrades gracefully into a rubber stamp. A load-bearing gate does not, because the pipeline simply will not move without an actual decision.</p><h2>What this has to do with explainability</h2><p>A lot of explainable AI research focuses on producing better post-hoc explanations, saliency maps, feature attributions, natural-language rationales for a decision the model has already made. Useful work, but it accepts a framing I think is worth questioning: that the explanation\'s job is to justify a decision after the fact, rather than to shape whether the decision gets made autonomously at all.</p><p>DeformAI\'s audit trail exists for a related but different reason. It does not explain why the model reached a conclusion in the deep-learning-interpretability sense. It records, at each mandatory gate, what evidence was presented, what the human decided, and why, in their own words. That is a much shallower kind of explanation, but it is complete and verifiable in a way that a saliency map is not, and for a regulated, high-consequence decision, I think that completeness matters more than depth.</p><h2>What I want to work on</h2><p>The open question I keep circling is this: for a given task, what determines whether human oversight should be architected as a gate the system cannot bypass, versus a lighter-weight reactive check? Cost of an error, reversibility, how legible the model\'s evidence is to a non-specialist, how much time pressure the human reviewer is realistically under, all of these seem relevant, and none of them are settled. I would rather spend a PhD building a principled answer to that than keep making the call by intuition project by project, which is what I have been doing so far.</p>'
+},
+a10: {
+tag:'Research Perspective', date:'May 2026',
+title:'What LLM-as-a-judge gets wrong, and how I\'ve worked around it',
+byline:'Written during PhD applications touching AI evaluation, drawing on BD Intelligence Platform and DeformAI (Opalia Recordati, 2026)',
+body:'<p>Ragas and LLM-as-a-judge show up on a lot of resumes, mine included, as a bullet point that implies more rigor than the raw technique actually guarantees. Using an LLM to grade another LLM\'s output is useful, and it is also quietly unreliable in ways that only became obvious to me once I had to trust the scores enough to act on them.</p><h2>The failure modes I actually ran into</h2><p>Across BD Intelligence Platform and DeformAI at Opalia, I used LLM-as-a-judge to evaluate agent outputs for groundedness and relevance where a hard metric like AUROC was not available, business development analysis, literature synthesis, that kind of open-ended generation. Three problems showed up consistently. Position bias: when a judge model compares two candidate outputs, it tends to favor whichever one appears first in the prompt, independent of quality, unless you deliberately randomize and average over both orderings. Length bias: judges reliably rate longer, more elaborated answers higher, even when the extra length is padding rather than substance. And self-preference: a judge model tends to rate outputs written in a style similar to its own more favorably, which quietly punishes concise or unusually structured answers that happen to be correct.</p><p>None of these are exotic findings, they are documented in the evaluation literature. What surprised me was how much they mattered in practice once the judge\'s score was feeding into a decision, not just a leaderboard number.</p><h2>What actually helped</h2><p>Two things made the judge scores trustworthy enough to rely on. First, narrowing the judge\'s task. Asking a judge to rate "overall quality" on a 1-10 scale invites all three biases at once. Asking it a specific, checkable question, "does this claim appear in the retrieved source, yes or no", produces something closer to a classification task than an aesthetic judgment, and classification tasks are where LLM judges are genuinely reliable. That is most of what Ragas\' faithfulness and context precision metrics are doing structurally, decomposing a vague "is this good" into a set of narrower, checkable claims.</p><p>Second, calibration against a small human-labeled set. Even twenty to thirty manually reviewed examples were enough to catch a judge that was systematically too lenient or too harsh, and to catch cases where the judge and a domain expert disagreed for a specific, fixable reason rather than random noise. Skipping this step is the single most common shortcut I see in how LLM-as-a-judge gets used, and it is the one that turns an evaluation pipeline into a black box that happens to output numbers.</p><h2>The open problem, as I see it</h2><p>What I have not found a satisfying answer to is how to do this kind of calibration at the scale and pace an agentic pipeline actually needs, when the system evolves weekly and the human-labeled reference set cannot realistically keep up. Static benchmarks solve this for classification tasks. Nobody has a clean equivalent for evaluating multi-step agentic reasoning where the "correct" output is not a single label but a defensible chain of decisions. That gap between how fast these systems change and how slowly trustworthy evaluation data can be produced is, I think, one of the more underrated bottlenecks in making agentic AI genuinely auditable.</p>'
+},
+a11: {
+tag:'Research Perspective', date:'April 2026',
+title:'Cost-aware agent design: the metric that doesn\'t show up in benchmarks',
+byline:'Drawing on BD Intelligence Platform and DeformAI (Opalia Recordati, 2026)',
+body:'<p>Most technical writing about agentic AI performance focuses on accuracy, latency, or throughput. The metric that determined more real design decisions in my work than any of those was cost per completed task, and it almost never gets discussed with the same seriousness.</p><h2>Why it matters more than it looks like it should</h2><p>A multi-agent pipeline is not one LLM call, it is many, and the cost compounds in ways that are easy to underestimate on a whiteboard. In both BD Intelligence Platform and DeformAI at Opalia, tracking cost and latency alongside accuracy and groundedness was not an afterthought, it was built into the evaluation loop from the start, because a system that is accurate but expensive to run does not survive contact with a real budget. A pipeline that costs a few cents per run in a demo can cost a very different number once it is handling the actual volume a business process generates, and that difference changes what architecture decisions are even worth considering.</p><h2>The decisions cost actually drove</h2><p>A few concrete patterns held up across both systems. Not every step needs the same model: reasoning-heavy steps, synthesizing literature, resolving a conflict between two agents, justify a larger, more capable model. Classification-shaped steps, routing a request, checking a value against a threshold, usually do not, and routing those to a smaller or even non-LLM step cuts cost without touching the quality of the steps that actually need the capability. Deduplication and caching matter more than they sound like they should: agentic pipelines frequently re-derive the same intermediate result across runs, and caching that intermediate output, rather than the final answer, is what actually pays off, because it is reusable across different downstream paths through the graph. And streaming intermediate results, which I used in DeformAI\'s WebSocket-based frontend, addresses something adjacent to cost but related to it: perceived latency. A user watching a pipeline progress live tolerates a slower total runtime far better than a user staring at a blank loading screen for the same duration, even though the actual cost and compute time are identical.</p><h2>What benchmarks miss</h2><p>Almost none of the standard evaluation frameworks for agentic systems report cost per task as a first-class metric alongside accuracy. That is a real gap, because it means two architecturally different systems that score identically on accuracy can differ by an order of magnitude in what they actually cost to run at scale, and the benchmark gives no signal of that at all. I think cost-aware evaluation, treating cost and latency as constraints the system has to satisfy rather than a footnote reported separately, is underexplored relative to how much it actually determines whether an agentic system is viable outside a research demo. It is a fairly unglamorous problem, but it is the one that decides whether a well-evaluated system ever gets to run in production at all.</p>'
+},
+a12: {
+tag:'Research Perspective', date:'March 2026',
+title:'What building for a regulated industry taught me about AI accountability',
+byline:'Written during PhD applications touching AI governance, drawing on DeformAI (Opalia Recordati, 2026)',
+body:'<p>Before Opalia, I thought of AI accountability mostly as a technical problem: build good guardrails, log the right things, and you are covered. Building AI systems for a regulated pharmaceutical R&D environment changed that view. Accountability turned out to be as much an organizational question as a technical one, and the gap between those two framings is where most of the real work sits.</p><h2>The question that actually matters</h2><p>The technical framing asks: did the system produce the right output? The organizational framing asks a different question: when this output turns out to be wrong, who is answerable for the decision that followed from it, and can they show, after the fact, exactly what they knew when they made it? Those are not the same question, and a system can satisfy the first while completely failing the second.</p><p>DeformAI, the deformulation pipeline I built at Opalia, was designed around the second question as much as the first. Every mandatory review gate does not just pause the pipeline, it produces a record: what evidence the system presented, what a specific named reviewer decided, and their stated reasoning. That record is not there to make the model\'s output more accurate. It is there so that six months later, if a decision is questioned, there is a clear answer to "who signed off on this, and on what basis", rather than an opaque trail leading back to a model that cannot itself be held accountable for anything.</p><h2>What this changes about how you design a system</h2><p>Once accountability is framed that way, some design choices stop being optional. The system has to make it clear, at every consequential step, whether a human or the model made the final call, because accountability cannot attach to a system, it only attaches to a person. Confidence scores and source citations are not nice-to-have transparency features, they are the minimum a reviewer needs to actually exercise judgment rather than rubber-stamp an output they cannot evaluate. And the audit trail has to be legible to someone who was not in the room when the system ran, an auditor, a regulator, a new hire trying to understand a past decision, not just to the engineer who built the pipeline.</p><h2>Why I think this generalizes beyond pharma</h2><p>Regulated industries make this requirement explicit and enforced. But I do not think the underlying problem is specific to pharma, or to regulation. Any AI system making decisions that affect people, in hiring, lending, clinical triage, content moderation, eventually runs into the same question: when the system is wrong, who is accountable, and can they prove what they knew. Most AI governance discussion I see focuses on model-level properties, fairness metrics, bias audits, safety evaluations. Those matter, but they answer a different question than the one an auditor actually asks after something has gone wrong. I think the harder, less-studied problem is designing the organizational and technical scaffolding that makes a specific human accountable for a specific AI-assisted decision, in a way that holds up under scrutiny after the fact. That is a systems and process design problem as much as a machine learning one, and it is the part of AI accountability I want to keep working on.</p>'
 }
 };
-
 function openArticle(id) {
-  var a = articles[id];
-  document.getElementById('article-content').innerHTML =
-    '<div style="margin-bottom:8px;">' +
-      '<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy-3);">' + a.date + '</span>' +
-      '<span style="display:inline-block;margin-left:12px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;background:var(--navy-light);color:var(--navy);">' + a.tag + '</span>' +
-    '</div>' +
-    '<h1 style="font-family:Lora,serif;font-size:clamp(24px,4vw,34px);font-weight:600;color:var(--navy);line-height:1.2;letter-spacing:-0.02em;margin-bottom:12px;">' + a.title + '</h1>' +
-    '<p style="font-size:13px;color:var(--ink-4);font-style:italic;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--border);">' + a.byline + '</p>' +
-    '<div class="article-body">' + a.body + '</div>';
-  var overlay = document.getElementById('article-overlay');
-  overlay.style.display = 'block';
-  overlay.scrollTop = 0;
-  document.body.style.overflow = 'hidden';
+var a = articles[id];
+document.getElementById('article-content').innerHTML =
+'<div style="margin-bottom:8px;">' +
+'<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy-3);">' + a.date + '</span>' +
+'<span style="display:inline-block;margin-left:12px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;background:var(--navy-light);color:var(--navy);">' + a.tag + '</span>' +
+'</div>' +
+'<h1 style="font-family:Lora,serif;font-size:clamp(24px,4vw,34px);font-weight:600;color:var(--navy);line-height:1.2;letter-spacing:-0.02em;margin-bottom:12px;">' + a.title + '</h1>' +
+'<p style="font-size:13px;color:var(--ink-4);font-style:italic;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--border);">' + a.byline + '</p>' +
+'<div class="article-body">' + a.body + '</div>';
+var overlay = document.getElementById('article-overlay');
+overlay.style.display = 'block';
+overlay.scrollTop = 0;
+document.body.style.overflow = 'hidden';
 }
-
 function closeArticle() {
-  document.getElementById('article-overlay').style.display = 'none';
-  document.body.style.overflow = '';
+document.getElementById('article-overlay').style.display = 'none';
+document.body.style.overflow = '';
 }
-
+function toggleDemo(strip) {
+var expand = document.getElementById('demo-expand');
+var toggle = strip.querySelector('.rc-demo-toggle');
+var isOpen = expand.classList.contains('open');
+if (isOpen) {
+expand.classList.remove('open');
+strip.classList.remove('open');
+toggle.textContent = 'Watch Demo \u2193';
+} else {
+expand.classList.add('open');
+strip.classList.add('open');
+toggle.textContent = 'Close \u2191';
+}
+}
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeArticle(); });
-</script>
 
-
-<!-- EXPERIENCE & EDUCATION -->
-<section class="section alt" id="experience">
-  <div class="section-inner">
-    <div class="s-kicker">Experience & Education</div>
-    <h2 class="s-title">Background</h2>
-    <div class="two-col" style="margin-top: 32px;">
-      <div>
-        <div class="col-title">Experience</div>
-        <div class="timeline">
-          <div class="tl-item">
-            <span class="tl-dot filled"></span>
-            <div class="tl-role">Pharmaceutical Development Project Manager</div>
-            <div class="tl-org">Opalia Recordati · 2026 – Present</div>
-            <div class="tl-note">Leading AI integration across R&D and Business Development </div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-role">AI Apprentice</div>
-            <div class="tl-org">InstaDeep · 2023 – 2025</div>
-            <div class="tl-note">M.Sc. AI Research Thesis on AssistTrials: Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
-
-            </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-role">Software Engineer</div>
-            <div class="tl-org">BTK Bank · 2021 – 2022</div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-role">Intern – Web Development</div>
-            <div class="tl-org">APP4MOB · 2020</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="col-title">Education</div>
-        <div class="timeline">
-          <div class="tl-item">
-            <span class="tl-dot filled"></span>
-            <div class="tl-role">M.Sc. Data Science, AI & Healthtech</div>
-            <div class="tl-org">Pristini University · 2022 – 2025</div>
-            </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-role">Engineering Degree in Software Engineering</div>
-            <div class="tl-org">EPI · 2016 – 2019</div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-dot"></span>
-            <div class="tl-role">Preparatory Cycle in Physics & Chemistry</div>
-            <div class="tl-org">Preparatory Institute of Engineering Studies · 2011 – 2013</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section ivory" id="skills">
-  <div class="section-inner">
-    <div class="s-kicker">Technical Skills</div>
-    <h2 class="s-title">Technical Skills</h2>
-    <div class="skill-grid" style="margin-top: 24px;">
-      <div class="skill-card">
-        <div class="skill-heading">LLM & AI Systems</div>
-        <div class="skill-tags"><span class="skill-tag">LangGraph</span><span class="skill-tag">LangChain</span><span class="skill-tag">Graph-RAG</span><span class="skill-tag">RAG</span><span class="skill-tag">Multi-Agent</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Fine-tuning</span><span class="skill-tag">PEFT/LoRA</span><span class="skill-tag">LLM Evaluation</span><span class="skill-tag">Retrieval Evaluation</span></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-heading">ML & Data Science</div>
-        <div class="skill-tags"><span class="skill-tag">PyTorch</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Transformers</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">XGBoost</span><span class="skill-tag">W&B</span><span class="skill-tag">R</span></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-heading">Research Infrastructure</div>
-        <div class="skill-tags"><span class="skill-tag">MLflow</span><span class="skill-tag">DVC</span><span class="skill-tag">Hydra</span><span class="skill-tag">Docker</span><span class="skill-tag">Neo4j</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Git</span></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-heading">Biomedical & Clinical AI</div>
-        <div class="skill-tags"><span class="skill-tag">Clinical NLP</span><span class="skill-tag">UMLS/MeSH</span><span class="skill-tag">NER</span><span class="skill-tag">Clinical Trial Ontologies</span><span class="skill-tag">Knowledge Graphs</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRESENTATIONS -->
-<section class="section alt" id="presentations">
-  <div class="section-inner">
-    <div class="s-kicker">Communication & Presentations</div>
-    <h2 class="s-title">Selected presentations</h2>
-    <p class="s-sub" style="white-space: nowrap;">A sample of academic and technical presentations delivered at InstaDeep, Pristini University, and in the context of M.Sc. thesis research.</p>
-
-    <div class="pres-grid">
-
-      <a href="https://docs.google.com/presentation/d/1cGZc3rzB4wQ3jrKlSSLnwwLSvuSfX5ZAqBmd_aaJUg8/edit?usp=sharing" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p8.png">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">AssistTrials: Thesis Defense Presentation</div>
-          <div class="pres-card-meta">M.Sc. defense · InstaDeep, Clinical AI · 2025</div>
-        </div>
-      </a>
-
-      <a href="https://github.com/lina2761991/presentations/blob/main/EnsembleLearning.pdf" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p2.png" alt="Ensemble Learning presentation cover">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">Ensemble Learning Methods in Machine Learning</div>
-          <div class="pres-card-meta">M.Sc. coursework · Data Science & AI</div>
-        </div>
-      </a>
-
-      <a href="https://github.com/lina2761991/presentations/blob/main/%CE%BB%26K%20Architectures.pdf" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p5.png" alt="Lambda & Kappa Architectures presentation cover">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">Lambda & Kappa Architectures for Real-Time Data Systems</div>
-          <div class="pres-card-meta">M.Sc. coursework · Data Engineering</div>
-        </div>
-      </a>
-
-      <a href="https://github.com/lina2761991/presentations/blob/main/Big%20Data.pdf" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p1.png" alt="Big Data presentation cover">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">Big Data: Architectures, Tools & Challenges</div>
-          <div class="pres-card-meta">M.Sc. coursework · Data Science & AI</div>
-        </div>
-      </a>
-
-      <a href="https://github.com/lina2761991/presentations/blob/main/immunology%20part1.pdf" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p7.png" alt="Immunology presentation cover">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">Foundations of Immunology, Part I & II</div>
-          <div class="pres-card-meta">M.Sc. coursework · AI & Healthtech</div>
-        </div>
-      </a>
-
-      <a href="https://github.com/lina2761991/presentations/blob/main/PragmaticProgramer.pdf" target="_blank" class="pres-card">
-        <div class="pres-thumb">
-          <img src="p3.png" alt="Pragmatic Programmer presentation cover">
-          <div class="pres-thumb-overlay">View Presentation →</div>
-        </div>
-        <div class="pres-card-body">
-          <div class="pres-card-title">The Pragmatic Programmer: Key Lessons & Engineering Philosophy</div>
-          <div class="pres-card-meta">Book presentation · Software Engineering</div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section ivory" id="projects">
-  <div class="section-inner">
-    <div class="s-kicker">Research, Engineering & Applied Projects</div>
-    <h2 class="s-title">Selected Projects</h2>
-    <p class="s-sub" style="white-space: nowrap;">A selection of projects spanning research, applied ML, data analysis, and software engineering.</p>
-
-    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Research & Applied AI</div>
-    <div class="proj-grid" style="margin-bottom:32px;">
-      <div class="proj-card">
-        <div class="proj-thumb pt-navy">AI Research</div>
-        <div class="proj-body">
-          <div class="proj-title">AssistTrials</div>
-          <div class="proj-desc">Automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
-          <div class="proj-stack"><span class="stag">LangGraph</span><span class="stag">LangChain</span><span class="stag">Graph-RAG</span><span class="stag">ChromaDB</span><span class="stag">Cross-Encoders</span><span class="stag">Multi-Agent Systems</span><span class="stag">LLMs</span><span class="stag">Knowledge Graph</span><span class="stag">PyTorch</span></div>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-thumb pt-sage">Applied ML</div>
-        <div class="proj-body">
-          <div class="proj-title">Olive Oil Production & Price Prediction</div>
-          <div class="proj-desc">Production forecasting dashboard for olive oil yields and extra-virgin prices at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a>.</div>
-          <div class="proj-stack"><span class="stag">Python</span><span class="stag">CatBoost</span><span class="stag">XGBoost</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">SciPy</span><span class="stag">Dash</span><span class="stag">Plotly</span><span class="stag">Flask</span><span class="stag">Optuna</span><span class="stag">Hydra</span><span class="stag">BeautifulSoup</span><span class="stag">Anaconda</span><span class="stag">Black</span><span class="stag">isort</span><span class="stag">Flake8</span><span class="stag">GitLab</span><span class="stag">Time Series</span></div>
-        </div>
-      </div>
-      <div class="proj-card" onclick="window.open('https://github.com/lina2761991/DiabetesML','_blank')" style="cursor:pointer;">
-        <div class="proj-thumb pt-navy">Applied ML
-        </div>
-        <div class="proj-body">
-          <div class="proj-title">Diabetes Prediction</div>
-          <div class="proj-desc">End-to-end ML classification pipeline with a Django dashboard for clinical risk assessment.</div>
-          <div class="proj-stack"><span class="stag">Django</span><span class="stag">Sklearn</span><span class="stag">Pandas</span><span class="stag">Classification</span><span class="stag">Logistic Regression</span><span class="stag">Feature Engineering</span><span class="stag">Cross-validation</span><span class="stag">ROC-AUC</span></div>
-        </div>
-      </div>
-    </div>
-
-     <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Earlier Engineering Work</div>
-    <div class="proj-grid">
-      <div class="proj-card">
-        <div class="proj-thumb pt-amber">Data Analysis</div>
-        <div class="proj-body">
-          <div class="proj-title">Data Analysis Projects</div>
-          <div class="proj-desc">Two R Markdown reports: <a href="https://rpubs.com/lina276/bikeShare1" target="_blank" style="color:var(--navy);">EDA on bike-sharing demand</a> across weather and seasonal factors; and an <a href="https://rpubs.com/lina276/Inv" target="_blank" style="color:var(--navy);">investment analysis of IFC funding trends</a> across regions and years using tidyverse and ggplot2.</div>
-          <div class="proj-stack"><span class="stag">R</span><span class="stag">R Markdown</span><span class="stag">ggplot2</span><span class="stag">tidyverse</span><span class="stag">Data Cleaning</span><span class="stag">EDA</span><span class="stag">Data Visualization</span><span class="stag">Correlation Analysis</span><span class="stag">Feature Understanding</span></div>
-        </div>
-      </div>
-      <div class="proj-card" onclick="window.open('https://www.youtube.com/watch?v=1JQTGREPMRo','_blank')" style="cursor:pointer;">
-        <div class="proj-thumb pt-sage">Full-stack</div>
-        <div class="proj-body">
-          <div class="proj-title">TuniPaw</div>
-          <div class="proj-desc">Platform connecting veterinarians, associations, and pet owners across Tunisia.</div>
-          <div class="proj-stack"><span class="stag">Symfony3</span><span class="stag">MySQL</span><span class="stag">Bootstrap</span><span class="stag">HTML5/CSS3</span><span class="stag">JavaScript</span><span class="stag">jQuery</span></div>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-thumb pt-amber">Banking Systems</div>
-        <div class="proj-body">
-          <div class="proj-title">BTK Bank Applications</div>
-          <div class="proj-desc">Three production web applications for debt collection, internal portals, and liquidity ratio calculation.</div>
-          <div class="proj-stack"><span class="stag">Java 8</span><span class="stag">JSF</span><span class="stag">MySQL</span><span class="stag">Wildfly</span><span class="stag">XHTML/CSS3</span><span class="stag">Eclipse</span><span class="stag">BootsFaces</span><span class="stag">PrimeFaces</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contact">
-  <div class="footer-name">Lina Ben Salem</div>
-  <div class="footer-title">AI Researcher & Engineer</div>
-  <div class="footer-divider"></div>
-  <div class="footer-links">
-    <a href="mailto:linabensalem91@gmail.com">linabensalem91@gmail.com</a>
-    <a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/">LinkedIn</a>
-    <a href="https://github.com/lina2761991">GitHub</a>
-    <a href="https://www.kaggle.com/linabensalem">Kaggle</a>
-  </div>
-  <div class="footer-copy">© 2026 Lina Ben Salem · All rights reserved</div>
-</footer>
-
-<script>
-  const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + entry.target.id) {
-            link.classList.add('active');
-          }
-        });
+function initScrollSpy() {
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var sections = navLinks.map(function(a) {
+    var id = a.getAttribute('href').slice(1);
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function setActive(id) {
+    navLinks.forEach(function(l) {
+      if (l.getAttribute('href') === '#' + id) {
+        l.classList.add('active');
+      } else {
+        l.classList.remove('active');
       }
     });
-  }, {
-    rootMargin: '-40% 0px -55% 0px',
-    threshold: 0
-  });
-
-  sections.forEach(section => observer.observe(section));
-
-  window.addEventListener('scroll', () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#contact') {
-          link.classList.add('active');
-        }
-      });
+  }
+  var ticking = false;
+  function updateActive() {
+    var scrollPos = window.scrollY + window.innerHeight * 0.3;
+    var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= scrollPos) {
+        current = sections[i];
+      }
     }
-  });
+    if (atBottom) {
+      current = sections[sections.length - 1];
+    }
+    if (current) setActive(current.id);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateActive);
+      ticking = true;
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateActive);
+  updateActive();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollSpy);
+} else {
+  initScrollSpy();
+}
 </script>
+
+<!-- EXPERIENCE & EDUCATION -->
+
+<section class="section alt" id="presentations">
+<div class="section-inner">
+<div class="s-kicker">Communication & Presentations</div>
+<h2 class="s-title">Selected presentations</h2>
+<p class="s-sub">A sample of academic and technical presentations delivered at InstaDeep, Pristini University, and in the context of M.Sc. thesis research.</p>
+<div class="pres-grid">
+<a href="https://docs.google.com/presentation/d/1cGZc3rzB4wQ3jrKlSSLnwwLSvuSfX5ZAqBmd_aaJUg8/edit?usp=sharing" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p8.png">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">AssistTrials: Thesis Defense Presentation</div>
+<div class="pres-card-meta">M.Sc. defense &middot; InstaDeep, Clinical AI &middot; 2025</div>
+</div>
+</a>
+<a href="https://github.com/lina2761991/presentations/blob/main/EnsembleLearning.pdf" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p2.png" alt="Ensemble Learning presentation cover">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">Ensemble Learning Methods in Machine Learning</div>
+<div class="pres-card-meta">M.Sc. coursework &middot; Data Science & AI</div>
+</div>
+</a>
+<a href="https://github.com/lina2761991/presentations/blob/main/%CE%BB%26K%20Architectures.pdf" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p5.png" alt="Lambda & Kappa Architectures presentation cover">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">Lambda & Kappa Architectures for Real-Time Data Systems</div>
+<div class="pres-card-meta">M.Sc. coursework &middot; Data Engineering</div>
+</div>
+</a>
+<a href="https://github.com/lina2761991/presentations/blob/main/Big%20Data.pdf" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p1.png" alt="Big Data presentation cover">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">Big Data: Architectures, Tools & Challenges</div>
+<div class="pres-card-meta">M.Sc. coursework &middot; Data Science & AI</div>
+</div>
+</a>
+<a href="https://github.com/lina2761991/presentations/blob/main/immunology%20part1.pdf" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p7.png" alt="Immunology presentation cover">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">Foundations of Immunology, Part I & II</div>
+<div class="pres-card-meta">M.Sc. coursework &middot; AI & Healthtech</div>
+</div>
+</a>
+<a href="https://github.com/lina2761991/presentations/blob/main/PragmaticProgramer.pdf" target="_blank" class="pres-card">
+<div class="pres-thumb">
+<img src="p3.png" alt="Pragmatic Programmer presentation cover">
+<div class="pres-thumb-overlay">View Presentation &rarr;</div>
+</div>
+<div class="pres-card-body">
+<div class="pres-card-title">The Pragmatic Programmer: Key Lessons & Engineering Philosophy</div>
+<div class="pres-card-meta">Book presentation &middot; Software Engineering</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="footer-name">Lina Ben Salem</div>
+<div class="footer-title">AI Researcher & Engineer</div>
+<div class="footer-links">
+<a href="mailto:linabensalem91@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/" target="_blank">LinkedIn</a>
+<a href="https://github.com/lina2761991" target="_blank">GitHub</a>
+<a href="https://www.kaggle.com/linabensalem" target="_blank">Kaggle</a>
+</div>
+<div class="footer-divider"></div>
+<div class="footer-copy">&copy; 2026 Lina Ben Salem &middot; All rights reserved</div>
+</footer>
+
 </body>
 </html>
