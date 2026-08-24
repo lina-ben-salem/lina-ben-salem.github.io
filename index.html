@@ -611,7 +611,7 @@ footer { padding: 40px 24px; }
 </div>
 <div class="rc-body">
 <span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a Streamlit + FastAPI system...</p>
+<p class="rc-abstract">Built a Streamlit + FastAPI system automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by the Streamlit frontend and available to other internal tools. Also integrates SOAP-based communication (zeep) with an internal ERP system.</p>
 <span class="rc-section-label">Stack</span>
 <div class="rc-tags">
 <span class="tag tag-navy">FastAPI</span>
