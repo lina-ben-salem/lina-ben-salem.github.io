@@ -532,7 +532,7 @@ footer { padding: 40px 24px; }
 <div id="engineering" style="padding-left:24px; border-left:3px solid var(--navy-light);">
 <div class="s-kicker">Featured AI Engineering Systems</div>
 <h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Multi-Agent & Production Systems Built at Opalia Recordati</h3>
-<p class="s-sub" style="max-width:none;">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working, tested systems.</p>
+<p class="s-sub" style="max-width:none;">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working systems.</p>
 <div class="research-card">
 <div class="rc-top">
 <div class="rc-type-badge">
@@ -543,22 +543,24 @@ footer { padding: 40px 24px; }
 </div>
 <div class="rc-top-text">
 <div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">DeformAI: automating pharmaceutical deformulation and reverse-engineering research</div>
+<div class="rc-top-title">DeformAI: Automating pharmaceutical deformulation and reverse-engineering research</div>
 </div>
 </div>
 <div class="rc-body">
 <span class="rc-section-label">Overview</span>
-<p class="rc-abstract">A 5-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates, two of them mandatory on high-severity safety flags, are backed by a full timestamped audit trail. Validated with a pytest suite against mock data. Reduced a multi-week manual research process to an approximately 11-minute guided analysis.</p>
+<p class="rc-abstract">A multi-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates are backed by a full timestamped audit trail. Reduced a multi-week manual research process to several minutes guided analysis.</p>
 <span class="rc-section-label">Stack</span>
 <div class="rc-tags">
 <span class="tag tag-navy">LangGraph</span>
 <span class="tag tag-navy">FastAPI</span>
 <span class="tag tag-navy">WebSocket</span>
+<span class="tag tag-amber">Human-in-the-loop</span>
+<span class="tag tag-amber">Agents</span>
+<span class="tag tag-amber">MCP</span>
 <span class="tag tag-sage">Pydantic v2</span>
 <span class="tag tag-sage">Guardrails</span>
 <span class="tag tag-sage">Audit Trail</span>
-<span class="tag tag-amber">pytest</span>
-<span class="tag tag-amber">Human-in-the-loop</span>
+
 </div>
 </div>
 </div>
@@ -573,7 +575,30 @@ footer { padding: 40px 24px; }
 </div>
 <div class="rc-top-text">
 <div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">MonographMind: automating European Pharmacopoeia monograph compliance review</div>
+<div class="rc-top-title">BD Intelligence Platform: automating pharma business development workflows</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, and database step.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-navy">Agents</span>
+<span class="tag tag-navy">MCP</span>
+<span class="tag tag-sage">PostgreSQL</span>
+<span class="tag tag-sage">knoweldge Graph</span>
+<span class="tag tag-sage">Vector Database</span>
+<span class="tag tag-amber">Evaluation</span>
+<span class="tag tag-amber">Guardrails</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">MonographMind: Automating European Pharmacopoeia monograph compliance review</div>
 </div>
 </div>
 <div class="rc-body">
@@ -598,24 +623,6 @@ footer { padding: 40px 24px; }
 <span class="rc-type-val">AI Engineering System</span>
 <span class="rc-type-label" style="margin-top:6px;">Period</span>
 <span class="rc-type-val">2026</span>
-</div>
-<div class="rc-top-text">
-<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">BD Intelligence Platform: automating pharma business development workflows</div>
-</div>
-</div>
-<div class="rc-body">
-<span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, or database step. PostgreSQL serves as the relational data layer underlying the platform.</p>
-<span class="rc-section-label">Stack</span>
-<div class="rc-tags">
-<span class="tag tag-navy">LangGraph</span>
-<span class="tag tag-sage">PostgreSQL</span>
-<span class="tag tag-amber">Evaluation</span>
-<span class="tag tag-amber">Guardrails</span>
-</div>
-</div>
-</div>
 </div>
 
 <div style="height:1px; background:var(--border); margin:56px 0;"></div>
