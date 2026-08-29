@@ -417,8 +417,8 @@ footer { padding: 40px 24px; }
 <div class="nav-logo">Lina Ben Salem<span>AI Researcher & Engineer</span></div>
 <div class="nav-links">
 <a href="#home" class="active">Home</a>
-<a href="#research">Research</a>
 <a href="#engineering">Engineering</a>
+<a href="#research">Research</a>
 <a href="#projects">Additional Projects</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
@@ -434,10 +434,10 @@ footer { padding: 40px 24px; }
 <div class="hero-kicker">AI Researcher & Engineer · Tunis, Tunisia</div>
 <h1 class="hero-name">Lina Ben Salem</h1>
 <p class="hero-title">AI Researcher & Engineer · M.Sc. Data Science, AI & Healthtech</p>
-<p class="hero-bio"> I am an AI Researcher and Engineer with a background on academic research from a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), to currently leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
+<p class="hero-bio"> I am an AI Researcher and Engineer with a background spanning academic research, a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), and, most recently, leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
 <div class="hero-cta">
-<a href="#research" class="btn btn-primary">View Research</a>
-<a href="#engineering" class="btn btn-ghost">View Engineering</a>
+<a href="#engineering" class="btn btn-primary">View Engineering</a>
+<a href="#research" class="btn btn-ghost">View Research</a>
 <a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/" class="btn btn-ghost">LinkedIn</a>
 <a href="https://github.com/lina2761991" class="btn btn-ghost">GitHub</a>
 </div>
@@ -454,7 +454,104 @@ footer { padding: 40px 24px; }
 <div class="section-inner">
 <div class="s-kicker">Featured Work</div>
 <h2 class="s-title" style="font-size:40px;">Research, Engineering & Selected Projects</h2>
-<p class="s-sub" style="max-width:none;">Applied research and production engineering, from a benchmarked M.Sc. thesis to systems shipped inside a regulated business, plus a selection of applied and earlier engineering work organized into the three parts below.</p>
+<p class="s-sub" style="max-width:none;">Production engineering systems shipped inside a regulated business, a benchmarked M.Sc. thesis, plus a selection of applied and earlier engineering work, organized into the three parts below.</p>
+
+<div id="engineering" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+<div class="s-kicker">Featured AI Engineering Systems</div>
+<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Multi-Agent & Production Systems Built at Opalia Recordati</h3>
+<p class="s-sub" style="max-width:none;">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working systems.</p>
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">AI Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">DeformAI: Automating pharmaceutical deformulation and reverse-engineering research</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">A multi-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates are backed by a full timestamped audit trail. Reduced a multi-week manual research process to several minutes guided analysis.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-navy">FastAPI</span>
+<span class="tag tag-navy">WebSocket</span>
+<span class="tag tag-amber">Human-in-the-loop</span>
+<span class="tag tag-amber">Agents</span>
+<span class="tag tag-amber">MCP</span>
+<span class="tag tag-sage">Pydantic v2</span>
+<span class="tag tag-sage">Guardrails</span>
+<span class="tag tag-sage">Audit Trail</span>
+
+</div>
+</div>
+</div>
+
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">BD Intelligence Platform: automating pharma business development workflows</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, and database step.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">LangGraph</span>
+<span class="tag tag-navy">Agents</span>
+<span class="tag tag-navy">MCP</span>
+<span class="tag tag-sage">PostgreSQL</span>
+<span class="tag tag-sage">Knowledge Graph</span>
+<span class="tag tag-sage">Vector Database</span>
+<span class="tag tag-amber">Evaluation</span>
+<span class="tag tag-amber">Guardrails</span>
+</div>
+</div>
+</div>
+
+
+<div class="research-card">
+<div class="rc-top">
+<div class="rc-type-badge">
+<span class="rc-type-label">Type</span>
+<span class="rc-type-val">AI Engineering System</span>
+<span class="rc-type-label" style="margin-top:6px;">Period</span>
+<span class="rc-type-val">2026</span>
+</div>
+<div class="rc-top-text">
+<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
+<div class="rc-top-title">MonographMind: Automating European Pharmacopoeia monograph compliance review</div>
+</div>
+</div>
+<div class="rc-body">
+<span class="rc-section-label">Overview</span>
+<p class="rc-abstract">Built a Streamlit + FastAPI system automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by the Streamlit frontend and available to other internal tools. Also integrates SOAP-based communication (zeep) with an internal ERP system.</p>
+<span class="rc-section-label">Stack</span>
+<div class="rc-tags">
+<span class="tag tag-navy">FastAPI</span>
+<span class="tag tag-navy">Streamlit</span>
+<span class="tag tag-sage">PyMuPDF</span>
+<span class="tag tag-sage">BeautifulSoup</span>
+<span class="tag tag-amber">SOAP</span>
+<span class="tag tag-amber">openpyxl</span>
+</div>
+</div>
+</div>
+</div>
+<div style="height:1px; background:var(--border); margin:56px 0;"></div>
 
 <div id="research" style="padding-left:24px; border-left:3px solid var(--navy-light);">
 <div class="s-kicker">Featured Research</div>
@@ -529,101 +626,6 @@ footer { padding: 40px 24px; }
 
 <div style="height:1px; background:var(--border); margin:56px 0;"></div>
 
-<div id="engineering" style="padding-left:24px; border-left:3px solid var(--navy-light);">
-<div class="s-kicker">Featured AI Engineering Systems</div>
-<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Multi-Agent & Production Systems Built at Opalia Recordati</h3>
-<p class="s-sub" style="max-width:none;">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working systems.</p>
-<div class="research-card">
-<div class="rc-top">
-<div class="rc-type-badge">
-<span class="rc-type-label">Type</span>
-<span class="rc-type-val">AI Engineering System</span>
-<span class="rc-type-label" style="margin-top:6px;">Period</span>
-<span class="rc-type-val">2026</span>
-</div>
-<div class="rc-top-text">
-<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">DeformAI: Automating pharmaceutical deformulation and reverse-engineering research</div>
-</div>
-</div>
-<div class="rc-body">
-<span class="rc-section-label">Overview</span>
-<p class="rc-abstract">A multi-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates are backed by a full timestamped audit trail. Reduced a multi-week manual research process to several minutes guided analysis.</p>
-<span class="rc-section-label">Stack</span>
-<div class="rc-tags">
-<span class="tag tag-navy">LangGraph</span>
-<span class="tag tag-navy">FastAPI</span>
-<span class="tag tag-navy">WebSocket</span>
-<span class="tag tag-amber">Human-in-the-loop</span>
-<span class="tag tag-amber">Agents</span>
-<span class="tag tag-amber">MCP</span>
-<span class="tag tag-sage">Pydantic v2</span>
-<span class="tag tag-sage">Guardrails</span>
-<span class="tag tag-sage">Audit Trail</span>
-
-</div>
-</div>
-</div>
-
-<div class="research-card">
-<div class="rc-top">
-<div class="rc-type-badge">
-<span class="rc-type-label">Type</span>
-<span class="rc-type-val">Engineering System</span>
-<span class="rc-type-label" style="margin-top:6px;">Period</span>
-<span class="rc-type-val">2026</span>
-</div>
-<div class="rc-top-text">
-<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">BD Intelligence Platform: automating pharma business development workflows</div>
-</div>
-</div>
-<div class="rc-body">
-<span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, and database step.</p>
-<span class="rc-section-label">Stack</span>
-<div class="rc-tags">
-<span class="tag tag-navy">LangGraph</span>
-<span class="tag tag-navy">Agents</span>
-<span class="tag tag-navy">MCP</span>
-<span class="tag tag-sage">PostgreSQL</span>
-<span class="tag tag-sage">knoweldge Graph</span>
-<span class="tag tag-sage">Vector Database</span>
-<span class="tag tag-amber">Evaluation</span>
-<span class="tag tag-amber">Guardrails</span>
-</div>
-</div>
-</div>
-
-
-<div class="research-card">
-<div class="rc-top">
-<div class="rc-type-badge">
-<span class="rc-type-label">Type</span>
-<span class="rc-type-val">AI Engineering System</span>
-<span class="rc-type-label" style="margin-top:6px;">Period</span>
-<span class="rc-type-val">2026</span>
-</div>
-<div class="rc-top-text">
-<div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
-<div class="rc-top-title">MonographMind: Automating European Pharmacopoeia monograph compliance review</div>
-</div>
-</div>
-<div class="rc-body">
-<span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a Streamlit + FastAPI system automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by the Streamlit frontend and available to other internal tools. Also integrates SOAP-based communication (zeep) with an internal ERP system.</p>
-<span class="rc-section-label">Stack</span>
-<div class="rc-tags">
-<span class="tag tag-navy">FastAPI</span>
-<span class="tag tag-navy">Streamlit</span>
-<span class="tag tag-sage">PyMuPDF</span>
-<span class="tag tag-sage">BeautifulSoup</span>
-<span class="tag tag-amber">SOAP</span>
-<span class="tag tag-amber">openpyxl</span>
-</div>
-</div>
-</div>
-</div>
 <div style="height:1px; background:var(--border); margin:56px 0;"></div>
 
 <div id="projects" style="padding-left:24px; border-left:3px solid var(--navy-light);">
@@ -728,8 +730,8 @@ footer { padding: 40px 24px; }
 <div class="timeline">
 <div class="tl-item">
 <span class="tl-dot filled"></span>
-<div class="tl-role">Pharmaceutical Development Project Manager</div>
-<div class="tl-org">Opalia Recordati &middot; Jan 2026 &ndash; Present</div>
+<div class="tl-role">ML Researcher / Pharmaceutical Development Project Manager, R&D and AI Integration</div>
+<div class="tl-org">Opalia Recordati &middot; Jan 2026 &ndash; Jul 2026</div>
 <div class="tl-note">Designed and shipped three production-facing multi-agent LLM systems: BD Intelligence Platform, DeformAI, and MonographMind, spanning LangGraph orchestration, FastAPI backends, evaluation, and guardrails.</div>
 </div>
 <div class="tl-item">
