@@ -66,6 +66,7 @@ text-decoration: none; letter-spacing: 0.01em;
 transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+.nav-toggle { display: none; background: none; border: none; color: var(--navy); cursor: pointer; padding: 6px; }
 .hero {
 min-height: 100vh;
 background: var(--ivory);
@@ -312,6 +313,7 @@ transition: background 0.15s;
 .w-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
 .w-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: var(--navy-light); color: var(--navy); margin-top: 7px; }
 .pres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.pres-grid-two { grid-template-columns: repeat(2, minmax(0, 280px)); }
 .pres-card {
 display: flex; flex-direction: column;
 border: 1px solid var(--border); border-radius: 10px;
@@ -399,44 +401,92 @@ border-bottom-left-radius:8px; border-bottom-right-radius:8px;
 overflow:hidden;
 }
 .rc-demo-expand.open { display:block; }
-@media (max-width: 820px) {
+.research-card.flagship { border: 1.5px solid var(--navy); box-shadow: 0 4px 20px rgba(30,58,95,0.14); }
+.research-card.flagship .rc-top { padding: 30px 32px; }
+.research-card.flagship .rc-top-title { font-size: 21px; }
+.research-card.flagship .rc-body { padding: 30px 32px; }
+.research-card.flagship .rc-abstract { font-size: 15px; }
+.flagship-badge {
+display: inline-block; margin-top: 10px; font-size: 10px; font-weight: 600;
+letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px;
+border-radius: 4px; background: rgba(255,255,255,0.16); color: #fff;
+border: 1px solid rgba(255,255,255,0.3);
+}
+.research-card.compact .rc-body { padding: 18px 28px; }
+.research-card.compact .rc-abstract { font-size: 13px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+.cert-list { display: flex; flex-direction: column; gap: 14px; }
+.cert-item { font-size: 13px; }
+.cert-item a { font-weight: 600; color: var(--navy); text-decoration: none; }
+.cert-item a:hover { text-decoration: underline; }
+.cert-meta { font-size: 11px; color: var(--ink-4); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+.skill-tag.skill-tag-highlight { background: var(--navy); color: #fff; border-color: var(--navy); font-weight: 600; }
+@media (max-width: 900px) {
 nav { padding: 0 20px; }
-.nav-links { gap: 16px; }
+.nav-toggle { display: block; }
+.nav-links {
+display: none; flex-direction: column; gap: 2px;
+position: fixed; top: 58px; left: 0; right: 0;
+max-height: calc(100vh - 58px); overflow-y: auto;
+background: var(--ivory); border-bottom: 1px solid var(--border);
+padding: 8px 20px 16px; box-shadow: 0 8px 20px rgba(30,58,95,0.08);
+}
+.nav-links.open { display: flex; }
+.nav-links a { padding: 12px 4px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.nav-links a:last-child { border-bottom: none; }
+}
+@media (max-width: 820px) {
+.three-col { grid-template-columns: 1fr; gap: 32px; }
 .hero, .section { padding: 80px 24px 56px; }
 .hero-grid { grid-template-columns: 1fr; }
 .hero-photo-col { display: none; }
 .proj-grid, .skill-grid { grid-template-columns: 1fr 1fr; }
-.pres-grid { grid-template-columns: 1fr; }
+.pres-grid, .pres-grid-single { grid-template-columns: 1fr; }
 .two-col { grid-template-columns: 1fr; }
+.rc-top { flex-wrap: wrap; }
 footer { padding: 40px 24px; }
+}
+@media (max-width: 480px) {
+.hero, .section { padding: 72px 18px 48px; }
+.hero-cta { gap: 8px; }
+.hero-cta .btn { flex: 1 1 auto; text-align: center; }
+.proj-grid, .skill-grid { grid-template-columns: 1fr; }
+.research-card.flagship .rc-top, .research-card.flagship .rc-body { padding: 22px 20px; }
+.rc-top, .rc-body { padding: 20px; }
+.rc-type-badge { padding: 6px 10px; }
+.rc-doc-strip { flex-wrap: wrap; gap: 8px; }
+.rc-doc-strip-action { width: 100%; }
 }
 </style>
 </head>
 <body>
 <nav>
 <div class="nav-logo">Lina Ben Salem<span>AI Researcher & Engineer</span></div>
-<div class="nav-links">
+<button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="nav-links" onclick="closeNavIfMobile(event)">
 <a href="#home" class="active">Home</a>
 <a href="#engineering">Engineering</a>
-<a href="#research">Research</a>
-<a href="#projects">Additional Projects</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
+<a href="#research">Research</a>
+<a href="#projects">Additional Projects</a>
 <a href="#writing">Writing</a>
 <a href="#presentations">Presentations</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
-
 <section class="hero" id="home">
 <div class="hero-grid">
 <div>
-<div class="hero-kicker">AI Researcher & Engineer · Tunis, Tunisia</div>
+<div class="hero-kicker">AI Engineer · Tunis, Tunisia</div>
 <h1 class="hero-name">Lina Ben Salem</h1>
-<p class="hero-title">AI Researcher & Engineer · M.Sc. Data Science, AI & Healthtech</p>
-<p class="hero-bio"> I am an AI Researcher and Engineer with a background spanning academic research, a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company), and, most recently, leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
+<p class="hero-title">AI Engineer · Multi-Agent & Agentic LLM Systems</p>
+<p class="hero-bio"> I design and ship multi-agent LLM systems, from architecture to production, most recently leading AI integration across R&D and Business Development at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a> (a pharmaceutical company), where I built three production-facing agentic systems (Jan–Jul 2026). My background also includes a M.Sc. thesis on automated Patient–Clinical Trial Matching via Graph-RAG in a Multi-Agentic System at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company).<br> This journey has given me a deep respect for what research combined with engineering makes possible. </p>
 <div class="hero-cta">
 <a href="#engineering" class="btn btn-primary">View Engineering</a>
+<a href="resume.pdf" class="btn btn-primary" download>Download CV</a>
 <a href="#research" class="btn btn-ghost">View Research</a>
 <a href="https://www.linkedin.com/in/lina-ben-salem-14aa2588/" class="btn btn-ghost">LinkedIn</a>
 <a href="https://github.com/lina2761991" class="btn btn-ghost">GitHub</a>
@@ -449,18 +499,13 @@ footer { padding: 40px 24px; }
 </div>
 </div>
 </section>
-
-<section class="section alt" id="work">
+<section class="section alt" id="engineering">
 <div class="section-inner">
-<div class="s-kicker">Featured Work</div>
-<h2 class="s-title" style="font-size:40px;">Research, Engineering & Selected Projects</h2>
-<p class="s-sub" style="max-width:none;">Production engineering systems shipped inside a regulated business, a benchmarked M.Sc. thesis, plus a selection of applied and earlier engineering work, organized into the three parts below.</p>
-
-<div id="engineering" style="padding-left:24px; border-left:3px solid var(--navy-light);">
 <div class="s-kicker">Featured AI Engineering Systems</div>
-<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Multi-Agent & Production Systems Built at Opalia Recordati</h3>
+<h2 class="s-title" style="font-size:36px;">Multi-Agent & Production Systems Built at Opalia Recordati</h2>
 <p class="s-sub" style="max-width:none;">Three systems designed and built at <a href="https://opaliarecordati.com/en/" target="_blank" class="co-link">Opalia Recordati</a>, from architecture to working systems.</p>
-<div class="research-card">
+
+<div class="research-card flagship">
 <div class="rc-top">
 <div class="rc-type-badge">
 <span class="rc-type-label">Type</span>
@@ -471,16 +516,18 @@ footer { padding: 40px 24px; }
 <div class="rc-top-text">
 <div class="rc-top-meta">Opalia Recordati &middot; Pharmaceutical R&D &middot; Tunis</div>
 <div class="rc-top-title">DeformAI: Automating pharmaceutical deformulation and reverse-engineering research</div>
+<span class="flagship-badge">Flagship Project</span>
 </div>
 </div>
 <div class="rc-body">
 <span class="rc-section-label">Overview</span>
-<p class="rc-abstract">A multi-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking) with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates are backed by a full timestamped audit trail. Reduced a multi-week manual research process to several minutes guided analysis.</p>
+<p class="rc-abstract">A five-agent LangGraph pipeline (literature search, composition analysis, particle size/morphology, polymorphic characterization, drug-excipient interaction checking), deployed on AWS with a FastAPI/WebSocket backend streaming pipeline events to the frontend in real time. Claude with the Anthropic web search tool powers literature retrieval with confidence-scored sourcing. Pydantic v2 schemas enforce validated, structured output across every agent. Seven human-in-the-loop review gates, two mandatory, are backed by a full timestamped audit trail. Reduced a multi-week manual research process to several minutes of guided analysis.</p>
 <span class="rc-section-label">Stack</span>
 <div class="rc-tags">
 <span class="tag tag-navy">LangGraph</span>
 <span class="tag tag-navy">FastAPI</span>
 <span class="tag tag-navy">WebSocket</span>
+<span class="tag tag-navy">AWS</span>
 <span class="tag tag-amber">Human-in-the-loop</span>
 <span class="tag tag-amber">Agents</span>
 <span class="tag tag-amber">MCP</span>
@@ -507,15 +554,15 @@ footer { padding: 40px 24px; }
 </div>
 <div class="rc-body">
 <span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a multi-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, and database step.</p>
+<p class="rc-abstract">A nine-agent LangGraph platform automating pharma business development workflows: market and IP landscape scanning, financial feasibility modeling, regulatory pathway assessment, and partner identification, orchestrated across Neo4j, Weaviate, and PostgreSQL. Implemented output evaluation (accuracy, groundedness, cost/latency) and guardrails against hallucinated claims, with traceability back to the source LLM call, prompt, tool, and database step.</p>
 <span class="rc-section-label">Stack</span>
 <div class="rc-tags">
 <span class="tag tag-navy">LangGraph</span>
 <span class="tag tag-navy">Agents</span>
 <span class="tag tag-navy">MCP</span>
+<span class="tag tag-sage">Neo4j</span>
+<span class="tag tag-sage">Weaviate</span>
 <span class="tag tag-sage">PostgreSQL</span>
-<span class="tag tag-sage">Knowledge Graph</span>
-<span class="tag tag-sage">Vector Database</span>
 <span class="tag tag-amber">Evaluation</span>
 <span class="tag tag-amber">Guardrails</span>
 </div>
@@ -523,11 +570,11 @@ footer { padding: 40px 24px; }
 </div>
 
 
-<div class="research-card">
+<div class="research-card compact">
 <div class="rc-top">
 <div class="rc-type-badge">
 <span class="rc-type-label">Type</span>
-<span class="rc-type-val">AI Engineering System</span>
+<span class="rc-type-val">Automation & Engineering System</span>
 <span class="rc-type-label" style="margin-top:6px;">Period</span>
 <span class="rc-type-val">2026</span>
 </div>
@@ -538,7 +585,7 @@ footer { padding: 40px 24px; }
 </div>
 <div class="rc-body">
 <span class="rc-section-label">Overview</span>
-<p class="rc-abstract">Built a Streamlit + FastAPI system automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by the Streamlit frontend and available to other internal tools. Also integrates SOAP-based communication (zeep) with an internal ERP system.</p>
+<p class="rc-abstract">A rule-based, deterministic system (no LLM/ML component) automating Ph. Eur. monograph compliance review. An authenticated scraper (requests/BeautifulSoup, SSO session handling) retrieves monograph PDFs from the EDQM portal. A PyMuPDF-based parser extracts and cross-references required tests against a configurable, JSON-defined test catalogue. FastAPI endpoints expose batch PDF analysis and Excel cross-check functionality (openpyxl), consumed by a Streamlit frontend and available to other internal tools, with SOAP-based integration (zeep) into an internal ERP system.</p>
 <span class="rc-section-label">Stack</span>
 <div class="rc-tags">
 <span class="tag tag-navy">FastAPI</span>
@@ -550,12 +597,136 @@ footer { padding: 40px 24px; }
 </div>
 </div>
 </div>
-</div>
-<div style="height:1px; background:var(--border); margin:56px 0;"></div>
 
-<div id="research" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+</div>
+</section>
+<section class="section ivory" id="skills">
+<div class="section-inner">
+<div class="s-kicker">Technical Skills</div>
+<h2 class="s-title">Technical Skills</h2>
+<div class="skill-grid" style="margin-top: 24px;">
+<div class="skill-card">
+<div class="skill-heading">Agentic AI & LLM Applications</div>
+<div class="skill-tags"><span class="skill-tag skill-tag-highlight">LangGraph</span><span class="skill-tag skill-tag-highlight">LangChain</span><span class="skill-tag">Graph-RAG</span><span class="skill-tag skill-tag-highlight">RAG</span><span class="skill-tag skill-tag-highlight">Multi-Agent Orchestration</span><span class="skill-tag skill-tag-highlight">Tool Calling</span><span class="skill-tag skill-tag-highlight">MCP</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Fine-tuning</span><span class="skill-tag">PEFT/LoRA</span><span class="skill-tag skill-tag-highlight">Vector Search / Embeddings</span><span class="skill-tag">Cross-Encoders</span><span class="skill-tag skill-tag-highlight">Agent Memory / State Management</span><span class="skill-tag skill-tag-highlight">Structured Output / Function Calling</span><span class="skill-tag skill-tag-highlight">Prompt Engineering</span><span class="skill-tag skill-tag-highlight">OpenAI API</span><span class="skill-tag skill-tag-highlight">Anthropic API</span><span class="skill-tag">Context Window Management</span><span class="skill-tag">Model Routing</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">LLM Evaluation, Guardrails & Observability</div>
+<div class="skill-tags"><span class="skill-tag">Ragas</span><span class="skill-tag">LLM-as-a-judge</span><span class="skill-tag">Groundedness/Relevance</span><span class="skill-tag skill-tag-highlight">Prompt-Injection Guardrails</span><span class="skill-tag skill-tag-highlight">Hallucination Detection</span><span class="skill-tag">Cost/Latency/Quality Observability</span><span class="skill-tag">Human-in-the-loop</span><span class="skill-tag">Auditable Outputs</span><span class="skill-tag">Retrieval Evaluation (Precision/Recall)</span><span class="skill-tag">A/B Testing / Model Comparison</span><span class="skill-tag skill-tag-highlight">Token Cost Optimization</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Engineering & Deployment</div>
+<div class="skill-tags"><span class="skill-tag skill-tag-highlight">FastAPI</span><span class="skill-tag">WebSocket</span><span class="skill-tag">Pydantic v2</span><span class="skill-tag skill-tag-highlight">Docker</span><span class="skill-tag">Git</span><span class="skill-tag skill-tag-highlight">CI/CD</span><span class="skill-tag skill-tag-highlight">REST APIs</span><span class="skill-tag">SOAP</span><span class="skill-tag">Streamlit</span><span class="skill-tag skill-tag-highlight">Kubernetes</span><span class="skill-tag">Terraform / IaC</span><span class="skill-tag skill-tag-highlight">Async Python (asyncio)</span><span class="skill-tag">pytest</span><span class="skill-tag">Streaming (SSE)</span><span class="skill-tag skill-tag-highlight">LLMOps</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">ML & Data Science</div>
+<div class="skill-tags"><span class="skill-tag skill-tag-highlight">PyTorch</span><span class="skill-tag">Hugging Face</span><span class="skill-tag skill-tag-highlight">Transformers</span><span class="skill-tag">Scikit-learn</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Research Infrastructure</div>
+<div class="skill-tags"><span class="skill-tag">MLflow</span><span class="skill-tag">DVC</span><span class="skill-tag">Hydra</span><span class="skill-tag">Neo4j</span><span class="skill-tag">Weaviate</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag skill-tag-highlight">Vector Databases</span><span class="skill-tag">Semantic Caching</span></div>
+</div>
+<div class="skill-card">
+<div class="skill-heading">Biomedical & Clinical AI</div>
+<div class="skill-tags"><span class="skill-tag">Clinical NLP</span><span class="skill-tag">UMLS/MeSH</span><span class="skill-tag">NER</span><span class="skill-tag">Clinical Trial Ontologies</span><span class="skill-tag skill-tag-highlight">Knowledge Graphs</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section alt" id="experience">
+<div class="section-inner">
+<div class="s-kicker">Experience, Education & Certifications</div>
+<h2 class="s-title">Background</h2>
+<div class="three-col" style="margin-top: 32px;">
+<div>
+<div class="col-title">Experience</div>
+<div class="timeline">
+<div class="tl-item">
+<span class="tl-dot filled"></span>
+<div class="tl-role">ML Researcher / Pharmaceutical Development Project Manager, R&D and AI Integration</div>
+<div class="tl-org">Opalia Recordati &middot; Jan &ndash; Jul 2026</div>
+<div class="tl-note">Designed and shipped three production-facing multi-agent LLM systems: BD Intelligence Platform, DeformAI, and MonographMind, spanning LangGraph orchestration, FastAPI backends, evaluation, and guardrails.</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">AI Apprentice</div>
+<div class="tl-org">InstaDeep &middot; 2023 &ndash; 2025</div>
+<div class="tl-note">M.Sc. AI Research Thesis on AssistTrials: Automated Patient&ndash;Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Software Engineer</div>
+<div class="tl-org">BTK Bank &middot; 2021 &ndash; 2022</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Intern &ndash; Web Development</div>
+<div class="tl-org">APP4MOB &middot; 2020 </div>
+</div>
+</div>
+</div>
+<div>
+<div class="col-title">Certifications</div>
+<div class="cert-list">
+<div class="cert-item">
+<a href="#" target="_blank">Agentic AI</a>
+<div class="cert-meta">Udacity &middot; 2026</div>
+</div>
+<div class="cert-item">
+<a href="#" target="_blank">Generative AI and LLMs: Architecture and Data Preparation</a>
+<div class="cert-meta">IBM &middot; 2025</div>
+</div>
+<div class="cert-item">
+<a href="#" target="_blank">Generative AI</a>
+<div class="cert-meta">Udacity &middot; 2024</div>
+</div>
+<div class="cert-item">
+<a href="#" target="_blank">Deep Learning</a>
+<div class="cert-meta">Udacity &middot; 2024</div>
+</div>
+<div class="cert-item">
+<a href="#" target="_blank">Deep Learning Specialization</a>
+<div class="cert-meta">Coursera (DeepLearning.AI) &middot; 2024</div>
+</div>
+<div class="cert-item">
+<a href="https://coursera.org/share/5775b67fea8d1e00c2eea44ae8fe82ac" target="_blank">Machine Learning Specialization</a>
+<div class="cert-meta">Coursera (DeepLearning.AI) &middot; 2023</div>
+</div>
+</div>
+</div>
+<div>
+<div class="col-title">Education</div>
+<div class="timeline">
+<div class="tl-item">
+<span class="tl-dot filled"></span>
+<div class="tl-role">MBA, Data Science, AI & Healthtech concentration</div>
+<div class="tl-org">Ascencia Business School (Coll&egrave;ge de Paris) &middot; Paris La D&eacute;fense &middot; Apr 2026</div>
+<div class="tl-note">Awarded jointly with the Pristini M.Sc. as a degree equivalence.</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot filled"></span>
+<div class="tl-role">M.Sc. Data Science, AI & Healthtech</div>
+<div class="tl-org">Pristini University &middot; 2022 &ndash; 2025</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Engineering Degree in Software Engineering</div>
+<div class="tl-org">EPI &middot; 2016 &ndash; 2019</div>
+</div>
+<div class="tl-item">
+<span class="tl-dot"></span>
+<div class="tl-role">Preparatory Cycle in Physics & Chemistry</div>
+<div class="tl-org">Preparatory Institute of Engineering Studies &middot; 2011 &ndash; 2013</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section alt" id="research">
+<div class="section-inner">
+<div style="padding-left:24px; border-left:3px solid var(--navy-light);">
 <div class="s-kicker">Featured Research</div>
-<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">M.Sc. Thesis entitled AssistTrials</h3>
+<h3 style="font-family:'Lora',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">M.Sc. Thesis entitled AssistTrials</h3>
 <p class="s-sub">Conducted at <a href="https://www.instadeep.com" target="_blank" class="co-link">InstaDeep</a> (a <a href="https://www.biontech.com" target="_blank" class="co-link">BioNTech</a> company) with the AI Research and Bio AI teams.</p>
 <div class="research-card">
 <div class="rc-top">
@@ -623,14 +794,13 @@ footer { padding: 40px 24px; }
 </div>
 </div>
 </div>
-
-<div style="height:1px; background:var(--border); margin:56px 0;"></div>
-
-<div style="height:1px; background:var(--border); margin:56px 0;"></div>
-
-<div id="projects" style="padding-left:24px; border-left:3px solid var(--navy-light);">
+</div>
+</section>
+<section class="section ivory" id="projects">
+<div class="section-inner">
+<div style="padding-left:24px; border-left:3px solid var(--navy-light);">
 <div class="s-kicker">Applied ML & Earlier Engineering Work</div>
-<h3 style="font-family:\'Lora\',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Additional Projects</h3>
+<h3 style="font-family:'Lora',serif; font-size:22px; color:var(--navy); margin-bottom:10px; letter-spacing:-0.01em; line-height:1.25; font-weight:600;">Additional Projects</h3>
 <p class="s-sub"style="max-width:none;">Applied ML work and earlier software engineering projects. Research and production engineering systems are featured above.</p>
 
 <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Applied ML</div>
@@ -683,99 +853,8 @@ footer { padding: 40px 24px; }
 </div>
 
 </div>
-</section>
-
-
-
-<section class="section ivory" id="skills">
-<div class="section-inner">
-<div class="s-kicker">Technical Skills</div>
-<h2 class="s-title">Technical Skills</h2>
-<div class="skill-grid" style="margin-top: 24px;">
-<div class="skill-card">
-<div class="skill-heading">Agentic AI & LLM Applications</div>
-<div class="skill-tags"><span class="skill-tag">LangGraph</span><span class="skill-tag">LangChain</span><span class="skill-tag">Graph-RAG</span><span class="skill-tag">RAG</span><span class="skill-tag">Multi-Agent Orchestration</span><span class="skill-tag">Tool Calling</span><span class="skill-tag">MCP</span><span class="skill-tag">ChromaDB</span><span class="skill-tag">Fine-tuning</span><span class="skill-tag">PEFT/LoRA</span></div>
-</div>
-<div class="skill-card">
-<div class="skill-heading">LLM Evaluation, Guardrails & Observability</div>
-<div class="skill-tags"><span class="skill-tag">Ragas</span><span class="skill-tag">LLM-as-a-judge</span><span class="skill-tag">Groundedness/Relevance</span><span class="skill-tag">Prompt-Injection Guardrails</span><span class="skill-tag">Hallucination Detection</span><span class="skill-tag">Cost/Latency/Quality Observability</span><span class="skill-tag">Human-in-the-loop</span><span class="skill-tag">Auditable Outputs</span></div>
-</div>
-<div class="skill-card">
-<div class="skill-heading">Engineering & Deployment</div>
-<div class="skill-tags"><span class="skill-tag">FastAPI</span><span class="skill-tag">WebSocket</span><span class="skill-tag">Pydantic v2</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span><span class="skill-tag">CI/CD</span><span class="skill-tag">REST APIs</span><span class="skill-tag">SOAP</span><span class="skill-tag">Streamlit</span></div>
-</div>
-<div class="skill-card">
-<div class="skill-heading">ML & Data Science</div>
-<div class="skill-tags"><span class="skill-tag">PyTorch</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Transformers</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">XGBoost</span><span class="skill-tag">CatBoost</span><span class="skill-tag">W&B</span></div>
-</div>
-<div class="skill-card">
-<div class="skill-heading">Research Infrastructure</div>
-<div class="skill-tags"><span class="skill-tag">MLflow</span><span class="skill-tag">DVC</span><span class="skill-tag">Hydra</span><span class="skill-tag">Neo4j</span><span class="skill-tag">Weaviate</span><span class="skill-tag">PostgreSQL</span></div>
-</div>
-<div class="skill-card">
-<div class="skill-heading">Biomedical & Clinical AI</div>
-<div class="skill-tags"><span class="skill-tag">Clinical NLP</span><span class="skill-tag">UMLS/MeSH</span><span class="skill-tag">NER</span><span class="skill-tag">Clinical Trial Ontologies</span><span class="skill-tag">Knowledge Graphs</span></div>
-</div>
-</div>
 </div>
 </section>
-
-<section class="section alt" id="experience">
-<div class="section-inner">
-<div class="s-kicker">Experience & Education</div>
-<h2 class="s-title">Background</h2>
-<div class="two-col" style="margin-top: 32px;">
-<div>
-<div class="col-title">Experience</div>
-<div class="timeline">
-<div class="tl-item">
-<span class="tl-dot filled"></span>
-<div class="tl-role">ML Researcher / Pharmaceutical Development Project Manager, R&D and AI Integration</div>
-<div class="tl-org">Opalia Recordati &middot; Jan 2026 &ndash; Present</div>
-<div class="tl-note">Designed and shipped three production-facing multi-agent LLM systems: BD Intelligence Platform, DeformAI, and MonographMind, spanning LangGraph orchestration, FastAPI backends, evaluation, and guardrails.</div>
-</div>
-<div class="tl-item">
-<span class="tl-dot"></span>
-<div class="tl-role">AI Apprentice</div>
-<div class="tl-org">InstaDeep &middot; 2023 &ndash; 2025</div>
-<div class="tl-note">M.Sc. AI Research Thesis on AssistTrials: Automated Patient&ndash;Clinical Trial Matching via Graph-RAG in a Multi-Agentic System.</div>
-</div>
-<div class="tl-item">
-<span class="tl-dot"></span>
-<div class="tl-role">Software Engineer</div>
-<div class="tl-org">BTK Bank &middot; 2021 &ndash; 2022</div>
-</div>
-<div class="tl-item">
-<span class="tl-dot"></span>
-<div class="tl-role">Intern &ndash; Web Development</div>
-<div class="tl-org">APP4MOB &middot; 2020 </div>
-</div>
-</div>
-</div>
-<div>
-<div class="col-title">Education</div>
-<div class="timeline">
-<div class="tl-item">
-<span class="tl-dot filled"></span>
-<div class="tl-role">M.Sc. Data Science, AI & Healthtech</div>
-<div class="tl-org">Pristini University &middot; 2022 &ndash; 2025</div>
-</div>
-<div class="tl-item">
-<span class="tl-dot"></span>
-<div class="tl-role">Engineering Degree in Software Engineering</div>
-<div class="tl-org">EPI &middot; 2016 &ndash; 2019</div>
-</div>
-<div class="tl-item">
-<span class="tl-dot"></span>
-<div class="tl-role">Preparatory Cycle in Physics & Chemistry</div>
-<div class="tl-org">Preparatory Institute of Engineering Studies &middot; 2011 &ndash; 2013</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
 <section class="section alt" id="writing">
 <div class="section-inner">
 <div class="s-kicker">Technical Writing</div>
@@ -893,7 +972,6 @@ footer { padding: 40px 24px; }
 </div>
 </div>
 </section>
-
 <div id="article-overlay">
 <div class="article-page">
 <button class="back-btn" onclick="closeArticle()">
@@ -1017,6 +1095,15 @@ toggle.textContent = 'Close \u2191';
 }
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeArticle(); });
 
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('open');
+}
+function closeNavIfMobile(e) {
+  if (e.target.tagName === 'A' && window.innerWidth <= 900) {
+    document.querySelector('.nav-links').classList.remove('open');
+  }
+}
+
 function initScrollSpy() {
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
   var sections = navLinks.map(function(a) {
@@ -1063,15 +1150,12 @@ if (document.readyState === 'loading') {
   initScrollSpy();
 }
 </script>
-
-<!-- EXPERIENCE & EDUCATION -->
-
 <section class="section alt" id="presentations">
 <div class="section-inner">
 <div class="s-kicker">Communication & Presentations</div>
 <h2 class="s-title">Selected presentations</h2>
-<p class="s-sub"style="max-width:none;">A sample of academic and technical presentations delivered at InstaDeep, Pristini University, and in the context of M.Sc. thesis research.</p>
-<div class="pres-grid">
+<p class="s-sub"style="max-width:none;">M.Sc. thesis defense presentation, plus a book presentation on engineering philosophy.</p>
+<div class="pres-grid pres-grid-two">
 <a href="https://docs.google.com/presentation/d/1cGZc3rzB4wQ3jrKlSSLnwwLSvuSfX5ZAqBmd_aaJUg8/edit?usp=sharing" target="_blank" class="pres-card">
 <div class="pres-thumb">
 <img src="p8.png">
@@ -1080,46 +1164,6 @@ if (document.readyState === 'loading') {
 <div class="pres-card-body">
 <div class="pres-card-title">AssistTrials: Thesis Defense Presentation</div>
 <div class="pres-card-meta">M.Sc. defense &middot; InstaDeep, Clinical AI &middot; 2025</div>
-</div>
-</a>
-<a href="https://github.com/lina2761991/presentations/blob/main/EnsembleLearning.pdf" target="_blank" class="pres-card">
-<div class="pres-thumb">
-<img src="p2.png" alt="Ensemble Learning presentation cover">
-<div class="pres-thumb-overlay">View Presentation &rarr;</div>
-</div>
-<div class="pres-card-body">
-<div class="pres-card-title">Ensemble Learning Methods in Machine Learning</div>
-<div class="pres-card-meta">M.Sc. coursework &middot; Data Science & AI</div>
-</div>
-</a>
-<a href="https://github.com/lina2761991/presentations/blob/main/%CE%BB%26K%20Architectures.pdf" target="_blank" class="pres-card">
-<div class="pres-thumb">
-<img src="p5.png" alt="Lambda & Kappa Architectures presentation cover">
-<div class="pres-thumb-overlay">View Presentation &rarr;</div>
-</div>
-<div class="pres-card-body">
-<div class="pres-card-title">Lambda & Kappa Architectures for Real-Time Data Systems</div>
-<div class="pres-card-meta">M.Sc. coursework &middot; Data Engineering</div>
-</div>
-</a>
-<a href="https://github.com/lina2761991/presentations/blob/main/Big%20Data.pdf" target="_blank" class="pres-card">
-<div class="pres-thumb">
-<img src="p1.png" alt="Big Data presentation cover">
-<div class="pres-thumb-overlay">View Presentation &rarr;</div>
-</div>
-<div class="pres-card-body">
-<div class="pres-card-title">Big Data: Architectures, Tools & Challenges</div>
-<div class="pres-card-meta">M.Sc. coursework &middot; Data Science & AI</div>
-</div>
-</a>
-<a href="https://github.com/lina2761991/presentations/blob/main/immunology%20part1.pdf" target="_blank" class="pres-card">
-<div class="pres-thumb">
-<img src="p7.png" alt="Immunology presentation cover">
-<div class="pres-thumb-overlay">View Presentation &rarr;</div>
-</div>
-<div class="pres-card-body">
-<div class="pres-card-title">Foundations of Immunology, Part I & II</div>
-<div class="pres-card-meta">M.Sc. coursework &middot; AI & Healthtech</div>
 </div>
 </a>
 <a href="https://github.com/lina2761991/presentations/blob/main/PragmaticProgramer.pdf" target="_blank" class="pres-card">
@@ -1135,7 +1179,6 @@ if (document.readyState === 'loading') {
 </div>
 </div>
 </section>
-
 <footer id="contact">
 <div class="footer-name">Lina Ben Salem</div>
 <div class="footer-title">AI Researcher & Engineer</div>
@@ -1148,6 +1191,5 @@ if (document.readyState === 'loading') {
 <div class="footer-divider"></div>
 <div class="footer-copy">&copy; 2026 Lina Ben Salem &middot; All rights reserved</div>
 </footer>
-
 </body>
 </html>
